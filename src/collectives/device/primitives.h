@@ -139,6 +139,7 @@ class Primitives {
       T*     dst1,
       DST2_T dst2,
       int len, int maxoffset, uint64_t step, SYNC_Ts... flags) {
+//printf("[Hurray2] do somethings...\n");
 
     enum { noSrc2 = std::is_same<SRC2_T, nullptr_t>::value };
     enum { noDst2 = std::is_same<DST2_T, nullptr_t>::value };

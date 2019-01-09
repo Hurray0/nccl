@@ -1,0 +1,1475 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ABORT	src/include/debug.h	/^typedef enum {NONE=0, VERSION=1, WARN=2, INFO=3, ABORT=4, TRACE=5} DebugLevel;$/;"	e	enum:__anon12
+ABSBUILDDIR	Makefile	/^ABSBUILDDIR := $(abspath $(BUILDDIR))$/;"	m
+ABSBUILDDIR	pkg/Makefile	/^ABSBUILDDIR := $(abspath $(BUILDDIR))$/;"	m
+ACK_PREV	src/collectives/device/ll_kernel.h	131;"	d
+ALIGNUP	src/collectives/device/common_kernel.h	195;"	d
+ALIGN_SIZE	src/include/core.h	48;"	d
+ALL	src/include/debug.h	/^typedef enum {INIT=1, COLL=2, P2P=4, SHM=8, NET=16, ALL=~0} SubSys;$/;"	e	enum:__anon13
+ALLGATHER_BUFCHUNKS	src/collectives/collectives.h	58;"	d
+ALLGATHER_SUBSTEPS	src/collectives/collectives.h	57;"	d
+ALLREDUCE_BUFCHUNKS	src/collectives/collectives.h	56;"	d
+ALLREDUCE_SUBSTEPS	src/collectives/collectives.h	55;"	d
+ARCH	pkg/debian/Makefile	/^ARCH           := $(shell uname -m)$/;"	m
+ARCH	pkg/redhat/Makefile	/^ARCH           := $(shell uname -m)$/;"	m
+ASTYLEBIN	makefiles/formatting.mk	/^ASTYLEBIN := $(ASTYLEDIR)\/astyle\/build\/gcc\/bin\/astyle$/;"	m
+ASTYLEBLD	makefiles/formatting.mk	/^ASTYLEBLD := $(ASTYLEDIR)\/astyle\/build\/gcc\/$/;"	m
+ASTYLEDIR	makefiles/formatting.mk	/^ASTYLEDIR := $(BUILDDIR)\/contrib$/;"	m
+ASTYLETAR	makefiles/formatting.mk	/^ASTYLETAR := $(ASTYLEDIR)\/astyle.tar.gz$/;"	m
+ASTYLEURL	makefiles/formatting.mk	/^ASTYLEURL := "https:\/\/versaweb.dl.sourceforge.net\/project\/astyle\/astyle\/astyle%20$(ASTYLEVER)\/astyle_$(ASTYLEVER)_linux.tar.gz"$/;"	m
+ASTYLEVER	makefiles/formatting.mk	/^ASTYLEVER := 3.1$/;"	m
+ASTYLE_FORMAT_OPTS	makefiles/formatting.mk	/^ASTYLE_FORMAT_OPTS=-Qv --style=java --indent-after-parens --indent-modifiers --indent-switches --indent-continuation=2 --keep-one-line-blocks --keep-one-line-statements --indent=spaces=2 --lineend=linux --suffix=none$/;"	m
+AlignUp	src/collectives/device/common_kernel.h	/^__device__ inline volatile T* AlignUp(volatile T * ptr, size_t align) {$/;"	f
+AnyAre	src/collectives/device/primitives.h	/^bool AnyAre() { return false; }$/;"	f
+AnyAre	src/collectives/device/primitives.h	/^bool AnyAre(FIRST_T first, TAIL_Ts... tail) {$/;"	f
+ArgsCheck	src/include/common_coll.h	/^static ncclResult_t ArgsCheck(const void* sendbuff, const void* recvbuff, size_t count, ncclDataType_t type, ncclRedOp_t op, int root, struct ncclComm* comm, const char* opname) {$/;"	f
+BROADCAST_BUFCHUNKS	src/collectives/collectives.h	62;"	d
+BROADCAST_SUBSTEPS	src/collectives/collectives.h	61;"	d
+BUILDDIR	Makefile	/^BUILDDIR ?= $(abspath .\/build)$/;"	m
+BUILDDIR	pkg/Makefile	/^BUILDDIR ?= $(abspath ..\/build)$/;"	m
+BUILDDIR	pkg/debian/Makefile	/^BUILDDIR ?= $(abspath ..\/..\/build)$/;"	m
+BUILDDIR	pkg/redhat/Makefile	/^BUILDDIR ?= $(abspath ..\/..\/build)$/;"	m
+BUILDDIR	pkg/srctxz/Makefile	/^BUILDDIR ?= $(abspath ..\/..\/build)$/;"	m
+BUILDDIR	pkg/txz/Makefile	/^BUILDDIR ?= $(abspath ..\/..\/build)$/;"	m
+BUILDDIR	src/Makefile	/^BUILDDIR ?= $(abspath ..\/build)$/;"	m
+BUILDDIR	src/collectives/device/Makefile	/^BUILDDIR ?= $(abspath ..\/..\/..\/build)$/;"	m
+CACHE_LINE_SIZE	src/include/core.h	93;"	d
+COLL	src/include/debug.h	/^typedef enum {INIT=1, COLL=2, P2P=4, SHM=8, NET=16, ALL=~0} SubSys;$/;"	e	enum:__anon13
+COMMON_COLL_H_	src/include/common_coll.h	8;"	d
+CONNECT_NVLINK	src/include/nvlink.h	15;"	d
+CONNECT_NVSWITCH	src/include/nvlink.h	16;"	d
+CONNECT_SIZE	src/include/transport.h	32;"	d
+CUDA8_GENCODE	makefiles/common.mk	/^CUDA8_GENCODE = -gencode=arch=compute_30,code=sm_30 \\$/;"	m
+CUDA8_PTX	makefiles/common.mk	/^CUDA8_PTX     = -gencode=arch=compute_61,code=compute_61$/;"	m
+CUDA9_GENCODE	makefiles/common.mk	/^CUDA9_GENCODE = -gencode=arch=compute_70,code=sm_70$/;"	m
+CUDA9_PTX	makefiles/common.mk	/^CUDA9_PTX     = -gencode=arch=compute_70,code=compute_70$/;"	m
+CUDACHECK	src/include/core.h	250;"	d
+CUDACHECKGOTO	src/include/core.h	258;"	d
+CUDA_HOME	makefiles/common.mk	/^CUDA_HOME ?= \/usr\/local\/cuda$/;"	m
+CUDA_INC	makefiles/common.mk	/^CUDA_INC ?= $(CUDA_HOME)\/include$/;"	m
+CUDA_IPC_MIN	src/include/core.h	96;"	d
+CUDA_LIB	makefiles/common.mk	/^CUDA_LIB ?= $(CUDA_HOME)\/lib64$/;"	m
+CUDA_MAJOR	makefiles/common.mk	/^CUDA_MAJOR = $(shell echo $(CUDA_VERSION) | cut -d "." -f 1)$/;"	m
+CUDA_MINOR	makefiles/common.mk	/^CUDA_MINOR = $(shell echo $(CUDA_VERSION) | cut -d "." -f 2)$/;"	m
+CUDA_VERSION	makefiles/common.mk	/^CUDA_VERSION = $(strip $(shell $(NVCC) --version | grep release | sed 's\/.*release \/\/' | sed 's\/\\,.*\/\/'))$/;"	m
+CXXFLAGS	makefiles/common.mk	/^CXXFLAGS   := -I$(CUDA_INC) -DCUDA_MAJOR=$(CUDA_MAJOR) -DCUDA_MINOR=$(CUDA_MINOR) -fPIC -fvisibility=hidden$/;"	m
+CollectiveArgs	src/include/core.h	/^struct CollectiveArgs {$/;"	s
+Copy	src/collectives/device/primitives.h	/^  Copy(const int tid, const int nthreads, const T* src, T* dst,$/;"	f	class:Primitives
+DEBFILES	pkg/debian/Makefile	/^DEBFILES   := compat copyright libnccl-dev.install rules $(DEBGEN)$/;"	m
+DEBGEN	pkg/debian/Makefile	/^DEBGEN     := $(DEBGEN_IN:.in=)$/;"	m
+DEBGEN_IN	pkg/debian/Makefile	/^DEBGEN_IN  := $(wildcard *.in)$/;"	m
+DEBPREPDIR	pkg/debian/Makefile	/^DEBPREPDIR := $(BUILDDIR)\/debian$/;"	m
+DEBTARGETS	pkg/debian/Makefile	/^DEBTARGETS := $(patsubst %, $(DEBPREPDIR)\/%, $(DEBFILES))$/;"	m
+DEBUG	makefiles/common.mk	/^DEBUG ?= 0$/;"	m
+DECL_ALL_COLLS	src/collectives/collectives.h	46;"	d
+DECL_COLL	src/collectives/collectives.h	40;"	d
+DECL_COLL2	src/collectives/collectives.h	29;"	d
+DECL_COLL3	src/collectives/collectives.h	25;"	d
+DECL_COLL4	src/collectives/collectives.h	21;"	d
+DEFAULT_BUFFER_SIZE_BYTES	src/include/core.h	34;"	d
+DEPENDFILES	src/collectives/device/Makefile	/^DEPENDFILES := $(DEPFILES:%.d=%.dep)$/;"	m
+DEPFILES	src/Makefile	/^DEPFILES   := $(LIBOBJ:%.o=%.d)$/;"	m
+DEPFILES	src/collectives/device/Makefile	/^DEPFILES   := $(patsubst %.cu, $(OBJDIR)\/%.d, $(LIBSRCFILES))$/;"	m
+DEVICELIB	src/Makefile	/^DEVICELIB  := $(BUILDDIR)\/obj\/collectives\/device\/colldevice.a$/;"	m
+DEVOBJ	src/collectives/device/Makefile	/^DEVOBJ     := $(OBJDIR)\/devlink.o$/;"	m
+DIVUP	src/include/core.h	43;"	d
+DebugLevel	src/include/debug.h	/^typedef enum {NONE=0, VERSION=1, WARN=2, INFO=3, ABORT=4, TRACE=5} DebugLevel;$/;"	t	typeref:enum:__anon12
+DoubleCopy	src/collectives/device/primitives.h	/^  DoubleCopy(const int tid, const int nthreads, const T* src, T* dst1, T* dst2,$/;"	f	class:Primitives
+FIFO_CLEANING_AND_SAVE_STEP	src/collectives/device/ll_kernel.h	135;"	d
+FILESTOFORMAT	src/Makefile	/^FILESTOFORMAT := $(shell find . -name ".\\#*" -prune -o \\( -name "*.cu" -o -name "*.h" \\) -print | grep -v -E 'ibvwrap.h|nvmlwrap.h|nccl.h')$/;"	m
+FUNC_INDEX	src/collectives/collectives.h	12;"	d
+Fetch128	src/collectives/device/common_kernel.h	/^inline __device__ void Fetch128(Pack128& v, Pack128* p) {$/;"	f
+FuncMax	src/collectives/device/reduce_kernel.h	/^struct FuncMax {$/;"	s
+FuncMax	src/collectives/device/reduce_kernel.h	/^struct FuncMax<half> {$/;"	s
+FuncMax	src/collectives/device/reduce_kernel.h	/^struct FuncMax<int8_t> {$/;"	s
+FuncMax	src/collectives/device/reduce_kernel.h	/^struct FuncMax<uint8_t> {$/;"	s
+FuncMin	src/collectives/device/reduce_kernel.h	/^struct FuncMin {$/;"	s
+FuncMin	src/collectives/device/reduce_kernel.h	/^struct FuncMin<half> {$/;"	s
+FuncMin	src/collectives/device/reduce_kernel.h	/^struct FuncMin<int8_t> {$/;"	s
+FuncMin	src/collectives/device/reduce_kernel.h	/^struct FuncMin<uint8_t> {$/;"	s
+FuncNull	src/collectives/device/reduce_kernel.h	/^struct FuncNull {$/;"	s
+FuncProd	src/collectives/device/reduce_kernel.h	/^struct FuncProd {$/;"	s
+FuncProd	src/collectives/device/reduce_kernel.h	/^struct FuncProd<half> {$/;"	s
+FuncProd	src/collectives/device/reduce_kernel.h	/^struct FuncProd<int8_t> {$/;"	s
+FuncProd	src/collectives/device/reduce_kernel.h	/^struct FuncProd<uint8_t> {$/;"	s
+FuncSum	src/collectives/device/reduce_kernel.h	/^struct FuncSum {$/;"	s
+FuncSum	src/collectives/device/reduce_kernel.h	/^struct FuncSum<half> {$/;"	s
+FuncSum	src/collectives/device/reduce_kernel.h	/^struct FuncSum<int8_t> {$/;"	s
+FuncSum	src/collectives/device/reduce_kernel.h	/^struct FuncSum<uint8_t> {$/;"	s
+GCOV	makefiles/common.mk	/^GCOV ?= 0 # disable by default.$/;"	m
+GCOV_FLAGS	makefiles/common.mk	/^GCOV_FLAGS := $(if $(filter 0,${GCOV} ${DEBUG}),,--coverage) # only gcov=1 and debug =1$/;"	m
+GROUP	src/include/core.h	/^  enum { GROUP, PARALLEL } launchMode;$/;"	e	enum:ncclComm::__anon23
+GenericOp	src/collectives/device/primitives.h	/^  GenericOp(const int tid, const int nthreads,$/;"	f	class:Primitives
+GetSocketAddrFromString	src/include/socket.h	/^static ncclResult_t GetSocketAddrFromString(union socketAddress* ua, const char* ip_port_pair) {$/;"	f
+IBV_ACCESS_LOCAL_WRITE	src/include/ibvwrap.h	/^	IBV_ACCESS_LOCAL_WRITE		= 1,$/;"	e	enum:ibv_access_flags
+IBV_ACCESS_MW_BIND	src/include/ibvwrap.h	/^	IBV_ACCESS_MW_BIND		= (1<<4)$/;"	e	enum:ibv_access_flags
+IBV_ACCESS_REMOTE_ATOMIC	src/include/ibvwrap.h	/^	IBV_ACCESS_REMOTE_ATOMIC	= (1<<3),$/;"	e	enum:ibv_access_flags
+IBV_ACCESS_REMOTE_READ	src/include/ibvwrap.h	/^	IBV_ACCESS_REMOTE_READ		= (1<<2),$/;"	e	enum:ibv_access_flags
+IBV_ACCESS_REMOTE_WRITE	src/include/ibvwrap.h	/^	IBV_ACCESS_REMOTE_WRITE		= (1<<1),$/;"	e	enum:ibv_access_flags
+IBV_ATOMIC_GLOB	src/include/ibvwrap.h	/^	IBV_ATOMIC_GLOB$/;"	e	enum:ibv_atomic_cap
+IBV_ATOMIC_HCA	src/include/ibvwrap.h	/^	IBV_ATOMIC_HCA,$/;"	e	enum:ibv_atomic_cap
+IBV_ATOMIC_NONE	src/include/ibvwrap.h	/^	IBV_ATOMIC_NONE,$/;"	e	enum:ibv_atomic_cap
+IBV_DEVICE_AUTO_PATH_MIG	src/include/ibvwrap.h	/^	IBV_DEVICE_AUTO_PATH_MIG	= 1 <<  4,$/;"	e	enum:ibv_device_cap_flags
+IBV_DEVICE_BAD_PKEY_CNTR	src/include/ibvwrap.h	/^	IBV_DEVICE_BAD_PKEY_CNTR	= 1 <<  1,$/;"	e	enum:ibv_device_cap_flags
+IBV_DEVICE_BAD_QKEY_CNTR	src/include/ibvwrap.h	/^	IBV_DEVICE_BAD_QKEY_CNTR	= 1 <<  2,$/;"	e	enum:ibv_device_cap_flags
+IBV_DEVICE_CHANGE_PHY_PORT	src/include/ibvwrap.h	/^	IBV_DEVICE_CHANGE_PHY_PORT	= 1 <<  5,$/;"	e	enum:ibv_device_cap_flags
+IBV_DEVICE_CURR_QP_STATE_MOD	src/include/ibvwrap.h	/^	IBV_DEVICE_CURR_QP_STATE_MOD	= 1 <<  7,$/;"	e	enum:ibv_device_cap_flags
+IBV_DEVICE_INIT_TYPE	src/include/ibvwrap.h	/^	IBV_DEVICE_INIT_TYPE		= 1 <<  9,$/;"	e	enum:ibv_device_cap_flags
+IBV_DEVICE_MANAGED_FLOW_STEERING	src/include/ibvwrap.h	/^	IBV_DEVICE_MANAGED_FLOW_STEERING = 1 << 29$/;"	e	enum:ibv_device_cap_flags
+IBV_DEVICE_N_NOTIFY_CQ	src/include/ibvwrap.h	/^	IBV_DEVICE_N_NOTIFY_CQ		= 1 << 14,$/;"	e	enum:ibv_device_cap_flags
+IBV_DEVICE_PORT_ACTIVE_EVENT	src/include/ibvwrap.h	/^	IBV_DEVICE_PORT_ACTIVE_EVENT	= 1 << 10,$/;"	e	enum:ibv_device_cap_flags
+IBV_DEVICE_RAW_MULTI	src/include/ibvwrap.h	/^	IBV_DEVICE_RAW_MULTI		= 1 <<  3,$/;"	e	enum:ibv_device_cap_flags
+IBV_DEVICE_RC_RNR_NAK_GEN	src/include/ibvwrap.h	/^	IBV_DEVICE_RC_RNR_NAK_GEN	= 1 << 12,$/;"	e	enum:ibv_device_cap_flags
+IBV_DEVICE_RESIZE_MAX_WR	src/include/ibvwrap.h	/^	IBV_DEVICE_RESIZE_MAX_WR	= 1,$/;"	e	enum:ibv_device_cap_flags
+IBV_DEVICE_SHUTDOWN_PORT	src/include/ibvwrap.h	/^	IBV_DEVICE_SHUTDOWN_PORT	= 1 <<  8,$/;"	e	enum:ibv_device_cap_flags
+IBV_DEVICE_SRQ_RESIZE	src/include/ibvwrap.h	/^	IBV_DEVICE_SRQ_RESIZE		= 1 << 13,$/;"	e	enum:ibv_device_cap_flags
+IBV_DEVICE_SYS_IMAGE_GUID	src/include/ibvwrap.h	/^	IBV_DEVICE_SYS_IMAGE_GUID	= 1 << 11,$/;"	e	enum:ibv_device_cap_flags
+IBV_DEVICE_UD_AV_PORT_ENFORCE	src/include/ibvwrap.h	/^	IBV_DEVICE_UD_AV_PORT_ENFORCE	= 1 <<  6,$/;"	e	enum:ibv_device_cap_flags
+IBV_DEVICE_XRC	src/include/ibvwrap.h	/^	IBV_DEVICE_XRC			= 1 << 20,$/;"	e	enum:ibv_device_cap_flags
+IBV_EVENT_CLIENT_REREGISTER	src/include/ibvwrap.h	/^	IBV_EVENT_CLIENT_REREGISTER,$/;"	e	enum:ibv_event_type
+IBV_EVENT_COMM_EST	src/include/ibvwrap.h	/^	IBV_EVENT_COMM_EST,$/;"	e	enum:ibv_event_type
+IBV_EVENT_CQ_ERR	src/include/ibvwrap.h	/^	IBV_EVENT_CQ_ERR,$/;"	e	enum:ibv_event_type
+IBV_EVENT_DEVICE_FATAL	src/include/ibvwrap.h	/^	IBV_EVENT_DEVICE_FATAL,$/;"	e	enum:ibv_event_type
+IBV_EVENT_GID_CHANGE	src/include/ibvwrap.h	/^	IBV_EVENT_GID_CHANGE,$/;"	e	enum:ibv_event_type
+IBV_EVENT_LID_CHANGE	src/include/ibvwrap.h	/^	IBV_EVENT_LID_CHANGE,$/;"	e	enum:ibv_event_type
+IBV_EVENT_PATH_MIG	src/include/ibvwrap.h	/^	IBV_EVENT_PATH_MIG,$/;"	e	enum:ibv_event_type
+IBV_EVENT_PATH_MIG_ERR	src/include/ibvwrap.h	/^	IBV_EVENT_PATH_MIG_ERR,$/;"	e	enum:ibv_event_type
+IBV_EVENT_PKEY_CHANGE	src/include/ibvwrap.h	/^	IBV_EVENT_PKEY_CHANGE,$/;"	e	enum:ibv_event_type
+IBV_EVENT_PORT_ACTIVE	src/include/ibvwrap.h	/^	IBV_EVENT_PORT_ACTIVE,$/;"	e	enum:ibv_event_type
+IBV_EVENT_PORT_ERR	src/include/ibvwrap.h	/^	IBV_EVENT_PORT_ERR,$/;"	e	enum:ibv_event_type
+IBV_EVENT_QP_ACCESS_ERR	src/include/ibvwrap.h	/^	IBV_EVENT_QP_ACCESS_ERR,$/;"	e	enum:ibv_event_type
+IBV_EVENT_QP_FATAL	src/include/ibvwrap.h	/^	IBV_EVENT_QP_FATAL,$/;"	e	enum:ibv_event_type
+IBV_EVENT_QP_LAST_WQE_REACHED	src/include/ibvwrap.h	/^	IBV_EVENT_QP_LAST_WQE_REACHED,$/;"	e	enum:ibv_event_type
+IBV_EVENT_QP_REQ_ERR	src/include/ibvwrap.h	/^	IBV_EVENT_QP_REQ_ERR,$/;"	e	enum:ibv_event_type
+IBV_EVENT_SM_CHANGE	src/include/ibvwrap.h	/^	IBV_EVENT_SM_CHANGE,$/;"	e	enum:ibv_event_type
+IBV_EVENT_SQ_DRAINED	src/include/ibvwrap.h	/^	IBV_EVENT_SQ_DRAINED,$/;"	e	enum:ibv_event_type
+IBV_EVENT_SRQ_ERR	src/include/ibvwrap.h	/^	IBV_EVENT_SRQ_ERR,$/;"	e	enum:ibv_event_type
+IBV_EVENT_SRQ_LIMIT_REACHED	src/include/ibvwrap.h	/^	IBV_EVENT_SRQ_LIMIT_REACHED,$/;"	e	enum:ibv_event_type
+IBV_EXP_EVENT_DCT_ACCESS_ERR	src/include/ibvwrap.h	/^	IBV_EXP_EVENT_DCT_ACCESS_ERR,$/;"	e	enum:ibv_event_type
+IBV_EXP_EVENT_DCT_KEY_VIOLATION	src/include/ibvwrap.h	/^	IBV_EXP_EVENT_DCT_KEY_VIOLATION = 32,$/;"	e	enum:ibv_event_type
+IBV_EXP_EVENT_DCT_REQ_ERR	src/include/ibvwrap.h	/^	IBV_EXP_EVENT_DCT_REQ_ERR,$/;"	e	enum:ibv_event_type
+IBV_EXP_LINK_LAYER_SCIF	src/include/ibvwrap.h	/^	IBV_EXP_LINK_LAYER_SCIF		= IBV_EXP_LINK_LAYER_START$/;"	e	enum:__anon26
+IBV_EXP_LINK_LAYER_START	src/include/ibvwrap.h	/^	IBV_EXP_LINK_LAYER_START	= 32,$/;"	e	enum:__anon26
+IBV_EXP_NODE_MIC	src/include/ibvwrap.h	/^	IBV_EXP_NODE_MIC	= IBV_EXP_NODE_TYPE_START$/;"	e	enum:ibv_node_type
+IBV_EXP_NODE_TYPE_START	src/include/ibvwrap.h	/^	IBV_EXP_NODE_TYPE_START	= 32,$/;"	e	enum:ibv_node_type
+IBV_EXP_QPT_DC_INI	src/include/ibvwrap.h	/^	IBV_EXP_QPT_DC_INI	= IBV_EXP_QP_TYPE_START$/;"	e	enum:ibv_qp_type
+IBV_EXP_QP_TYPE_START	src/include/ibvwrap.h	/^	IBV_EXP_QP_TYPE_START	= 32,$/;"	e	enum:ibv_qp_type
+IBV_EXP_TRANSPORT_SCIF	src/include/ibvwrap.h	/^	IBV_EXP_TRANSPORT_SCIF		= IBV_EXP_TRANSPORT_TYPE_START$/;"	e	enum:ibv_transport_type
+IBV_EXP_TRANSPORT_TYPE_START	src/include/ibvwrap.h	/^	IBV_EXP_TRANSPORT_TYPE_START	= 32,$/;"	e	enum:ibv_transport_type
+IBV_FLOW_ATTR_ALL_DEFAULT	src/include/ibvwrap.h	/^	IBV_FLOW_ATTR_ALL_DEFAULT	= 0x1,$/;"	e	enum:ibv_flow_attr_type
+IBV_FLOW_ATTR_FLAGS_ALLOW_LOOP_BACK	src/include/ibvwrap.h	/^	IBV_FLOW_ATTR_FLAGS_ALLOW_LOOP_BACK = 1,$/;"	e	enum:ibv_flow_flags
+IBV_FLOW_ATTR_FLAGS_DONT_TRAP	src/include/ibvwrap.h	/^	IBV_FLOW_ATTR_FLAGS_DONT_TRAP = 1 << 1,$/;"	e	enum:ibv_flow_flags
+IBV_FLOW_ATTR_MC_DEFAULT	src/include/ibvwrap.h	/^	IBV_FLOW_ATTR_MC_DEFAULT	= 0x2,$/;"	e	enum:ibv_flow_attr_type
+IBV_FLOW_ATTR_NORMAL	src/include/ibvwrap.h	/^	IBV_FLOW_ATTR_NORMAL		= 0x0,$/;"	e	enum:ibv_flow_attr_type
+IBV_FLOW_SPEC_ETH	src/include/ibvwrap.h	/^	IBV_FLOW_SPEC_ETH	= 0x20,$/;"	e	enum:ibv_flow_spec_type
+IBV_FLOW_SPEC_IPV4	src/include/ibvwrap.h	/^	IBV_FLOW_SPEC_IPV4	= 0x30,$/;"	e	enum:ibv_flow_spec_type
+IBV_FLOW_SPEC_TCP	src/include/ibvwrap.h	/^	IBV_FLOW_SPEC_TCP	= 0x40,$/;"	e	enum:ibv_flow_spec_type
+IBV_FLOW_SPEC_UDP	src/include/ibvwrap.h	/^	IBV_FLOW_SPEC_UDP	= 0x41,$/;"	e	enum:ibv_flow_spec_type
+IBV_LINK_LAYER_ETHERNET	src/include/ibvwrap.h	/^	IBV_LINK_LAYER_ETHERNET,$/;"	e	enum:__anon26
+IBV_LINK_LAYER_INFINIBAND	src/include/ibvwrap.h	/^	IBV_LINK_LAYER_INFINIBAND,$/;"	e	enum:__anon26
+IBV_LINK_LAYER_UNSPECIFIED	src/include/ibvwrap.h	/^	IBV_LINK_LAYER_UNSPECIFIED,$/;"	e	enum:__anon26
+IBV_MIG_ARMED	src/include/ibvwrap.h	/^	IBV_MIG_ARMED$/;"	e	enum:ibv_mig_state
+IBV_MIG_MIGRATED	src/include/ibvwrap.h	/^	IBV_MIG_MIGRATED,$/;"	e	enum:ibv_mig_state
+IBV_MIG_REARM	src/include/ibvwrap.h	/^	IBV_MIG_REARM,$/;"	e	enum:ibv_mig_state
+IBV_MTU_1024	src/include/ibvwrap.h	/^	IBV_MTU_1024 = 3,$/;"	e	enum:ibv_mtu
+IBV_MTU_2048	src/include/ibvwrap.h	/^	IBV_MTU_2048 = 4,$/;"	e	enum:ibv_mtu
+IBV_MTU_256	src/include/ibvwrap.h	/^	IBV_MTU_256  = 1,$/;"	e	enum:ibv_mtu
+IBV_MTU_4096	src/include/ibvwrap.h	/^	IBV_MTU_4096 = 5$/;"	e	enum:ibv_mtu
+IBV_MTU_512	src/include/ibvwrap.h	/^	IBV_MTU_512  = 2,$/;"	e	enum:ibv_mtu
+IBV_MW_TYPE_1	src/include/ibvwrap.h	/^	IBV_MW_TYPE_1			= 1,$/;"	e	enum:ibv_mw_type
+IBV_MW_TYPE_2	src/include/ibvwrap.h	/^	IBV_MW_TYPE_2			= 2$/;"	e	enum:ibv_mw_type
+IBV_NODE_CA	src/include/ibvwrap.h	/^	IBV_NODE_CA 		= 1,$/;"	e	enum:ibv_node_type
+IBV_NODE_RNIC	src/include/ibvwrap.h	/^	IBV_NODE_RNIC,$/;"	e	enum:ibv_node_type
+IBV_NODE_ROUTER	src/include/ibvwrap.h	/^	IBV_NODE_ROUTER,$/;"	e	enum:ibv_node_type
+IBV_NODE_SWITCH	src/include/ibvwrap.h	/^	IBV_NODE_SWITCH,$/;"	e	enum:ibv_node_type
+IBV_NODE_UNKNOWN	src/include/ibvwrap.h	/^	IBV_NODE_UNKNOWN	= -1,$/;"	e	enum:ibv_node_type
+IBV_PORT_ACTIVE	src/include/ibvwrap.h	/^	IBV_PORT_ACTIVE		= 4,$/;"	e	enum:ibv_port_state
+IBV_PORT_ACTIVE_DEFER	src/include/ibvwrap.h	/^	IBV_PORT_ACTIVE_DEFER	= 5$/;"	e	enum:ibv_port_state
+IBV_PORT_ARMED	src/include/ibvwrap.h	/^	IBV_PORT_ARMED		= 3,$/;"	e	enum:ibv_port_state
+IBV_PORT_AUTO_MIGR_SUP	src/include/ibvwrap.h	/^	IBV_PORT_AUTO_MIGR_SUP			= 1 <<  5,$/;"	e	enum:ibv_port_cap_flags
+IBV_PORT_CLIENT_REG_SUP	src/include/ibvwrap.h	/^	IBV_PORT_CLIENT_REG_SUP			= 1 << 25,$/;"	e	enum:ibv_port_cap_flags
+IBV_PORT_CM_SUP	src/include/ibvwrap.h	/^	IBV_PORT_CM_SUP				= 1 << 16,$/;"	e	enum:ibv_port_cap_flags
+IBV_PORT_DEVICE_MGMT_SUP	src/include/ibvwrap.h	/^	IBV_PORT_DEVICE_MGMT_SUP		= 1 << 19,$/;"	e	enum:ibv_port_cap_flags
+IBV_PORT_DOWN	src/include/ibvwrap.h	/^	IBV_PORT_DOWN		= 1,$/;"	e	enum:ibv_port_state
+IBV_PORT_EXTENDED_SPEEDS_SUP	src/include/ibvwrap.h	/^	IBV_PORT_EXTENDED_SPEEDS_SUP		= 1 << 14,$/;"	e	enum:ibv_port_cap_flags
+IBV_PORT_INIT	src/include/ibvwrap.h	/^	IBV_PORT_INIT		= 2,$/;"	e	enum:ibv_port_state
+IBV_PORT_IP_BASED_GIDS	src/include/ibvwrap.h	/^	IBV_PORT_IP_BASED_GIDS			= 1 << 26,$/;"	e	enum:ibv_port_cap_flags
+IBV_PORT_LED_INFO_SUP	src/include/ibvwrap.h	/^	IBV_PORT_LED_INFO_SUP			= 1 <<  9,$/;"	e	enum:ibv_port_cap_flags
+IBV_PORT_MKEY_NVRAM	src/include/ibvwrap.h	/^	IBV_PORT_MKEY_NVRAM			= 1 <<  7,$/;"	e	enum:ibv_port_cap_flags
+IBV_PORT_NOP	src/include/ibvwrap.h	/^	IBV_PORT_NOP		= 0,$/;"	e	enum:ibv_port_state
+IBV_PORT_NOTICE_SUP	src/include/ibvwrap.h	/^	IBV_PORT_NOTICE_SUP			= 1 <<  2,$/;"	e	enum:ibv_port_cap_flags
+IBV_PORT_OPT_IPD_SUP	src/include/ibvwrap.h	/^	IBV_PORT_OPT_IPD_SUP			= 1 <<  4,$/;"	e	enum:ibv_port_cap_flags
+IBV_PORT_PKEY_NVRAM	src/include/ibvwrap.h	/^	IBV_PORT_PKEY_NVRAM			= 1 <<  8,$/;"	e	enum:ibv_port_cap_flags
+IBV_PORT_PKEY_SW_EXT_PORT_TRAP_SUP	src/include/ibvwrap.h	/^	IBV_PORT_PKEY_SW_EXT_PORT_TRAP_SUP	= 1 << 12,$/;"	e	enum:ibv_port_cap_flags
+IBV_PORT_REINIT_SUP	src/include/ibvwrap.h	/^	IBV_PORT_REINIT_SUP			= 1 << 18,$/;"	e	enum:ibv_port_cap_flags
+IBV_PORT_SL_MAP_SUP	src/include/ibvwrap.h	/^	IBV_PORT_SL_MAP_SUP			= 1 <<  6,$/;"	e	enum:ibv_port_cap_flags
+IBV_PORT_SM	src/include/ibvwrap.h	/^	IBV_PORT_SM				= 1 <<  1,$/;"	e	enum:ibv_port_cap_flags
+IBV_PORT_SNMP_TUNNEL_SUP	src/include/ibvwrap.h	/^	IBV_PORT_SNMP_TUNNEL_SUP		= 1 << 17,$/;"	e	enum:ibv_port_cap_flags
+IBV_PORT_SYS_IMAGE_GUID_SUP	src/include/ibvwrap.h	/^	IBV_PORT_SYS_IMAGE_GUID_SUP		= 1 << 11,$/;"	e	enum:ibv_port_cap_flags
+IBV_PORT_TRAP_SUP	src/include/ibvwrap.h	/^	IBV_PORT_TRAP_SUP			= 1 <<  3,$/;"	e	enum:ibv_port_cap_flags
+IBV_PORT_VENDOR_CLASS	src/include/ibvwrap.h	/^	IBV_PORT_VENDOR_CLASS			= 1 << 24,$/;"	e	enum:ibv_port_cap_flags
+IBV_QPS_ERR	src/include/ibvwrap.h	/^	IBV_QPS_ERR,$/;"	e	enum:ibv_qp_state
+IBV_QPS_INIT	src/include/ibvwrap.h	/^	IBV_QPS_INIT,$/;"	e	enum:ibv_qp_state
+IBV_QPS_RESET	src/include/ibvwrap.h	/^	IBV_QPS_RESET,$/;"	e	enum:ibv_qp_state
+IBV_QPS_RTR	src/include/ibvwrap.h	/^	IBV_QPS_RTR,$/;"	e	enum:ibv_qp_state
+IBV_QPS_RTS	src/include/ibvwrap.h	/^	IBV_QPS_RTS,$/;"	e	enum:ibv_qp_state
+IBV_QPS_SQD	src/include/ibvwrap.h	/^	IBV_QPS_SQD,$/;"	e	enum:ibv_qp_state
+IBV_QPS_SQE	src/include/ibvwrap.h	/^	IBV_QPS_SQE,$/;"	e	enum:ibv_qp_state
+IBV_QPS_UNKNOWN	src/include/ibvwrap.h	/^	IBV_QPS_UNKNOWN$/;"	e	enum:ibv_qp_state
+IBV_QPT_RAW_ETH	src/include/ibvwrap.h	/^	IBV_QPT_RAW_ETH = 8,$/;"	e	enum:ibv_qp_type
+IBV_QPT_RAW_PACKET	src/include/ibvwrap.h	/^	IBV_QPT_RAW_PACKET = 8,$/;"	e	enum:ibv_qp_type
+IBV_QPT_RC	src/include/ibvwrap.h	/^	IBV_QPT_RC = 2,$/;"	e	enum:ibv_qp_type
+IBV_QPT_UC	src/include/ibvwrap.h	/^	IBV_QPT_UC,$/;"	e	enum:ibv_qp_type
+IBV_QPT_UD	src/include/ibvwrap.h	/^	IBV_QPT_UD,$/;"	e	enum:ibv_qp_type
+IBV_QPT_XRC	src/include/ibvwrap.h	/^	IBV_QPT_XRC,$/;"	e	enum:ibv_qp_type
+IBV_QPT_XRC_RECV	src/include/ibvwrap.h	/^	IBV_QPT_XRC_RECV,$/;"	e	enum:ibv_qp_type
+IBV_QPT_XRC_SEND	src/include/ibvwrap.h	/^	IBV_QPT_XRC_SEND = 9,$/;"	e	enum:ibv_qp_type
+IBV_QP_ACCESS_FLAGS	src/include/ibvwrap.h	/^	IBV_QP_ACCESS_FLAGS		= 1 << 	3,$/;"	e	enum:ibv_qp_attr_mask
+IBV_QP_ALT_PATH	src/include/ibvwrap.h	/^	IBV_QP_ALT_PATH			= 1 << 14,$/;"	e	enum:ibv_qp_attr_mask
+IBV_QP_AV	src/include/ibvwrap.h	/^	IBV_QP_AV			= 1 << 	7,$/;"	e	enum:ibv_qp_attr_mask
+IBV_QP_CAP	src/include/ibvwrap.h	/^	IBV_QP_CAP			= 1 << 19,$/;"	e	enum:ibv_qp_attr_mask
+IBV_QP_CUR_STATE	src/include/ibvwrap.h	/^	IBV_QP_CUR_STATE		= 1 << 	1,$/;"	e	enum:ibv_qp_attr_mask
+IBV_QP_DEST_QPN	src/include/ibvwrap.h	/^	IBV_QP_DEST_QPN			= 1 << 20$/;"	e	enum:ibv_qp_attr_mask
+IBV_QP_EN_SQD_ASYNC_NOTIFY	src/include/ibvwrap.h	/^	IBV_QP_EN_SQD_ASYNC_NOTIFY	= 1 << 	2,$/;"	e	enum:ibv_qp_attr_mask
+IBV_QP_INIT_ATTR_PD	src/include/ibvwrap.h	/^	IBV_QP_INIT_ATTR_PD		= 1 << 0,$/;"	e	enum:ibv_qp_init_attr_mask
+IBV_QP_INIT_ATTR_RESERVED	src/include/ibvwrap.h	/^	IBV_QP_INIT_ATTR_RESERVED	= 1 << 2$/;"	e	enum:ibv_qp_init_attr_mask
+IBV_QP_INIT_ATTR_XRCD	src/include/ibvwrap.h	/^	IBV_QP_INIT_ATTR_XRCD		= 1 << 1,$/;"	e	enum:ibv_qp_init_attr_mask
+IBV_QP_MAX_DEST_RD_ATOMIC	src/include/ibvwrap.h	/^	IBV_QP_MAX_DEST_RD_ATOMIC	= 1 << 17,$/;"	e	enum:ibv_qp_attr_mask
+IBV_QP_MAX_QP_RD_ATOMIC	src/include/ibvwrap.h	/^	IBV_QP_MAX_QP_RD_ATOMIC		= 1 << 13,$/;"	e	enum:ibv_qp_attr_mask
+IBV_QP_MIN_RNR_TIMER	src/include/ibvwrap.h	/^	IBV_QP_MIN_RNR_TIMER		= 1 << 15,$/;"	e	enum:ibv_qp_attr_mask
+IBV_QP_OPEN_ATTR_CONTEXT	src/include/ibvwrap.h	/^	IBV_QP_OPEN_ATTR_CONTEXT	= 1 << 2,$/;"	e	enum:ibv_qp_open_attr_mask
+IBV_QP_OPEN_ATTR_NUM	src/include/ibvwrap.h	/^	IBV_QP_OPEN_ATTR_NUM		= 1 << 0,$/;"	e	enum:ibv_qp_open_attr_mask
+IBV_QP_OPEN_ATTR_RESERVED	src/include/ibvwrap.h	/^	IBV_QP_OPEN_ATTR_RESERVED	= 1 << 4$/;"	e	enum:ibv_qp_open_attr_mask
+IBV_QP_OPEN_ATTR_TYPE	src/include/ibvwrap.h	/^	IBV_QP_OPEN_ATTR_TYPE		= 1 << 3,$/;"	e	enum:ibv_qp_open_attr_mask
+IBV_QP_OPEN_ATTR_XRCD	src/include/ibvwrap.h	/^	IBV_QP_OPEN_ATTR_XRCD		= 1 << 1,$/;"	e	enum:ibv_qp_open_attr_mask
+IBV_QP_PATH_MIG_STATE	src/include/ibvwrap.h	/^	IBV_QP_PATH_MIG_STATE		= 1 << 18,$/;"	e	enum:ibv_qp_attr_mask
+IBV_QP_PATH_MTU	src/include/ibvwrap.h	/^	IBV_QP_PATH_MTU			= 1 << 	8,$/;"	e	enum:ibv_qp_attr_mask
+IBV_QP_PKEY_INDEX	src/include/ibvwrap.h	/^	IBV_QP_PKEY_INDEX		= 1 << 	4,$/;"	e	enum:ibv_qp_attr_mask
+IBV_QP_PORT	src/include/ibvwrap.h	/^	IBV_QP_PORT			= 1 << 	5,$/;"	e	enum:ibv_qp_attr_mask
+IBV_QP_QKEY	src/include/ibvwrap.h	/^	IBV_QP_QKEY			= 1 << 	6,$/;"	e	enum:ibv_qp_attr_mask
+IBV_QP_RETRY_CNT	src/include/ibvwrap.h	/^	IBV_QP_RETRY_CNT		= 1 << 10,$/;"	e	enum:ibv_qp_attr_mask
+IBV_QP_RNR_RETRY	src/include/ibvwrap.h	/^	IBV_QP_RNR_RETRY		= 1 << 11,$/;"	e	enum:ibv_qp_attr_mask
+IBV_QP_RQ_PSN	src/include/ibvwrap.h	/^	IBV_QP_RQ_PSN			= 1 << 12,$/;"	e	enum:ibv_qp_attr_mask
+IBV_QP_SQ_PSN	src/include/ibvwrap.h	/^	IBV_QP_SQ_PSN			= 1 << 16,$/;"	e	enum:ibv_qp_attr_mask
+IBV_QP_STATE	src/include/ibvwrap.h	/^	IBV_QP_STATE			= 1 << 	0,$/;"	e	enum:ibv_qp_attr_mask
+IBV_QP_TIMEOUT	src/include/ibvwrap.h	/^	IBV_QP_TIMEOUT			= 1 << 	9,$/;"	e	enum:ibv_qp_attr_mask
+IBV_RATE_100_GBPS	src/include/ibvwrap.h	/^	IBV_RATE_100_GBPS = 16,$/;"	e	enum:ibv_rate
+IBV_RATE_10_GBPS	src/include/ibvwrap.h	/^	IBV_RATE_10_GBPS  = 3,$/;"	e	enum:ibv_rate
+IBV_RATE_112_GBPS	src/include/ibvwrap.h	/^	IBV_RATE_112_GBPS = 13,$/;"	e	enum:ibv_rate
+IBV_RATE_120_GBPS	src/include/ibvwrap.h	/^	IBV_RATE_120_GBPS = 10,$/;"	e	enum:ibv_rate
+IBV_RATE_14_GBPS	src/include/ibvwrap.h	/^	IBV_RATE_14_GBPS  = 11,$/;"	e	enum:ibv_rate
+IBV_RATE_168_GBPS	src/include/ibvwrap.h	/^	IBV_RATE_168_GBPS = 14,$/;"	e	enum:ibv_rate
+IBV_RATE_200_GBPS	src/include/ibvwrap.h	/^	IBV_RATE_200_GBPS = 17,$/;"	e	enum:ibv_rate
+IBV_RATE_20_GBPS	src/include/ibvwrap.h	/^	IBV_RATE_20_GBPS  = 6,$/;"	e	enum:ibv_rate
+IBV_RATE_25_GBPS	src/include/ibvwrap.h	/^	IBV_RATE_25_GBPS  = 15,$/;"	e	enum:ibv_rate
+IBV_RATE_2_5_GBPS	src/include/ibvwrap.h	/^	IBV_RATE_2_5_GBPS = 2,$/;"	e	enum:ibv_rate
+IBV_RATE_300_GBPS	src/include/ibvwrap.h	/^	IBV_RATE_300_GBPS = 18$/;"	e	enum:ibv_rate
+IBV_RATE_30_GBPS	src/include/ibvwrap.h	/^	IBV_RATE_30_GBPS  = 4,$/;"	e	enum:ibv_rate
+IBV_RATE_40_GBPS	src/include/ibvwrap.h	/^	IBV_RATE_40_GBPS  = 7,$/;"	e	enum:ibv_rate
+IBV_RATE_56_GBPS	src/include/ibvwrap.h	/^	IBV_RATE_56_GBPS  = 12,$/;"	e	enum:ibv_rate
+IBV_RATE_5_GBPS	src/include/ibvwrap.h	/^	IBV_RATE_5_GBPS   = 5,$/;"	e	enum:ibv_rate
+IBV_RATE_60_GBPS	src/include/ibvwrap.h	/^	IBV_RATE_60_GBPS  = 8,$/;"	e	enum:ibv_rate
+IBV_RATE_80_GBPS	src/include/ibvwrap.h	/^	IBV_RATE_80_GBPS  = 9,$/;"	e	enum:ibv_rate
+IBV_RATE_MAX	src/include/ibvwrap.h	/^	IBV_RATE_MAX      = 0,$/;"	e	enum:ibv_rate
+IBV_REREG_MR_CHANGE_ACCESS	src/include/ibvwrap.h	/^	IBV_REREG_MR_CHANGE_ACCESS	= (1 << 2),$/;"	e	enum:ibv_rereg_mr_flags
+IBV_REREG_MR_CHANGE_PD	src/include/ibvwrap.h	/^	IBV_REREG_MR_CHANGE_PD		= (1 << 1),$/;"	e	enum:ibv_rereg_mr_flags
+IBV_REREG_MR_CHANGE_TRANSLATION	src/include/ibvwrap.h	/^	IBV_REREG_MR_CHANGE_TRANSLATION	= (1 << 0),$/;"	e	enum:ibv_rereg_mr_flags
+IBV_REREG_MR_KEEP_VALID	src/include/ibvwrap.h	/^	IBV_REREG_MR_KEEP_VALID		= (1 << 3)$/;"	e	enum:ibv_rereg_mr_flags
+IBV_SEND_FENCE	src/include/ibvwrap.h	/^	IBV_SEND_FENCE		= 1 << 0,$/;"	e	enum:ibv_send_flags
+IBV_SEND_INLINE	src/include/ibvwrap.h	/^	IBV_SEND_INLINE		= 1 << 3$/;"	e	enum:ibv_send_flags
+IBV_SEND_SIGNALED	src/include/ibvwrap.h	/^	IBV_SEND_SIGNALED	= 1 << 1,$/;"	e	enum:ibv_send_flags
+IBV_SEND_SOLICITED	src/include/ibvwrap.h	/^	IBV_SEND_SOLICITED	= 1 << 2,$/;"	e	enum:ibv_send_flags
+IBV_SRQT_BASIC	src/include/ibvwrap.h	/^	IBV_SRQT_BASIC,$/;"	e	enum:ibv_srq_type
+IBV_SRQT_XRC	src/include/ibvwrap.h	/^	IBV_SRQT_XRC$/;"	e	enum:ibv_srq_type
+IBV_SRQ_INIT_ATTR_CQ	src/include/ibvwrap.h	/^	IBV_SRQ_INIT_ATTR_CQ		= 1 << 3,$/;"	e	enum:ibv_srq_init_attr_mask
+IBV_SRQ_INIT_ATTR_PD	src/include/ibvwrap.h	/^	IBV_SRQ_INIT_ATTR_PD		= 1 << 1,$/;"	e	enum:ibv_srq_init_attr_mask
+IBV_SRQ_INIT_ATTR_RESERVED	src/include/ibvwrap.h	/^	IBV_SRQ_INIT_ATTR_RESERVED	= 1 << 4$/;"	e	enum:ibv_srq_init_attr_mask
+IBV_SRQ_INIT_ATTR_TYPE	src/include/ibvwrap.h	/^	IBV_SRQ_INIT_ATTR_TYPE		= 1 << 0,$/;"	e	enum:ibv_srq_init_attr_mask
+IBV_SRQ_INIT_ATTR_XRCD	src/include/ibvwrap.h	/^	IBV_SRQ_INIT_ATTR_XRCD		= 1 << 2,$/;"	e	enum:ibv_srq_init_attr_mask
+IBV_SRQ_LIMIT	src/include/ibvwrap.h	/^	IBV_SRQ_LIMIT	= 1 << 1$/;"	e	enum:ibv_srq_attr_mask
+IBV_SRQ_MAX_WR	src/include/ibvwrap.h	/^	IBV_SRQ_MAX_WR	= 1 << 0,$/;"	e	enum:ibv_srq_attr_mask
+IBV_SUCCESS	src/include/ibvwrap.h	/^    IBV_SUCCESS = 0,                   \/\/!< The operation was successful$/;"	e	enum:ibv_return_enum
+IBV_SYSFS_NAME_MAX	src/include/ibvwrap.h	/^	IBV_SYSFS_NAME_MAX	= 64,$/;"	e	enum:__anon37
+IBV_SYSFS_PATH_MAX	src/include/ibvwrap.h	/^	IBV_SYSFS_PATH_MAX	= 256$/;"	e	enum:__anon37
+IBV_TRANSPORT_IB	src/include/ibvwrap.h	/^	IBV_TRANSPORT_IB	= 0,$/;"	e	enum:ibv_transport_type
+IBV_TRANSPORT_IWARP	src/include/ibvwrap.h	/^	IBV_TRANSPORT_IWARP,$/;"	e	enum:ibv_transport_type
+IBV_TRANSPORT_UNKNOWN	src/include/ibvwrap.h	/^	IBV_TRANSPORT_UNKNOWN	= -1,$/;"	e	enum:ibv_transport_type
+IBV_WC_BAD_RESP_ERR	src/include/ibvwrap.h	/^	IBV_WC_BAD_RESP_ERR,$/;"	e	enum:ibv_wc_status
+IBV_WC_BIND_MW	src/include/ibvwrap.h	/^	IBV_WC_BIND_MW,$/;"	e	enum:ibv_wc_opcode
+IBV_WC_COMP_SWAP	src/include/ibvwrap.h	/^	IBV_WC_COMP_SWAP,$/;"	e	enum:ibv_wc_opcode
+IBV_WC_FATAL_ERR	src/include/ibvwrap.h	/^	IBV_WC_FATAL_ERR,$/;"	e	enum:ibv_wc_status
+IBV_WC_FETCH_ADD	src/include/ibvwrap.h	/^	IBV_WC_FETCH_ADD,$/;"	e	enum:ibv_wc_opcode
+IBV_WC_GENERAL_ERR	src/include/ibvwrap.h	/^	IBV_WC_GENERAL_ERR$/;"	e	enum:ibv_wc_status
+IBV_WC_GRH	src/include/ibvwrap.h	/^	IBV_WC_GRH		= 1 << 0,$/;"	e	enum:ibv_wc_flags
+IBV_WC_INV_EECN_ERR	src/include/ibvwrap.h	/^	IBV_WC_INV_EECN_ERR,$/;"	e	enum:ibv_wc_status
+IBV_WC_INV_EEC_STATE_ERR	src/include/ibvwrap.h	/^	IBV_WC_INV_EEC_STATE_ERR,$/;"	e	enum:ibv_wc_status
+IBV_WC_LOC_ACCESS_ERR	src/include/ibvwrap.h	/^	IBV_WC_LOC_ACCESS_ERR,$/;"	e	enum:ibv_wc_status
+IBV_WC_LOC_EEC_OP_ERR	src/include/ibvwrap.h	/^	IBV_WC_LOC_EEC_OP_ERR,$/;"	e	enum:ibv_wc_status
+IBV_WC_LOC_LEN_ERR	src/include/ibvwrap.h	/^	IBV_WC_LOC_LEN_ERR,$/;"	e	enum:ibv_wc_status
+IBV_WC_LOC_PROT_ERR	src/include/ibvwrap.h	/^	IBV_WC_LOC_PROT_ERR,$/;"	e	enum:ibv_wc_status
+IBV_WC_LOC_QP_OP_ERR	src/include/ibvwrap.h	/^	IBV_WC_LOC_QP_OP_ERR,$/;"	e	enum:ibv_wc_status
+IBV_WC_LOC_RDD_VIOL_ERR	src/include/ibvwrap.h	/^	IBV_WC_LOC_RDD_VIOL_ERR,$/;"	e	enum:ibv_wc_status
+IBV_WC_MW_BIND_ERR	src/include/ibvwrap.h	/^	IBV_WC_MW_BIND_ERR,$/;"	e	enum:ibv_wc_status
+IBV_WC_RDMA_READ	src/include/ibvwrap.h	/^	IBV_WC_RDMA_READ,$/;"	e	enum:ibv_wc_opcode
+IBV_WC_RDMA_WRITE	src/include/ibvwrap.h	/^	IBV_WC_RDMA_WRITE,$/;"	e	enum:ibv_wc_opcode
+IBV_WC_RECV	src/include/ibvwrap.h	/^	IBV_WC_RECV			= 1 << 7,$/;"	e	enum:ibv_wc_opcode
+IBV_WC_RECV_RDMA_WITH_IMM	src/include/ibvwrap.h	/^	IBV_WC_RECV_RDMA_WITH_IMM$/;"	e	enum:ibv_wc_opcode
+IBV_WC_REM_ABORT_ERR	src/include/ibvwrap.h	/^	IBV_WC_REM_ABORT_ERR,$/;"	e	enum:ibv_wc_status
+IBV_WC_REM_ACCESS_ERR	src/include/ibvwrap.h	/^	IBV_WC_REM_ACCESS_ERR,$/;"	e	enum:ibv_wc_status
+IBV_WC_REM_INV_RD_REQ_ERR	src/include/ibvwrap.h	/^	IBV_WC_REM_INV_RD_REQ_ERR,$/;"	e	enum:ibv_wc_status
+IBV_WC_REM_INV_REQ_ERR	src/include/ibvwrap.h	/^	IBV_WC_REM_INV_REQ_ERR,$/;"	e	enum:ibv_wc_status
+IBV_WC_REM_OP_ERR	src/include/ibvwrap.h	/^	IBV_WC_REM_OP_ERR,$/;"	e	enum:ibv_wc_status
+IBV_WC_RESP_TIMEOUT_ERR	src/include/ibvwrap.h	/^	IBV_WC_RESP_TIMEOUT_ERR,$/;"	e	enum:ibv_wc_status
+IBV_WC_RETRY_EXC_ERR	src/include/ibvwrap.h	/^	IBV_WC_RETRY_EXC_ERR,$/;"	e	enum:ibv_wc_status
+IBV_WC_RNR_RETRY_EXC_ERR	src/include/ibvwrap.h	/^	IBV_WC_RNR_RETRY_EXC_ERR,$/;"	e	enum:ibv_wc_status
+IBV_WC_SEND	src/include/ibvwrap.h	/^	IBV_WC_SEND,$/;"	e	enum:ibv_wc_opcode
+IBV_WC_SUCCESS	src/include/ibvwrap.h	/^	IBV_WC_SUCCESS,$/;"	e	enum:ibv_wc_status
+IBV_WC_WITH_IMM	src/include/ibvwrap.h	/^	IBV_WC_WITH_IMM		= 1 << 1$/;"	e	enum:ibv_wc_flags
+IBV_WC_WR_FLUSH_ERR	src/include/ibvwrap.h	/^	IBV_WC_WR_FLUSH_ERR,$/;"	e	enum:ibv_wc_status
+IBV_WR_ATOMIC_CMP_AND_SWP	src/include/ibvwrap.h	/^	IBV_WR_ATOMIC_CMP_AND_SWP,$/;"	e	enum:ibv_wr_opcode
+IBV_WR_ATOMIC_FETCH_AND_ADD	src/include/ibvwrap.h	/^	IBV_WR_ATOMIC_FETCH_AND_ADD$/;"	e	enum:ibv_wr_opcode
+IBV_WR_RDMA_READ	src/include/ibvwrap.h	/^	IBV_WR_RDMA_READ,$/;"	e	enum:ibv_wr_opcode
+IBV_WR_RDMA_WRITE	src/include/ibvwrap.h	/^	IBV_WR_RDMA_WRITE,$/;"	e	enum:ibv_wr_opcode
+IBV_WR_RDMA_WRITE_WITH_IMM	src/include/ibvwrap.h	/^	IBV_WR_RDMA_WRITE_WITH_IMM,$/;"	e	enum:ibv_wr_opcode
+IBV_WR_SEND	src/include/ibvwrap.h	/^	IBV_WR_SEND,$/;"	e	enum:ibv_wr_opcode
+IBV_WR_SEND_WITH_IMM	src/include/ibvwrap.h	/^	IBV_WR_SEND_WITH_IMM,$/;"	e	enum:ibv_wr_opcode
+IBV_XRCD_INIT_ATTR_FD	src/include/ibvwrap.h	/^	IBV_XRCD_INIT_ATTR_FD	    = 1 << 0,$/;"	e	enum:ibv_xrcd_init_attr_mask
+IBV_XRCD_INIT_ATTR_OFLAGS	src/include/ibvwrap.h	/^	IBV_XRCD_INIT_ATTR_OFLAGS   = 1 << 1,$/;"	e	enum:ibv_xrcd_init_attr_mask
+IBV_XRCD_INIT_ATTR_RESERVED	src/include/ibvwrap.h	/^	IBV_XRCD_INIT_ATTR_RESERVED = 1 << 2$/;"	e	enum:ibv_xrcd_init_attr_mask
+IBV_XRC_QP_EVENT_FLAG	src/include/ibvwrap.h	/^	IBV_XRC_QP_EVENT_FLAG = 0x80000000,$/;"	e	enum:ibv_event_flags
+IMPL_COLL2	src/collectives/device/common.h	79;"	d
+IMPL_COLL3	src/collectives/device/common.h	73;"	d
+IMPL_COLL4	src/collectives/device/common.h	30;"	d
+IMPL_COLL4K	src/collectives/device/common.h	35;"	d
+INCDIR	src/Makefile	/^INCDIR := $(BUILDDIR)\/include$/;"	m
+INCEXPORTS	src/Makefile	/^INCEXPORTS  := nccl.h$/;"	m
+INCTARGETS	src/Makefile	/^INCTARGETS := $(INCEXPORTS:%=$(INCDIR)\/%)$/;"	m
+INFO	src/include/debug.h	/^typedef enum {NONE=0, VERSION=1, WARN=2, INFO=3, ABORT=4, TRACE=5} DebugLevel;$/;"	e	enum:__anon12
+INFO	src/include/debug.h	45;"	d
+INIT	src/include/debug.h	/^typedef enum {INIT=1, COLL=2, P2P=4, SHM=8, NET=16, ALL=~0} SubSys;$/;"	e	enum:__anon13
+KEEP	makefiles/common.mk	/^KEEP ?= 0$/;"	m
+LIBDIR	src/Makefile	/^LIBDIR := $(BUILDDIR)\/lib$/;"	m
+LIBNAME	src/Makefile	/^LIBNAME     := libnccl.so$/;"	m
+LIBOBJ	src/Makefile	/^LIBOBJ     := $(LIBSRCFILES:%.cu=$(OBJDIR)\/%.o)$/;"	m
+LIBOBJ	src/collectives/device/Makefile	/^LIBOBJ     := $(patsubst %.cu,$(OBJDIR)\/%_sum.o, $(LIBSRCFILES)) \\$/;"	m
+LIBSONAME	src/Makefile	/^LIBSONAME  := $(LIBNAME:%=%.$(NCCL_MAJOR))$/;"	m
+LIBSRCFILES	src/Makefile	/^LIBSRCFILES := init.cu ring.cu bootstrap.cu transport.cu misc\/group.cu \\$/;"	m
+LIBSRCFILES	src/collectives/device/Makefile	/^LIBSRCFILES := all_reduce.cu broadcast.cu reduce.cu all_gather.cu reduce_scatter.cu$/;"	m
+LIBTARGET	src/Makefile	/^LIBTARGET  := $(LIBNAME:%=%.$(NCCL_MAJOR).$(NCCL_MINOR).$(NCCL_PATCH))$/;"	m
+LICENSE_FILES	Makefile	/^LICENSE_FILES := LICENSE.txt$/;"	m
+LICENSE_TARGETS	Makefile	/^LICENSE_TARGETS := $(LICENSE_FILES:%=$(BUILDDIR)\/%)$/;"	m
+LLPrimitives	src/collectives/device/ll_kernel.h	/^class LLPrimitives {$/;"	c
+MAXPATHSIZE	src/include/topo.h	13;"	d
+MAXRINGS	src/include/core.h	32;"	d
+MAXTHREADS	src/include/core.h	33;"	d
+MAX_IFS	src/include/socket.h	19;"	d
+MAX_IF_NAME_SIZE	src/include/socket.h	20;"	d
+MEM_ALIGN	src/include/core.h	94;"	d
+MULTI	src/collectives/device/common_kernel.h	/^struct MULTI {$/;"	s
+MULTI	src/collectives/device/common_kernel.h	/^struct MULTI<FUNC, double> {$/;"	s
+MULTI	src/collectives/device/common_kernel.h	/^struct MULTI<FUNC, float> {$/;"	s
+MULTI	src/collectives/device/common_kernel.h	/^struct MULTI<FUNC, half> {$/;"	s
+MULTI	src/collectives/device/common_kernel.h	/^struct MULTI<FUNC, int32_t> {$/;"	s
+MULTI	src/collectives/device/common_kernel.h	/^struct MULTI<FUNC, int64_t> {$/;"	s
+MULTI	src/collectives/device/common_kernel.h	/^struct MULTI<FUNC, int8_t> {$/;"	s
+MULTI	src/collectives/device/common_kernel.h	/^struct MULTI<FUNC, uint32_t> {$/;"	s
+MULTI	src/collectives/device/common_kernel.h	/^struct MULTI<FUNC, uint64_t> {$/;"	s
+MULTI	src/collectives/device/common_kernel.h	/^struct MULTI<FUNC, uint8_t> {$/;"	s
+MULTI128	src/collectives/device/common_kernel.h	/^struct MULTI128 {$/;"	s
+N	src/include/core.h	/^  size_t N;$/;"	m	struct:CollectiveArgs
+NCCLCHECK	src/include/core.h	312;"	d
+NCCLCHECKGOTO	src/include/core.h	321;"	d
+NCCL_API	src/include/core.h	331;"	d
+NCCL_API	src/include/core.h	340;"	d
+NCCL_BOOTSTRAP_H_	src/include/bootstrap.h	8;"	d
+NCCL_COLLECTIVES_H_	src/collectives/collectives.h	8;"	d
+NCCL_COLL_NAME	src/collectives/collectives.h	14;"	d
+NCCL_COMMON_KERNEL_H_	src/collectives/device/common_kernel.h	8;"	d
+NCCL_CORE_H_	src/include/core.h	8;"	d
+NCCL_DEBUG_H_	src/include/debug.h	8;"	d
+NCCL_DEVICE_COMMON_H_	src/collectives/device/common.h	8;"	d
+NCCL_ENQUEUE_H_	src/include/enqueue.h	8;"	d
+NCCL_GROUP_H_	src/include/group.h	8;"	d
+NCCL_H_	build/include/nccl.h	8;"	d
+NCCL_IBVWRAP_H_	src/include/ibvwrap.h	13;"	d
+NCCL_INT_NET_H_	src/include/net.h	8;"	d
+NCCL_KERN_NAME	src/collectives/collectives.h	17;"	d
+NCCL_LL_BUFF_LINES	src/include/core.h	101;"	d
+NCCL_LL_BUFF_SIZE	src/include/core.h	100;"	d
+NCCL_LL_CHUNKS	src/include/core.h	98;"	d
+NCCL_LL_CLEAN_FREQ	src/include/core.h	103;"	d
+NCCL_LL_KERNEL_H_	src/collectives/device/ll_kernel.h	8;"	d
+NCCL_LL_MAX_NTHREADS	src/include/core.h	40;"	d
+NCCL_LL_MIN_NTHREADS	src/include/core.h	41;"	d
+NCCL_LL_RING_THRESHOLD	src/include/core.h	37;"	d
+NCCL_LL_SLICE_LINES	src/include/core.h	102;"	d
+NCCL_MAJOR	build/include/nccl.h	13;"	d
+NCCL_MAJOR	makefiles/version.mk	/^NCCL_MAJOR   := 2$/;"	m
+NCCL_MAX_OPS	src/include/core.h	10;"	d
+NCCL_MAX_SCORE	src/include/nccl_net.h	20;"	d
+NCCL_MINOR	build/include/nccl.h	14;"	d
+NCCL_MINOR	makefiles/version.mk	/^NCCL_MINOR   := 3$/;"	m
+NCCL_NET_HANDLE_MAXSIZE	src/include/nccl_net.h	15;"	d
+NCCL_NET_H_	src/include/nccl_net.h	8;"	d
+NCCL_NET_MAJOR	src/include/nccl_net.h	12;"	d
+NCCL_NET_MINOR	src/include/nccl_net.h	13;"	d
+NCCL_NVLINK_H_	src/include/nvlink.h	8;"	d
+NCCL_NVMLWRAP_H_	src/include/nvmlwrap.h	8;"	d
+NCCL_PARAM	src/include/param.h	57;"	d
+NCCL_PARAM_H_	src/include/param.h	8;"	d
+NCCL_PATCH	build/include/nccl.h	15;"	d
+NCCL_PATCH	makefiles/version.mk	/^NCCL_PATCH   := 7$/;"	m
+NCCL_PRIMITIVES_H_	src/collectives/device/primitives.h	8;"	d
+NCCL_PTR_CUDA	src/include/nccl_net.h	18;"	d
+NCCL_PTR_HOST	src/include/nccl_net.h	17;"	d
+NCCL_REDUCE_KERNEL_H_	src/collectives/device/reduce_kernel.h	9;"	d
+NCCL_RINGS_H_	src/include/rings.h	8;"	d
+NCCL_RING_H_	src/include/ring.h	8;"	d
+NCCL_SHM_H_	src/include/shm.h	8;"	d
+NCCL_SOCKET_H_	src/include/socket.h	8;"	d
+NCCL_SUFFIX	build/include/nccl.h	16;"	d
+NCCL_SUFFIX	makefiles/version.mk	/^NCCL_SUFFIX  :=$/;"	m
+NCCL_THREAD_THRESHOLD	src/include/core.h	38;"	d
+NCCL_THREAD_THRESHOLD_PREVOLTA	src/include/core.h	39;"	d
+NCCL_TOPO_H_	src/include/topo.h	8;"	d
+NCCL_TRANSPORT_H_	src/include/transport.h	8;"	d
+NCCL_UNIQUE_ID_BYTES	build/include/nccl.h	28;"	d
+NCCL_UTILS_H_	src/include/utils.h	8;"	d
+NCCL_VERSION	build/include/nccl.h	19;"	d
+NCCL_VERSION_CODE	build/include/nccl.h	18;"	d
+NET	src/include/debug.h	/^typedef enum {INIT=1, COLL=2, P2P=4, SHM=8, NET=16, ALL=~0} SubSys;$/;"	e	enum:__anon13
+NEXT_STEP	src/collectives/device/all_gather.h	12;"	d
+NEXT_STEP	src/collectives/device/all_reduce.h	12;"	d
+NEXT_STEP	src/collectives/device/broadcast.h	12;"	d
+NEXT_STEP	src/collectives/device/reduce.h	12;"	d
+NEXT_STEP	src/collectives/device/reduce_scatter.h	12;"	d
+NEXT_STEP_LL	src/collectives/device/all_gather.h	170;"	d
+NEXT_STEP_LL	src/collectives/device/all_reduce.h	201;"	d
+NEXT_STEP_LL	src/collectives/device/broadcast.h	143;"	d
+NEXT_STEP_LL	src/collectives/device/reduce.h	111;"	d
+NEXT_STEP_LL	src/collectives/device/reduce_scatter.h	124;"	d
+NONE	src/include/debug.h	/^typedef enum {NONE=0, VERSION=1, WARN=2, INFO=3, ABORT=4, TRACE=5} DebugLevel;$/;"	e	enum:__anon12
+NTRANSPORTS	src/include/transport.h	13;"	d
+NUM_LINES_PER_THREAD	src/include/core.h	99;"	d
+NVCC	makefiles/common.mk	/^NVCC = $(CUDA_HOME)\/bin\/nvcc$/;"	m
+NVCC_GENCODE	makefiles/common.mk	/^  NVCC_GENCODE ?= $(CUDA8_GENCODE) $(CUDA8_PTX)$/;"	m
+NVCC_GENCODE	makefiles/common.mk	/^  NVCC_GENCODE ?= $(CUDA8_GENCODE) $(CUDA9_GENCODE) $(CUDA9_PTX)$/;"	m
+NVCUFLAGS	makefiles/common.mk	/^NVCUFLAGS  := -ccbin $(CXX) $(NVCC_GENCODE) -lineinfo -std=c++11 -Xptxas -maxrregcount=96 -Xfatbin -compress-all$/;"	m
+NVLDFLAGS	makefiles/common.mk	/^NVLDFLAGS  := -L${CUDA_LIB} -lcudart -lrt$/;"	m
+NVMLCHECK	src/include/nvmlwrap.h	16;"	d
+NVML_DEVICE_PCI_BUS_ID_BUFFER_SIZE	src/include/nvmlwrap.h	69;"	d
+NVML_ERROR_ALREADY_INITIALIZED	src/include/nvmlwrap.h	/^    NVML_ERROR_ALREADY_INITIALIZED = 5, \/\/!< Deprecated: Multiple initializations are now allowed through ref counting$/;"	e	enum:nvmlReturn_enum
+NVML_ERROR_CORRUPTED_INFOROM	src/include/nvmlwrap.h	/^    NVML_ERROR_CORRUPTED_INFOROM = 14,  \/\/!< infoROM is corrupted$/;"	e	enum:nvmlReturn_enum
+NVML_ERROR_DRIVER_NOT_LOADED	src/include/nvmlwrap.h	/^    NVML_ERROR_DRIVER_NOT_LOADED = 9,   \/\/!< NVIDIA driver is not loaded$/;"	e	enum:nvmlReturn_enum
+NVML_ERROR_FUNCTION_NOT_FOUND	src/include/nvmlwrap.h	/^    NVML_ERROR_FUNCTION_NOT_FOUND = 13, \/\/!< Local version of NVML doesn't implement this function$/;"	e	enum:nvmlReturn_enum
+NVML_ERROR_GPU_IS_LOST	src/include/nvmlwrap.h	/^    NVML_ERROR_GPU_IS_LOST = 15,        \/\/!< The GPU has fallen off the bus or has otherwise become inaccessible$/;"	e	enum:nvmlReturn_enum
+NVML_ERROR_INSUFFICIENT_POWER	src/include/nvmlwrap.h	/^    NVML_ERROR_INSUFFICIENT_POWER = 8,  \/\/!< A device's external power cables are not properly attached$/;"	e	enum:nvmlReturn_enum
+NVML_ERROR_INSUFFICIENT_SIZE	src/include/nvmlwrap.h	/^    NVML_ERROR_INSUFFICIENT_SIZE = 7,   \/\/!< An input argument is not large enough$/;"	e	enum:nvmlReturn_enum
+NVML_ERROR_INVALID_ARGUMENT	src/include/nvmlwrap.h	/^    NVML_ERROR_INVALID_ARGUMENT = 2,    \/\/!< A supplied argument is invalid$/;"	e	enum:nvmlReturn_enum
+NVML_ERROR_IN_USE	src/include/nvmlwrap.h	/^    NVML_ERROR_IN_USE = 19,             \/\/!< An operation cannot be performed because the GPU is currently in use$/;"	e	enum:nvmlReturn_enum
+NVML_ERROR_IRQ_ISSUE	src/include/nvmlwrap.h	/^    NVML_ERROR_IRQ_ISSUE = 11,          \/\/!< NVIDIA Kernel detected an interrupt issue with a GPU$/;"	e	enum:nvmlReturn_enum
+NVML_ERROR_LIBRARY_NOT_FOUND	src/include/nvmlwrap.h	/^    NVML_ERROR_LIBRARY_NOT_FOUND = 12,  \/\/!< NVML Shared Library couldn't be found or loaded$/;"	e	enum:nvmlReturn_enum
+NVML_ERROR_LIB_RM_VERSION_MISMATCH	src/include/nvmlwrap.h	/^    NVML_ERROR_LIB_RM_VERSION_MISMATCH = 18,   \/\/!< RM detects a driver\/library version mismatch$/;"	e	enum:nvmlReturn_enum
+NVML_ERROR_NOT_FOUND	src/include/nvmlwrap.h	/^    NVML_ERROR_NOT_FOUND = 6,           \/\/!< A query to find an object was unsuccessful$/;"	e	enum:nvmlReturn_enum
+NVML_ERROR_NOT_SUPPORTED	src/include/nvmlwrap.h	/^    NVML_ERROR_NOT_SUPPORTED = 3,       \/\/!< The requested operation is not available on target device$/;"	e	enum:nvmlReturn_enum
+NVML_ERROR_NO_PERMISSION	src/include/nvmlwrap.h	/^    NVML_ERROR_NO_PERMISSION = 4,       \/\/!< The current user does not have permission for operation$/;"	e	enum:nvmlReturn_enum
+NVML_ERROR_OPERATING_SYSTEM	src/include/nvmlwrap.h	/^    NVML_ERROR_OPERATING_SYSTEM = 17,   \/\/!< The GPU control device has been blocked by the operating system\/cgroups$/;"	e	enum:nvmlReturn_enum
+NVML_ERROR_RESET_REQUIRED	src/include/nvmlwrap.h	/^    NVML_ERROR_RESET_REQUIRED = 16,     \/\/!< The GPU requires a reset before it can be used again$/;"	e	enum:nvmlReturn_enum
+NVML_ERROR_TIMEOUT	src/include/nvmlwrap.h	/^    NVML_ERROR_TIMEOUT = 10,            \/\/!< User provided timeout passed$/;"	e	enum:nvmlReturn_enum
+NVML_ERROR_UNINITIALIZED	src/include/nvmlwrap.h	/^    NVML_ERROR_UNINITIALIZED = 1,       \/\/!< NVML was not first initialized with nvmlInit()$/;"	e	enum:nvmlReturn_enum
+NVML_ERROR_UNKNOWN	src/include/nvmlwrap.h	/^    NVML_ERROR_UNKNOWN = 999            \/\/!< An internal driver error occurred$/;"	e	enum:nvmlReturn_enum
+NVML_FEATURE_DISABLED	src/include/nvmlwrap.h	/^    NVML_FEATURE_DISABLED    = 0,     \/\/!< Feature disabled$/;"	e	enum:nvmlEnableState_enum
+NVML_FEATURE_ENABLED	src/include/nvmlwrap.h	/^    NVML_FEATURE_ENABLED     = 1      \/\/!< Feature enabled$/;"	e	enum:nvmlEnableState_enum
+NVML_NVLINK_CAP_COUNT	src/include/nvmlwrap.h	/^    NVML_NVLINK_CAP_COUNT$/;"	e	enum:nvmlNvLinkCapability_enum
+NVML_NVLINK_CAP_P2P_ATOMICS	src/include/nvmlwrap.h	/^    NVML_NVLINK_CAP_P2P_ATOMICS   = 2,     \/\/ P2P atomics are supported$/;"	e	enum:nvmlNvLinkCapability_enum
+NVML_NVLINK_CAP_P2P_SUPPORTED	src/include/nvmlwrap.h	/^    NVML_NVLINK_CAP_P2P_SUPPORTED = 0,     \/\/ P2P over NVLink is supported$/;"	e	enum:nvmlNvLinkCapability_enum
+NVML_NVLINK_CAP_SLI_BRIDGE	src/include/nvmlwrap.h	/^    NVML_NVLINK_CAP_SLI_BRIDGE    = 4,     \/\/ SLI is supported over this link$/;"	e	enum:nvmlNvLinkCapability_enum
+NVML_NVLINK_CAP_SYSMEM_ACCESS	src/include/nvmlwrap.h	/^    NVML_NVLINK_CAP_SYSMEM_ACCESS = 1,     \/\/ Access to system memory is supported$/;"	e	enum:nvmlNvLinkCapability_enum
+NVML_NVLINK_CAP_SYSMEM_ATOMICS	src/include/nvmlwrap.h	/^    NVML_NVLINK_CAP_SYSMEM_ATOMICS= 3,     \/\/ System memory atomics are supported$/;"	e	enum:nvmlNvLinkCapability_enum
+NVML_NVLINK_CAP_VALID	src/include/nvmlwrap.h	/^    NVML_NVLINK_CAP_VALID         = 5,     \/\/ Link is supported on this device$/;"	e	enum:nvmlNvLinkCapability_enum
+NVML_SUCCESS	src/include/nvmlwrap.h	/^    NVML_SUCCESS = 0,                   \/\/!< The operation was successful$/;"	e	enum:nvmlReturn_enum
+OBJDIR	src/Makefile	/^OBJDIR := $(BUILDDIR)\/obj$/;"	m
+OBJDIR	src/collectives/device/Makefile	/^OBJDIR := $(BUILDDIR)\/obj\/collectives\/device$/;"	m
+P2P	src/include/debug.h	/^typedef enum {INIT=1, COLL=2, P2P=4, SHM=8, NET=16, ALL=~0} SubSys;$/;"	e	enum:__anon13
+PARALLEL	src/include/core.h	/^  enum { GROUP, PARALLEL } launchMode;$/;"	e	enum:ncclComm::__anon23
+PATH_PHB	src/include/topo.h	/^  PATH_PHB = 2,$/;"	e	enum:ncclIbPathDist
+PATH_PIX	src/include/topo.h	/^  PATH_PIX = 0,$/;"	e	enum:ncclIbPathDist
+PATH_PXB	src/include/topo.h	/^  PATH_PXB = 1,$/;"	e	enum:ncclIbPathDist
+PATH_SOC	src/include/topo.h	/^  PATH_SOC = 3$/;"	e	enum:ncclIbPathDist
+PKGDIR	pkg/debian/Makefile	/^PKGDIR  := $(BUILDDIR)\/pkg\/deb\/$/;"	m
+PKGDIR	pkg/redhat/Makefile	/^PKGDIR  := $(BUILDDIR)\/pkg\/rpm\/$/;"	m
+PKGDIR	pkg/srctxz/Makefile	/^PKGDIR  := $(BUILDDIR)\/pkg\/srctxz\/$/;"	m
+PKGDIR	pkg/txz/Makefile	/^PKGDIR  := $(BUILDDIR)\/pkg\/txz\/$/;"	m
+PKG_ARCH	pkg/debian/Makefile	/^PKG_ARCH       ?= $(shell uname -m | sed -e "s\/x86_64\/amd64\/g" | sed -e "s\/ppc64le\/ppc64el\/g")$/;"	m
+PKG_ARCH	pkg/redhat/Makefile	/^PKG_ARCH       ?= $(shell uname -m)$/;"	m
+PKG_ARCH	pkg/srctxz/Makefile	/^PKG_ARCH       := $(shell uname -m)$/;"	m
+PKG_ARCH	pkg/txz/Makefile	/^PKG_ARCH   := $(shell uname -m)$/;"	m
+PKG_MULTIARCH	pkg/debian/Makefile	/^PKG_MULTIARCH  := $(ARCH)-linux-gnu$/;"	m
+PKG_MULTIARCH	pkg/debian/Makefile	/^PKG_MULTIARCH  ?= $(shell $(CXX) -print-multiarch)$/;"	m
+PKG_MULTIARCH	pkg/redhat/Makefile	/^PKG_MULTIARCH  := $(ARCH)-linux-gnu$/;"	m
+PKG_MULTIARCH	pkg/redhat/Makefile	/^PKG_MULTIARCH  ?= $(shell $(CXX) -print-multiarch)$/;"	m
+PKG_REVISION	makefiles/version.mk	/^PKG_REVISION := 1$/;"	m
+PKG_REVISION	pkg/srctxz/Makefile	/^PKG_REVISION   ?= 3$/;"	m
+PKG_TIMESTAMP	pkg/debian/Makefile	/^PKG_TIMESTAMP  := $(shell date -R)$/;"	m
+PKG_TIMESTAMP	pkg/redhat/Makefile	/^PKG_TIMESTAMP  := $(shell date -R)$/;"	m
+POST_SIZE	src/collectives/device/ll_kernel.h	128;"	d
+PREFIX	makefiles/common.mk	/^PREFIX ?= \/usr\/local$/;"	m
+PROFAPI	makefiles/common.mk	/^PROFAPI ?= 0$/;"	m
+Pack128	src/collectives/device/common_kernel.h	/^typedef ulong2 Pack128;$/;"	t
+PackHalf2	src/collectives/device/common_kernel.h	/^  struct PackHalf2 {$/;"	s	struct:MULTI
+PackType	src/collectives/device/common_kernel.h	/^typedef uint64_t PackType;$/;"	t
+PointerCheck	src/include/common_coll.h	/^static ncclResult_t PointerCheck(const void* pointer, struct ncclComm* comm, const char* ptrname, const char* opname) {$/;"	f
+PostFlag	src/collectives/device/primitives.h	/^  PostFlag(volatile uint64_t* const flag, const int shift, volatile int* const fifo, const int fifo_size) : flag(flag), shift(shift), fifo(fifo), fifo_size(fifo_size) { }$/;"	f	class:PostFlag
+PostFlag	src/collectives/device/primitives.h	/^class PostFlag {$/;"	c
+PostSizeToFlags	src/collectives/device/primitives.h	/^void PostSizeToFlags(uint64_t step, int size) { }$/;"	f
+PostSizeToFlags	src/collectives/device/primitives.h	/^void PostSizeToFlags(uint64_t step, int size, PostFlag flag, TAIL_Ts... tail) {$/;"	f
+PostSizeToFlags	src/collectives/device/primitives.h	/^void PostSizeToFlags(uint64_t step, int size, WaitFlag flag, TAIL_Ts... tail) {$/;"	f
+PostToFlags	src/collectives/device/primitives.h	/^void PostToFlags(uint64_t val) { }$/;"	f
+PostToFlags	src/collectives/device/primitives.h	/^void PostToFlags(uint64_t val, PostFlag flag, TAIL_Ts... tail) {$/;"	f
+PostToFlags	src/collectives/device/primitives.h	/^void PostToFlags(uint64_t val, WaitFlag flag, TAIL_Ts... tail) {$/;"	f
+Primitives	src/collectives/device/primitives.h	/^class Primitives {$/;"	c
+PtrCheck	src/include/common_coll.h	/^static ncclResult_t PtrCheck(void* ptr, const char* opname, const char* ptrname) {$/;"	f
+RANK_INFO_SIZE	src/include/transport.h	22;"	d
+REDUCESCATTER_BUFCHUNKS	src/collectives/collectives.h	60;"	d
+REDUCESCATTER_SUBSTEPS	src/collectives/collectives.h	59;"	d
+REDUCE_BUFCHUNKS	src/collectives/collectives.h	64;"	d
+REDUCE_SUBSTEPS	src/collectives/collectives.h	63;"	d
+RETRY_TIMES	src/include/socket.h	22;"	d
+ROUNDUP	src/include/core.h	45;"	d
+RPMFILES	pkg/redhat/Makefile	/^RPMFILES   := $(RPMGEN)$/;"	m
+RPMGEN	pkg/redhat/Makefile	/^RPMGEN     := $(RPMGEN_IN:.in=)$/;"	m
+RPMGEN_IN	pkg/redhat/Makefile	/^RPMGEN_IN  := $(wildcard *.in)$/;"	m
+RPMPREPDIR	pkg/redhat/Makefile	/^RPMPREPDIR := $(BUILDDIR)\/redhat$/;"	m
+RPMTARGETS	pkg/redhat/Makefile	/^RPMTARGETS := $(patsubst %, $(RPMPREPDIR)\/%, $(RPMFILES))$/;"	m
+Reduce	src/collectives/device/primitives.h	/^  Reduce(const int tid, const int nthreads, const T* src1, const T* src2, T* dst,$/;"	f	class:Primitives
+ReduceCopy	src/collectives/device/common_kernel.h	/^__device__ inline void ReduceCopy($/;"	f
+ReduceCopy	src/collectives/device/ll_kernel.h	/^  static __device__ void ReduceCopy(const T* src, T* dst1, union ncclLLFifoLine* dst2, int size, uint32_t oflag, int nthreads) {$/;"	f	class:LLPrimitives
+ReduceCopy	src/collectives/device/ll_kernel.h	/^  static __device__ void ReduceCopy(const T* src, union ncclLLFifoLine* dst, int size, uint32_t oflag, int nthreads) {$/;"	f	class:LLPrimitives
+ReduceCopy	src/collectives/device/ll_kernel.h	/^  static __device__ void ReduceCopy(const T* src1, union ncclLLFifoLine* src2, T* dst, int size, uint32_t iflag, int nthreads) {$/;"	f	class:LLPrimitives
+ReduceCopy	src/collectives/device/ll_kernel.h	/^  static __device__ void ReduceCopy(const T* src1, union ncclLLFifoLine* src2, T* dst1, union ncclLLFifoLine* dst2, int size, uint32_t iflag, uint32_t oflag, int nthreads) {$/;"	f	class:LLPrimitives
+ReduceCopy	src/collectives/device/ll_kernel.h	/^  static __device__ void ReduceCopy(const T* src1, union ncclLLFifoLine* src2, union ncclLLFifoLine* dst, int size, uint32_t iflag, uint32_t oflag, int nthreads) {$/;"	f	class:LLPrimitives
+ReduceCopy	src/collectives/device/ll_kernel.h	/^  static __device__ void ReduceCopy(union ncclLLFifoLine* src, T* dst, int size, uint32_t iflag, int nthreads) {$/;"	f	class:LLPrimitives
+ReduceCopy	src/collectives/device/ll_kernel.h	/^  static __device__ void ReduceCopy(union ncclLLFifoLine* src, T* dst1, union ncclLLFifoLine* dst2, int size, uint32_t iflag, uint32_t oflag, int nthreads) {$/;"	f	class:LLPrimitives
+ReduceCopy	src/collectives/device/primitives.h	/^  ReduceCopy(const int tid, const int nthreads, const T* src1, const T* src2, T* dst1, T* dst2,$/;"	f	class:Primitives
+ReduceCopy128b	src/collectives/device/common_kernel.h	/^__device__ inline void ReduceCopy128b( const int w, const int nw, const int t,$/;"	f
+ReduceCopyGeneric	src/collectives/device/ll_kernel.h	/^  static __device__ void ReduceCopyGeneric(const T* src1, union ncclLLFifoLine* src2, T* dst1, union ncclLLFifoLine* dst2, int size, uint32_t iflag, uint32_t oflag, int nthreads) {$/;"	f	class:LLPrimitives
+ReduceOrCopy	src/collectives/device/common_kernel.h	/^__device__ inline void ReduceOrCopy(const int tid, const int nthreads,$/;"	f
+SHM	src/include/debug.h	/^typedef enum {INIT=1, COLL=2, P2P=4, SHM=8, NET=16, ALL=~0} SubSys;$/;"	e	enum:__anon13
+SIZES_FIFO_SIZE	src/include/core.h	95;"	d
+SLEEP_INT	src/include/socket.h	21;"	d
+STATICLIB	src/collectives/device/Makefile	/^STATICLIB  := $(OBJDIR)\/colldevice.a$/;"	m
+STATICLIBNAME	src/Makefile	/^STATICLIBNAME := libnccl_static.a$/;"	m
+STATICLIBTARGET	src/Makefile	/^STATICLIBTARGET := $(STATICLIBNAME)$/;"	m
+STEP_TO_SLOT	src/collectives/device/ll_kernel.h	117;"	d
+SYSCHECK	src/include/core.h	269;"	d
+SYSCHECKNTIMES	src/include/core.h	287;"	d
+SYSCHECKVAL	src/include/core.h	279;"	d
+SYSCHECKVALEXP	src/include/core.h	303;"	d
+Store128	src/collectives/device/common_kernel.h	/^inline __device__ void Store128(Pack128* p, Pack128& v) {$/;"	f
+SubSys	src/include/debug.h	/^typedef enum {INIT=1, COLL=2, P2P=4, SHM=8, NET=16, ALL=~0} SubSys;$/;"	t	typeref:enum:__anon13
+TARGETS	Makefile	/^TARGETS := src pkg$/;"	m
+TARGETS	pkg/Makefile	/^TARGETS := debian txz$/;"	m
+TRACE	makefiles/common.mk	/^TRACE ?= 0$/;"	m
+TRACE	src/include/debug.h	/^typedef enum {NONE=0, VERSION=1, WARN=2, INFO=3, ABORT=4, TRACE=5} DebugLevel;$/;"	e	enum:__anon12
+TRACE	src/include/debug.h	60;"	d
+TRACE	src/include/debug.h	79;"	d
+TRANSPORT_PROXY_FIFO_SIZE	src/include/transport.h	67;"	d
+TXZGEN	pkg/srctxz/Makefile	/^TXZGEN     := $(TXZGEN_IN:.in=)$/;"	m
+TXZGEN	pkg/txz/Makefile	/^TXZGEN     := $(TXZGEN_IN:.in=)$/;"	m
+TXZGEN_IN	pkg/srctxz/Makefile	/^TXZGEN_IN  := $(wildcard *.in)$/;"	m
+TXZGEN_IN	pkg/txz/Makefile	/^TXZGEN_IN  := $(wildcard *.in)$/;"	m
+TXZPREPDIR	pkg/srctxz/Makefile	/^TXZPREPDIR  := $(BUILDDIR)\/srctxz$/;"	m
+TXZPREPDIR	pkg/txz/Makefile	/^TXZPREPDIR  := $(BUILDDIR)\/txz$/;"	m
+TXZTARGETS	pkg/srctxz/Makefile	/^TXZTARGETS := $(patsubst %, $(TXZPREPDIR)\/%, $(TXZGEN))$/;"	m
+TXZTARGETS	pkg/txz/Makefile	/^TXZTARGETS := $(patsubst %, $(TXZPREPDIR)\/%, $(TXZGEN))$/;"	m
+ThisInput	src/include/core.h	/^  const void * ThisInput;$/;"	m	struct:CollectiveArgs
+ThisOutput	src/include/core.h	/^  void * ThisOutput;$/;"	m	struct:CollectiveArgs
+VERBOSE	makefiles/common.mk	/^VERBOSE ?= 0$/;"	m
+VERBS_CONTEXT_EXP	src/include/ibvwrap.h	/^	VERBS_CONTEXT_EXP	   = (uint64_t)1 << 62$/;"	e	enum:verbs_context_mask
+VERBS_CONTEXT_QP	src/include/ibvwrap.h	/^	VERBS_CONTEXT_QP           = (uint64_t)1 << 2,$/;"	e	enum:verbs_context_mask
+VERBS_CONTEXT_RESERVED	src/include/ibvwrap.h	/^	VERBS_CONTEXT_RESERVED     = (uint64_t)1 << 3,$/;"	e	enum:verbs_context_mask
+VERBS_CONTEXT_SRQ	src/include/ibvwrap.h	/^	VERBS_CONTEXT_SRQ          = (uint64_t)1 << 1,$/;"	e	enum:verbs_context_mask
+VERBS_CONTEXT_XRCD	src/include/ibvwrap.h	/^	VERBS_CONTEXT_XRCD         = (uint64_t)1 << 0,$/;"	e	enum:verbs_context_mask
+VERSION	src/include/debug.h	/^typedef enum {NONE=0, VERSION=1, WARN=2, INFO=3, ABORT=4, TRACE=5} DebugLevel;$/;"	e	enum:__anon12
+WAIT_NEXT	src/collectives/device/ll_kernel.h	120;"	d
+WARN	src/include/debug.h	/^typedef enum {NONE=0, VERSION=1, WARN=2, INFO=3, ABORT=4, TRACE=5} DebugLevel;$/;"	e	enum:__anon12
+WARN	src/include/debug.h	29;"	d
+WARP_SIZE	src/collectives/device/common_kernel.h	275;"	d
+WaitFlag	src/collectives/device/primitives.h	/^  WaitFlag(volatile uint64_t * const flag, const int shift) : flag(flag), shift(shift) { }$/;"	f	class:WaitFlag
+WaitFlag	src/collectives/device/primitives.h	/^class WaitFlag {$/;"	c
+WaitOnFlags	src/collectives/device/primitives.h	/^void WaitOnFlags(uint64_t val) { }$/;"	f
+WaitOnFlags	src/collectives/device/primitives.h	/^void WaitOnFlags(uint64_t val, PostFlag, TAIL_Ts... tail) {$/;"	f
+WaitOnFlags	src/collectives/device/primitives.h	/^void WaitOnFlags(uint64_t val, WaitFlag flag, TAIL_Ts... tail) {$/;"	f
+__attribute_const	src/include/ibvwrap.h	22;"	d
+__attribute_const	src/include/ibvwrap.h	24;"	d
+_reserved_1	src/include/ibvwrap.h	/^	int (*_reserved_1) (void);$/;"	m	struct:verbs_context
+_reserved_2	src/include/ibvwrap.h	/^	int (*_reserved_2) (void);$/;"	m	struct:verbs_context
+a	src/collectives/device/common_kernel.h	/^      float a, b;$/;"	m	struct:MULTI::converter::__anon9
+a	src/collectives/device/common_kernel.h	/^      int32_t a, b;$/;"	m	struct:MULTI::converter::__anon7
+a	src/collectives/device/common_kernel.h	/^      uint32_t a, b;$/;"	m	struct:MULTI::converter::__anon5
+a	src/collectives/device/common_kernel.h	/^      uint32_t a, b;$/;"	m	struct:MULTI::converter::__anon6
+a	src/collectives/device/common_kernel.h	/^      uint32_t a, b;$/;"	m	struct:MULTI::converter::__anon8
+a	src/collectives/device/common_kernel.h	/^    half2 a, b;$/;"	m	struct:MULTI::PackHalf2
+a	src/collectives/device/reduce_kernel.h	/^  union converter { uint32_t storage; char4 a; };$/;"	m	union:FuncMax::converter
+a	src/collectives/device/reduce_kernel.h	/^  union converter { uint32_t storage; char4 a; };$/;"	m	union:FuncMin::converter
+a	src/collectives/device/reduce_kernel.h	/^  union converter { uint32_t storage; char4 a; };$/;"	m	union:FuncSum::converter
+a	src/collectives/device/reduce_kernel.h	/^  union converter { uint32_t storage; uchar4 a; };$/;"	m	union:FuncMax::converter
+a	src/collectives/device/reduce_kernel.h	/^  union converter { uint32_t storage; uchar4 a; };$/;"	m	union:FuncMin::converter
+a	src/collectives/device/reduce_kernel.h	/^  union converter { uint32_t storage; uchar4 a; };$/;"	m	union:FuncSum::converter
+abi_compat	src/include/ibvwrap.h	/^	void		       *abi_compat;$/;"	m	struct:ibv_context
+accept	src/include/nccl_net.h	/^  ncclResult_t (*accept)(void* listenComm, void** recvComm);$/;"	m	struct:__anon24
+active	src/include/core.h	/^      uint8_t  active;$/;"	m	struct:ncclColl::__anon21::__anon22
+active	src/include/transport.h	/^  int active;   \/\/ add component before this line -- it is left out during initialization$/;"	m	struct:ncclProxyArgs
+active_mtu	src/include/ibvwrap.h	/^	enum ibv_mtu		active_mtu;$/;"	m	struct:ibv_port_attr	typeref:enum:ibv_port_attr::ibv_mtu
+active_speed	src/include/ibvwrap.h	/^	uint8_t			active_speed;$/;"	m	struct:ibv_port_attr
+active_width	src/include/ibvwrap.h	/^	uint8_t			active_width;$/;"	m	struct:ibv_port_attr
+addr	src/include/ibvwrap.h	/^	uint64_t		addr;$/;"	m	struct:ibv_sge
+addr	src/include/ibvwrap.h	/^	void		       *addr;$/;"	m	struct:ibv_mr
+addr	src/include/ibvwrap.h	/^	void		       *addr;$/;"	m	struct:ibv_mw_bind
+ah	src/include/ibvwrap.h	/^			struct ibv_ah  *ah;$/;"	m	struct:ibv_send_wr::__anon28::__anon31	typeref:struct:ibv_send_wr::__anon28::__anon31::ibv_ah
+ah_attr	src/include/ibvwrap.h	/^	struct ibv_ah_attr	ah_attr;$/;"	m	struct:ibv_qp_attr	typeref:struct:ibv_qp_attr::ibv_ah_attr
+alloc_context	src/include/ibvwrap.h	/^	struct ibv_context *	(*alloc_context)(struct ibv_device *device, int cmd_fd);$/;"	m	struct:ibv_device_ops	typeref:struct:ibv_device_ops::alloc_context
+alloc_mw	src/include/ibvwrap.h	/^	struct ibv_mw *		(*alloc_mw)(struct ibv_pd *pd, enum ibv_mw_type type);$/;"	m	struct:ibv_context_ops	typeref:struct:ibv_context_ops::alloc_mw
+alloc_pd	src/include/ibvwrap.h	/^	struct ibv_pd *		(*alloc_pd)(struct ibv_context *context);$/;"	m	struct:ibv_context_ops	typeref:struct:ibv_context_ops::alloc_pd
+alt_ah_attr	src/include/ibvwrap.h	/^	struct ibv_ah_attr	alt_ah_attr;$/;"	m	struct:ibv_qp_attr	typeref:struct:ibv_qp_attr::ibv_ah_attr
+alt_pkey_index	src/include/ibvwrap.h	/^	uint16_t		alt_pkey_index;$/;"	m	struct:ibv_qp_attr
+alt_port_num	src/include/ibvwrap.h	/^	uint8_t			alt_port_num;$/;"	m	struct:ibv_qp_attr
+alt_timeout	src/include/ibvwrap.h	/^	uint8_t			alt_timeout;$/;"	m	struct:ibv_qp_attr
+args	src/include/core.h	/^      struct CollectiveArgs args;$/;"	m	struct:ncclColl::__anon21::__anon22	typeref:struct:ncclColl::__anon21::__anon22::CollectiveArgs
+args	src/include/core.h	/^  struct ncclColl args;$/;"	m	struct:ncclComm	typeref:struct:ncclComm::ncclColl
+args	src/include/core.h	/^  void **args;$/;"	m	struct:cudaLaunchParams
+argsFifo	src/include/transport.h	/^  struct ncclProxyArgs argsFifo[TRANSPORT_PROXY_FIFO_SIZE];$/;"	m	struct:transportProxyInfo	typeref:struct:transportProxyInfo::ncclProxyArgs
+argsFifoHead	src/include/transport.h	/^  volatile uint64_t argsFifoHead;$/;"	m	struct:transportProxyInfo
+argsFifoTail	src/include/transport.h	/^  volatile uint64_t argsFifoTail;$/;"	m	struct:transportProxyInfo
+argsptr	src/include/core.h	/^  void* argsptr;$/;"	m	struct:ncclComm
+async_event	src/include/ibvwrap.h	/^	void			(*async_event)(struct ibv_async_event *event);$/;"	m	struct:ibv_context_ops
+async_events_completed	src/include/ibvwrap.h	/^	uint32_t		async_events_completed;$/;"	m	struct:ibv_cq
+async_fd	src/include/ibvwrap.h	/^	int			async_fd;$/;"	m	struct:ibv_context
+atomic	src/include/ibvwrap.h	/^		} atomic;$/;"	m	union:ibv_send_wr::__anon28	typeref:struct:ibv_send_wr::__anon28::__anon30
+atomic_cap	src/include/ibvwrap.h	/^	enum ibv_atomic_cap	atomic_cap;$/;"	m	struct:ibv_device_attr	typeref:enum:ibv_device_attr::ibv_atomic_cap
+attach_mcast	src/include/ibvwrap.h	/^	int			(*attach_mcast)(struct ibv_qp *qp, const union ibv_gid *gid,$/;"	m	struct:ibv_context_ops
+attr	src/include/ibvwrap.h	/^	struct ibv_srq_attr	attr;$/;"	m	struct:ibv_srq_init_attr	typeref:struct:ibv_srq_init_attr::ibv_srq_attr
+attr	src/include/ibvwrap.h	/^	struct ibv_srq_attr	attr;$/;"	m	struct:ibv_srq_init_attr_ex	typeref:struct:ibv_srq_init_attr_ex::ibv_srq_attr
+b	src/collectives/device/common_kernel.h	/^      float a, b;$/;"	m	struct:MULTI::converter::__anon9
+b	src/collectives/device/common_kernel.h	/^      int32_t a, b;$/;"	m	struct:MULTI::converter::__anon7
+b	src/collectives/device/common_kernel.h	/^      uint32_t a, b;$/;"	m	struct:MULTI::converter::__anon5
+b	src/collectives/device/common_kernel.h	/^      uint32_t a, b;$/;"	m	struct:MULTI::converter::__anon6
+b	src/collectives/device/common_kernel.h	/^      uint32_t a, b;$/;"	m	struct:MULTI::converter::__anon8
+b	src/collectives/device/common_kernel.h	/^    half2 a, b;$/;"	m	struct:MULTI::PackHalf2
+bad_pkey_cntr	src/include/ibvwrap.h	/^	uint32_t		bad_pkey_cntr;$/;"	m	struct:ibv_port_attr
+bid	src/include/core.h	/^  uint8_t bid;$/;"	m	struct:CollectiveArgs
+bind_mw	src/include/ibvwrap.h	/^	int			(*bind_mw)(struct ibv_qp *qp, struct ibv_mw *mw,$/;"	m	struct:ibv_context_ops
+blockDim	src/include/core.h	/^  dim3 blockDim;$/;"	m	struct:cudaLaunchParams
+buff	src/include/core.h	/^  char *buff;         \/\/ Local for recv, remote for send$/;"	m	struct:ncclConnInfo
+buff	src/include/core.h	/^  char buff[1]; \/\/ Actually larger than that$/;"	m	struct:ncclRecvMem
+buffSize	src/include/core.h	/^      int buffSize;$/;"	m	struct:ncclRing::__anon19::__anon20
+bus	src/include/nvmlwrap.h	/^    unsigned int bus;                \/\/!< The bus on which the device resides, 0 to 0xff$/;"	m	struct:nvmlPciInfo_st
+busId	src/include/nvmlwrap.h	/^    char busId[NVML_DEVICE_PCI_BUS_ID_BUFFER_SIZE]; \/\/!< The tuple domain:bus:device.function PCI identifier (&amp; NULL terminator)$/;"	m	struct:nvmlPciInfo_st
+byte_len	src/include/ibvwrap.h	/^	uint32_t		byte_len;$/;"	m	struct:ibv_wc
+canConnect	src/include/transport.h	/^  ncclResult_t (*canConnect)(ncclTvalue_t*, ncclTinfo_t*, ncclTinfo_t*);$/;"	m	struct:ncclTransport
+cap	src/include/ibvwrap.h	/^	struct ibv_qp_cap	cap;$/;"	m	struct:ibv_qp_attr	typeref:struct:ibv_qp_attr::ibv_qp_cap
+cap	src/include/ibvwrap.h	/^	struct ibv_qp_cap	cap;$/;"	m	struct:ibv_qp_init_attr	typeref:struct:ibv_qp_init_attr::ibv_qp_cap
+cap	src/include/ibvwrap.h	/^	struct ibv_qp_cap	cap;$/;"	m	struct:ibv_qp_init_attr_ex	typeref:struct:ibv_qp_init_attr_ex::ibv_qp_cap
+channel	src/include/ibvwrap.h	/^	struct ibv_comp_channel *channel;$/;"	m	struct:ibv_cq	typeref:struct:ibv_cq::ibv_comp_channel
+checkPointers	src/include/core.h	/^  bool checkPointers;$/;"	m	struct:ncclComm
+closeListen	src/include/nccl_net.h	/^  ncclResult_t (*closeListen)(void* listenComm);$/;"	m	struct:__anon24
+closeRecv	src/include/nccl_net.h	/^  ncclResult_t (*closeRecv)(void* recvComm);$/;"	m	struct:__anon24
+closeSend	src/include/nccl_net.h	/^  ncclResult_t (*closeSend)(void* sendComm);$/;"	m	struct:__anon24
+close_xrcd	src/include/ibvwrap.h	/^	int  (*close_xrcd)(struct ibv_xrcd *xrcd);$/;"	m	struct:verbs_context
+cmd_fd	src/include/ibvwrap.h	/^	int			cmd_fd;$/;"	m	struct:ibv_context
+collCount	src/include/core.h	/^      int collCount;$/;"	m	struct:ncclRing::__anon19::__anon20
+collFifoHead	src/include/core.h	/^      int collFifoHead; \/\/ Only used by GPU$/;"	m	struct:ncclRing::__anon19::__anon20
+collFifoTail	src/include/core.h	/^      int collFifoTail; \/\/ Only used by CPU$/;"	m	struct:ncclRing::__anon19::__anon20
+collStart	src/include/core.h	/^      int collStart;$/;"	m	struct:ncclRing::__anon19::__anon20
+collectives	src/include/core.h	/^      struct ncclColl* collectives;$/;"	m	struct:ncclRing::__anon19::__anon20	typeref:struct:ncclRing::__anon19::__anon20::ncclColl
+comm	src/include/core.h	/^  struct ncclComm* comm;$/;"	m	struct:CollectiveArgs	typeref:struct:CollectiveArgs::ncclComm
+comm	src/include/transport.h	/^  struct ncclComm* comm;$/;"	m	struct:transportProxyInfo	typeref:struct:transportProxyInfo::ncclComm
+comp_events_completed	src/include/ibvwrap.h	/^	uint32_t		comp_events_completed;$/;"	m	struct:ibv_cq
+comp_mask	src/include/ibvwrap.h	/^	uint32_t		comp_mask;$/;"	m	struct:ibv_qp_init_attr_ex
+comp_mask	src/include/ibvwrap.h	/^	uint32_t		comp_mask;$/;"	m	struct:ibv_qp_open_attr
+comp_mask	src/include/ibvwrap.h	/^	uint32_t		comp_mask;$/;"	m	struct:ibv_srq_init_attr_ex
+comp_mask	src/include/ibvwrap.h	/^	uint32_t	   comp_mask;$/;"	m	struct:ibv_flow
+comp_mask	src/include/ibvwrap.h	/^	uint32_t comp_mask;$/;"	m	struct:ibv_flow_attr
+comp_mask	src/include/ibvwrap.h	/^	uint32_t comp_mask;$/;"	m	struct:ibv_xrcd_init_attr
+compare_add	src/include/ibvwrap.h	/^			uint64_t	compare_add;$/;"	m	struct:ibv_send_wr::__anon28::__anon30
+cond	src/include/ibvwrap.h	/^	pthread_cond_t		cond;$/;"	m	struct:ibv_cq
+cond	src/include/ibvwrap.h	/^	pthread_cond_t		cond;$/;"	m	struct:ibv_qp
+cond	src/include/ibvwrap.h	/^	pthread_cond_t		cond;$/;"	m	struct:ibv_srq
+cond	src/include/transport.h	/^  pthread_cond_t cond;$/;"	m	struct:transportProxyInfo
+conn	src/include/core.h	/^  struct ncclConnInfo conn;$/;"	m	struct:ncclConnector	typeref:struct:ncclConnector::ncclConnInfo
+connect	src/include/nccl_net.h	/^  ncclResult_t (*connect)(int dev, void* handle, void** sendComm);$/;"	m	struct:__anon24
+connect	src/include/transport.h	/^  ncclResult_t (*connect)(struct ncclConnect*, struct ncclConnector*);$/;"	m	struct:ncclTransportComm
+connectAddress	src/include/socket.h	/^static ncclResult_t connectAddress(int* fd, union socketAddress* remoteAddr) {$/;"	f
+container_of	src/include/ibvwrap.h	43;"	d
+context	src/include/ibvwrap.h	/^	struct ibv_context     *context;$/;"	m	struct:ibv_ah	typeref:struct:ibv_ah::ibv_context
+context	src/include/ibvwrap.h	/^	struct ibv_context     *context;$/;"	m	struct:ibv_comp_channel	typeref:struct:ibv_comp_channel::ibv_context
+context	src/include/ibvwrap.h	/^	struct ibv_context     *context;$/;"	m	struct:ibv_cq	typeref:struct:ibv_cq::ibv_context
+context	src/include/ibvwrap.h	/^	struct ibv_context     *context;$/;"	m	struct:ibv_mr	typeref:struct:ibv_mr::ibv_context
+context	src/include/ibvwrap.h	/^	struct ibv_context     *context;$/;"	m	struct:ibv_mw	typeref:struct:ibv_mw::ibv_context
+context	src/include/ibvwrap.h	/^	struct ibv_context     *context;$/;"	m	struct:ibv_pd	typeref:struct:ibv_pd::ibv_context
+context	src/include/ibvwrap.h	/^	struct ibv_context     *context;$/;"	m	struct:ibv_qp	typeref:struct:ibv_qp::ibv_context
+context	src/include/ibvwrap.h	/^	struct ibv_context     *context;$/;"	m	struct:ibv_srq	typeref:struct:ibv_srq::ibv_context
+context	src/include/ibvwrap.h	/^	struct ibv_context     *context;$/;"	m	struct:ibv_xrcd	typeref:struct:ibv_xrcd::ibv_context
+context	src/include/ibvwrap.h	/^	struct ibv_context *context;$/;"	m	struct:ibv_flow	typeref:struct:ibv_flow::ibv_context
+context	src/include/ibvwrap.h	/^	struct ibv_context context;\/* Must be last field in the struct *\/$/;"	m	struct:verbs_context	typeref:struct:verbs_context::ibv_context
+converter	src/collectives/device/common_kernel.h	/^  union converter {$/;"	u	struct:MULTI
+converter	src/collectives/device/reduce_kernel.h	/^  union converter { uint32_t storage; char4 a; };$/;"	u	struct:FuncMax
+converter	src/collectives/device/reduce_kernel.h	/^  union converter { uint32_t storage; char4 a; };$/;"	u	struct:FuncMin
+converter	src/collectives/device/reduce_kernel.h	/^  union converter { uint32_t storage; char4 a; };$/;"	u	struct:FuncSum
+converter	src/collectives/device/reduce_kernel.h	/^  union converter { uint32_t storage; uchar4 a; };$/;"	u	struct:FuncMax
+converter	src/collectives/device/reduce_kernel.h	/^  union converter { uint32_t storage; uchar4 a; };$/;"	u	struct:FuncMin
+converter	src/collectives/device/reduce_kernel.h	/^  union converter { uint32_t storage; uchar4 a; };$/;"	u	struct:FuncSum
+cq	src/include/ibvwrap.h	/^		struct ibv_cq  *cq;$/;"	m	union:ibv_async_event::__anon27	typeref:struct:ibv_async_event::__anon27::ibv_cq
+cq	src/include/ibvwrap.h	/^	struct ibv_cq	       *cq;$/;"	m	struct:ibv_srq_init_attr_ex	typeref:struct:ibv_srq_init_attr_ex::ibv_cq
+cq_context	src/include/ibvwrap.h	/^	void		       *cq_context;$/;"	m	struct:ibv_cq
+cq_event	src/include/ibvwrap.h	/^	void			(*cq_event)(struct ibv_cq *cq);$/;"	m	struct:ibv_context_ops
+cqe	src/include/ibvwrap.h	/^	int			cqe;$/;"	m	struct:ibv_cq
+createListenSocket	src/include/socket.h	/^static ncclResult_t createListenSocket(int *fd, union socketAddress *localAddr) {$/;"	f
+create_ah	src/include/ibvwrap.h	/^	struct ibv_ah *		(*create_ah)(struct ibv_pd *pd, struct ibv_ah_attr *attr);$/;"	m	struct:ibv_context_ops	typeref:struct:ibv_context_ops::create_ah
+create_cq	src/include/ibvwrap.h	/^	struct ibv_cq *		(*create_cq)(struct ibv_context *context, int cqe,$/;"	m	struct:ibv_context_ops	typeref:struct:ibv_context_ops::create_cq
+create_flow	src/include/ibvwrap.h	/^	struct ibv_flow * (*create_flow) (struct ibv_qp *qp,$/;"	m	struct:verbs_context	typeref:struct:verbs_context::create_flow
+create_qp	src/include/ibvwrap.h	/^	struct ibv_qp *		(*create_qp)(struct ibv_pd *pd, struct ibv_qp_init_attr *attr);$/;"	m	struct:ibv_context_ops	typeref:struct:ibv_context_ops::create_qp
+create_qp_ex	src/include/ibvwrap.h	/^	struct ibv_qp * (*create_qp_ex)(struct ibv_context *context,$/;"	m	struct:verbs_context	typeref:struct:verbs_context::create_qp_ex
+create_srq	src/include/ibvwrap.h	/^	struct ibv_srq *	(*create_srq)(struct ibv_pd *pd,$/;"	m	struct:ibv_context_ops	typeref:struct:ibv_context_ops::create_srq
+create_srq_ex	src/include/ibvwrap.h	/^	struct ibv_srq * (*create_srq_ex)(struct ibv_context *context,$/;"	m	struct:verbs_context	typeref:struct:verbs_context::create_srq_ex
+cudaDev	src/include/core.h	/^  int cudaDev; \/\/ my cuda device index$/;"	m	struct:ncclComm
+cudaLaunchParams	src/include/core.h	/^struct cudaLaunchParams {$/;"	s
+cur_qp_state	src/include/ibvwrap.h	/^	enum ibv_qp_state	cur_qp_state;$/;"	m	struct:ibv_qp_attr	typeref:enum:ibv_qp_attr::ibv_qp_state
+data	src/include/core.h	/^    int data[0x10];$/;"	m	union:ncclColl::__anon21
+data	src/include/core.h	/^    int data[0x80];$/;"	m	union:ncclRing::__anon19
+data	src/include/transport.h	/^  char data[CONNECT_SIZE];$/;"	m	struct:ncclConnect
+data1	src/include/core.h	/^    uint32_t data1;$/;"	m	struct:ncclLLFifoLine::__anon14
+data2	src/include/core.h	/^    uint32_t data2;$/;"	m	struct:ncclLLFifoLine::__anon14
+dct	src/include/ibvwrap.h	/^		struct ibv_exp_dct *dct;$/;"	m	union:ibv_async_event::__anon27	typeref:struct:ibv_async_event::__anon27::ibv_exp_dct
+dealloc_mw	src/include/ibvwrap.h	/^	int			(*dealloc_mw)(struct ibv_mw *mw);$/;"	m	struct:ibv_context_ops
+dealloc_pd	src/include/ibvwrap.h	/^	int			(*dealloc_pd)(struct ibv_pd *pd);$/;"	m	struct:ibv_context_ops
+dereg_mr	src/include/ibvwrap.h	/^	int			(*dereg_mr)(struct ibv_mr *mr);$/;"	m	struct:ibv_context_ops
+dest_qp_num	src/include/ibvwrap.h	/^	uint32_t		dest_qp_num;$/;"	m	struct:ibv_qp_attr
+destroy_ah	src/include/ibvwrap.h	/^	int			(*destroy_ah)(struct ibv_ah *ah);$/;"	m	struct:ibv_context_ops
+destroy_cq	src/include/ibvwrap.h	/^	int			(*destroy_cq)(struct ibv_cq *cq);$/;"	m	struct:ibv_context_ops
+destroy_flow	src/include/ibvwrap.h	/^	int (*destroy_flow) (struct ibv_flow *flow);$/;"	m	struct:verbs_context
+destroy_qp	src/include/ibvwrap.h	/^	int			(*destroy_qp)(struct ibv_qp *qp);$/;"	m	struct:ibv_context_ops
+destroy_srq	src/include/ibvwrap.h	/^	int			(*destroy_srq)(struct ibv_srq *srq);$/;"	m	struct:ibv_context_ops
+detach_mcast	src/include/ibvwrap.h	/^	int			(*detach_mcast)(struct ibv_qp *qp, const union ibv_gid *gid,$/;"	m	struct:ibv_context_ops
+devCollectives	src/include/core.h	/^      struct ncclColl* devCollectives;$/;"	m	struct:ncclRing::__anon19::__anon20	typeref:struct:ncclRing::__anon19::__anon20::ncclColl
+devComm	src/include/core.h	/^  struct ncclComm *devComm;$/;"	m	struct:ncclComm	typeref:struct:ncclComm::ncclComm
+devMemRecv	src/include/core.h	/^      struct ncclRecvMem* devMemRecv;   \/\/ CUDA-size resources$/;"	m	struct:ncclRing::__anon19::__anon20	typeref:struct:ncclRing::__anon19::__anon20::ncclRecvMem
+devMemRecvSize	src/include/core.h	/^      int devMemRecvSize;    \/\/ Keep the size for IPCs$/;"	m	struct:ncclRing::__anon19::__anon20
+devMemSend	src/include/core.h	/^      struct ncclSendMem* devMemSend;   \/\/ CUDA-size resources$/;"	m	struct:ncclRing::__anon19::__anon20	typeref:struct:ncclRing::__anon19::__anon20::ncclSendMem
+devMemSendSize	src/include/core.h	/^      int devMemSendSize;    \/\/ Keep the size for IPCs$/;"	m	struct:ncclRing::__anon19::__anon20
+devUserRanks	src/include/core.h	/^      int* devUserRanks;$/;"	m	struct:ncclRing::__anon19::__anon20
+dev_name	src/include/ibvwrap.h	/^	char			dev_name[IBV_SYSFS_NAME_MAX];$/;"	m	struct:ibv_device
+dev_path	src/include/ibvwrap.h	/^	char			dev_path[IBV_SYSFS_PATH_MAX];$/;"	m	struct:ibv_device
+device	src/include/ibvwrap.h	/^	struct ibv_device      *device;$/;"	m	struct:ibv_context	typeref:struct:ibv_context::ibv_device
+device	src/include/ibvwrap.h	/^	struct ibv_device device; \/* Must be first *\/$/;"	m	struct:verbs_device	typeref:struct:verbs_device::ibv_device
+device	src/include/nvmlwrap.h	/^    unsigned int device;             \/\/!< The device's id on the bus, 0 to 31$/;"	m	struct:nvmlPciInfo_st
+device_cap_flags	src/include/ibvwrap.h	/^	int			device_cap_flags;$/;"	m	struct:ibv_device_attr
+devices	src/include/nccl_net.h	/^  ncclResult_t (*devices)(int* ndev, int** scores);$/;"	m	struct:__anon24
+dgid	src/include/ibvwrap.h	/^	union ibv_gid		dgid;$/;"	m	struct:ibv_global_route	typeref:union:ibv_global_route::ibv_gid
+dgid	src/include/ibvwrap.h	/^	union ibv_gid		dgid;$/;"	m	struct:ibv_grh	typeref:union:ibv_grh::ibv_gid
+direct	src/include/core.h	/^  int direct;         \/\/ Direct communication$/;"	m	struct:ncclConnInfo
+dlid	src/include/ibvwrap.h	/^	uint16_t		dlid;$/;"	m	struct:ibv_ah_attr
+dlid_path_bits	src/include/ibvwrap.h	/^	uint8_t			dlid_path_bits;$/;"	m	struct:ibv_wc
+domain	src/include/nvmlwrap.h	/^    unsigned int domain;             \/\/!< The PCI domain on which the device's bus resides, 0 to 0xffff$/;"	m	struct:nvmlPciInfo_st
+doneEvent	src/include/core.h	/^  cudaEvent_t doneEvent;$/;"	m	struct:ncclComm
+dontCareIf	src/include/net.h	/^    dontCareIf     = -2$/;"	e	enum:__anon11
+dst_ip	src/include/ibvwrap.h	/^	uint32_t dst_ip;$/;"	m	struct:ibv_flow_ipv4_filter
+dst_mac	src/include/ibvwrap.h	/^	uint8_t		dst_mac[6];$/;"	m	struct:ibv_flow_eth_filter
+dst_port	src/include/ibvwrap.h	/^	uint16_t dst_port;$/;"	m	struct:ibv_flow_tcp_udp_filter
+element	src/include/ibvwrap.h	/^	} element;$/;"	m	struct:ibv_async_event	typeref:union:ibv_async_event::__anon27
+en_sqd_async_notify	src/include/ibvwrap.h	/^	uint8_t			en_sqd_async_notify;$/;"	m	struct:ibv_qp_attr
+envSocketFamily	src/include/socket.h	/^static inline int envSocketFamily(void) {$/;"	f
+eth	src/include/ibvwrap.h	/^		struct ibv_flow_spec_eth eth;$/;"	m	union:ibv_flow_spec::__anon35	typeref:struct:ibv_flow_spec::__anon35::ibv_flow_spec_eth
+ether_type	src/include/ibvwrap.h	/^	uint16_t	ether_type;$/;"	m	struct:ibv_flow_eth_filter
+event_type	src/include/ibvwrap.h	/^	enum ibv_event_type	event_type;$/;"	m	struct:ibv_async_event	typeref:enum:ibv_async_event::ibv_event_type
+events_completed	src/include/ibvwrap.h	/^	uint32_t		events_completed;$/;"	m	struct:ibv_qp
+events_completed	src/include/ibvwrap.h	/^	uint32_t		events_completed;$/;"	m	struct:ibv_srq
+fd	src/include/ibvwrap.h	/^	int			fd;$/;"	m	struct:ibv_comp_channel
+fd	src/include/ibvwrap.h	/^	int	 fd;$/;"	m	struct:ibv_xrcd_init_attr
+fifo	src/collectives/device/primitives.h	/^  volatile int * const fifo;$/;"	m	class:PostFlag
+fifo	src/include/core.h	/^  int *fifo;          \/\/ Size fifo for proxy$/;"	m	struct:ncclConnInfo
+fifo_size	src/collectives/device/primitives.h	/^  const int fifo_size;$/;"	m	class:PostFlag
+fillInfo	src/include/transport.h	/^  ncclResult_t (*fillInfo)(ncclTinfo_t*, int);$/;"	m	struct:ncclTransport
+findInterfaceMatchSubnet	src/include/socket.h	/^static int findInterfaceMatchSubnet(char* ifNames, union socketAddress* localAddrs, union socketAddress remoteAddr, int ifNameMaxSize, int maxIfs) {$/;"	f
+findInterfaces	src/include/socket.h	/^static int findInterfaces(char* ifNames, union socketAddress *ifAddrs, int ifNameMaxSize, int maxIfs) {$/;"	f
+findInterfaces	src/include/socket.h	/^static int findInterfaces(const char* prefixList, char* names, union socketAddress *addrs, int sock_family, int maxIfNameSize, int maxIfs) {$/;"	f
+findSubnetIf	src/include/net.h	/^typedef enum { findSubnetIf   = -1,$/;"	e	enum:__anon11
+flag	src/collectives/device/primitives.h	/^  volatile uint64_t * const flag;$/;"	m	class:PostFlag
+flag	src/collectives/device/primitives.h	/^  volatile uint64_t * const flag;$/;"	m	class:WaitFlag
+flag1	src/include/core.h	/^    uint32_t flag1;$/;"	m	struct:ncclLLFifoLine::__anon14
+flag2	src/include/core.h	/^    uint32_t flag2;$/;"	m	struct:ncclLLFifoLine::__anon14
+flags	src/include/ibvwrap.h	/^	uint32_t flags;$/;"	m	struct:ibv_flow_attr
+flow_label	src/include/ibvwrap.h	/^	uint32_t		flow_label;$/;"	m	struct:ibv_global_route
+flush	src/include/nccl_net.h	/^  ncclResult_t (*flush)(void* recvComm, void* data, int size);$/;"	m	struct:__anon24
+free	src/include/transport.h	/^  ncclResult_t (*free)(void*);$/;"	m	struct:ncclTransportComm
+free_context	src/include/ibvwrap.h	/^	void			(*free_context)(struct ibv_context *context);$/;"	m	struct:ibv_device_ops
+func	src/include/core.h	/^  void *func;$/;"	m	struct:cudaLaunchParams
+func	src/include/transport.h	/^  threadFunc_t func;$/;"	m	struct:transportProxyInfo
+funcIndex	src/include/core.h	/^      uint16_t funcIndex;$/;"	m	struct:ncclColl::__anon21::__anon22
+fw_ver	src/include/ibvwrap.h	/^	char			fw_ver[64];$/;"	m	struct:ibv_device_attr
+getCudaPath	src/include/topo.h	/^static ncclResult_t getCudaPath(int cudaDev, char** path) {$/;"	f
+getDefaultThreads	src/include/rings.h	/^static int getDefaultThreads() {$/;"	f
+getMaxNvlinks	src/include/nvlink.h	/^static ncclResult_t getMaxNvlinks(int* maxLinks) {$/;"	f
+getMlxPath	src/include/topo.h	/^static ncclResult_t getMlxPath(char* ibName, char** path) {$/;"	f
+getNumNvlinks	src/include/nvlink.h	/^static int getNumNvlinks(const char* busId) {$/;"	f
+getNvlinkGpu	src/include/nvlink.h	/^static int getNvlinkGpu(const char* busId1, const char* busId2) {$/;"	f
+getRings	src/include/transport.h	/^  ncclResult_t (*getRings)(int, int*, int*, ncclTvalue_t*, int*, int*, int*, int, int*);$/;"	m	struct:ncclTransport
+getSockPath	src/include/topo.h	/^static ncclResult_t getSockPath(char* ifName, char** path) {$/;"	f
+get_srq_num	src/include/ibvwrap.h	/^	int (*get_srq_num)(struct ibv_srq *srq, uint32_t *srq_num);$/;"	m	struct:verbs_context
+gettid	src/include/debug.h	19;"	d
+gid_tbl_len	src/include/ibvwrap.h	/^	int			gid_tbl_len;$/;"	m	struct:ibv_port_attr
+global	src/include/ibvwrap.h	/^	} global;$/;"	m	union:ibv_gid	typeref:struct:ibv_gid::__anon25
+grh	src/include/ibvwrap.h	/^	struct ibv_global_route	grh;$/;"	m	struct:ibv_ah_attr	typeref:struct:ibv_ah_attr::ibv_global_route
+gridDim	src/include/core.h	/^  dim3 gridDim;$/;"	m	struct:cudaLaunchParams
+groupCudaStream	src/include/core.h	/^  int groupCudaStream;$/;"	m	struct:ncclComm
+groupStream	src/include/core.h	/^  cudaStream_t groupStream;$/;"	m	struct:ncclComm
+handle	src/include/ibvwrap.h	/^	uint32_t		handle;$/;"	m	struct:ibv_ah
+handle	src/include/ibvwrap.h	/^	uint32_t		handle;$/;"	m	struct:ibv_cq
+handle	src/include/ibvwrap.h	/^	uint32_t		handle;$/;"	m	struct:ibv_mr
+handle	src/include/ibvwrap.h	/^	uint32_t		handle;$/;"	m	struct:ibv_pd
+handle	src/include/ibvwrap.h	/^	uint32_t		handle;$/;"	m	struct:ibv_qp
+handle	src/include/ibvwrap.h	/^	uint32_t		handle;$/;"	m	struct:ibv_srq
+handle	src/include/ibvwrap.h	/^	uint32_t	   handle;$/;"	m	struct:ibv_flow
+has_comp_mask	src/include/ibvwrap.h	/^	uint64_t has_comp_mask;$/;"	m	struct:verbs_context
+hdr	src/include/ibvwrap.h	/^		} hdr;$/;"	m	union:ibv_flow_spec::__anon35	typeref:struct:ibv_flow_spec::__anon35::__anon36
+head	src/include/core.h	/^      uint64_t head;$/;"	m	struct:ncclSendMem::__anon15::__anon16
+head	src/include/core.h	/^  uint64_t *head;     \/\/ Local for send, remote for recv$/;"	m	struct:ncclConnInfo
+hop_limit	src/include/ibvwrap.h	/^	uint8_t			hop_limit;$/;"	m	struct:ibv_global_route
+hop_limit	src/include/ibvwrap.h	/^	uint8_t			hop_limit;$/;"	m	struct:ibv_grh
+hw_ver	src/include/ibvwrap.h	/^	uint32_t		hw_ver;$/;"	m	struct:ibv_device_attr
+i4	src/include/core.h	/^  int4 i4;$/;"	m	union:ncclLLFifoLine
+ibdev_path	src/include/ibvwrap.h	/^	char			ibdev_path[IBV_SYSFS_PATH_MAX];$/;"	m	struct:ibv_device
+ibv_access_flags	src/include/ibvwrap.h	/^enum ibv_access_flags {$/;"	g
+ibv_ah	src/include/ibvwrap.h	/^struct ibv_ah {$/;"	s
+ibv_ah_attr	src/include/ibvwrap.h	/^struct ibv_ah_attr {$/;"	s
+ibv_async_event	src/include/ibvwrap.h	/^struct ibv_async_event {$/;"	s
+ibv_atomic_cap	src/include/ibvwrap.h	/^enum ibv_atomic_cap {$/;"	g
+ibv_comp_channel	src/include/ibvwrap.h	/^struct ibv_comp_channel {$/;"	s
+ibv_context	src/include/ibvwrap.h	/^struct ibv_context {$/;"	s
+ibv_context_ops	src/include/ibvwrap.h	/^struct ibv_context_ops {$/;"	s
+ibv_cq	src/include/ibvwrap.h	/^struct ibv_cq {$/;"	s
+ibv_device	src/include/ibvwrap.h	/^struct ibv_device {$/;"	s
+ibv_device_attr	src/include/ibvwrap.h	/^struct ibv_device_attr {$/;"	s
+ibv_device_cap_flags	src/include/ibvwrap.h	/^enum ibv_device_cap_flags {$/;"	g
+ibv_device_ops	src/include/ibvwrap.h	/^struct ibv_device_ops {$/;"	s
+ibv_event_flags	src/include/ibvwrap.h	/^enum ibv_event_flags {$/;"	g
+ibv_event_type	src/include/ibvwrap.h	/^enum ibv_event_type {$/;"	g
+ibv_flow	src/include/ibvwrap.h	/^struct ibv_flow {$/;"	s
+ibv_flow_attr	src/include/ibvwrap.h	/^struct ibv_flow_attr {$/;"	s
+ibv_flow_attr_type	src/include/ibvwrap.h	/^enum ibv_flow_attr_type {$/;"	g
+ibv_flow_eth_filter	src/include/ibvwrap.h	/^struct ibv_flow_eth_filter {$/;"	s
+ibv_flow_flags	src/include/ibvwrap.h	/^enum ibv_flow_flags {$/;"	g
+ibv_flow_ipv4_filter	src/include/ibvwrap.h	/^struct ibv_flow_ipv4_filter {$/;"	s
+ibv_flow_spec	src/include/ibvwrap.h	/^struct ibv_flow_spec {$/;"	s
+ibv_flow_spec_eth	src/include/ibvwrap.h	/^struct ibv_flow_spec_eth {$/;"	s
+ibv_flow_spec_ipv4	src/include/ibvwrap.h	/^struct ibv_flow_spec_ipv4 {$/;"	s
+ibv_flow_spec_tcp_udp	src/include/ibvwrap.h	/^struct ibv_flow_spec_tcp_udp {$/;"	s
+ibv_flow_spec_type	src/include/ibvwrap.h	/^enum ibv_flow_spec_type {$/;"	g
+ibv_flow_tcp_udp_filter	src/include/ibvwrap.h	/^struct ibv_flow_tcp_udp_filter {$/;"	s
+ibv_gid	src/include/ibvwrap.h	/^union ibv_gid {$/;"	u
+ibv_global_route	src/include/ibvwrap.h	/^struct ibv_global_route {$/;"	s
+ibv_grh	src/include/ibvwrap.h	/^struct ibv_grh {$/;"	s
+ibv_mig_state	src/include/ibvwrap.h	/^enum ibv_mig_state {$/;"	g
+ibv_mr	src/include/ibvwrap.h	/^struct ibv_mr {$/;"	s
+ibv_mtu	src/include/ibvwrap.h	/^enum ibv_mtu {$/;"	g
+ibv_mw	src/include/ibvwrap.h	/^struct ibv_mw {$/;"	s
+ibv_mw_bind	src/include/ibvwrap.h	/^struct ibv_mw_bind {$/;"	s
+ibv_mw_type	src/include/ibvwrap.h	/^enum ibv_mw_type {$/;"	g
+ibv_node_type	src/include/ibvwrap.h	/^enum ibv_node_type {$/;"	g
+ibv_pd	src/include/ibvwrap.h	/^struct ibv_pd {$/;"	s
+ibv_port_attr	src/include/ibvwrap.h	/^struct ibv_port_attr {$/;"	s
+ibv_port_cap_flags	src/include/ibvwrap.h	/^enum ibv_port_cap_flags {$/;"	g
+ibv_port_state	src/include/ibvwrap.h	/^enum ibv_port_state {$/;"	g
+ibv_post_send	src/include/ibvwrap.h	/^static inline int ibv_post_send(struct ibv_qp *qp, struct ibv_send_wr *wr, struct ibv_send_wr **bad_wr) {$/;"	f
+ibv_qp	src/include/ibvwrap.h	/^struct ibv_qp {$/;"	s
+ibv_qp_attr	src/include/ibvwrap.h	/^struct ibv_qp_attr {$/;"	s
+ibv_qp_attr_mask	src/include/ibvwrap.h	/^enum ibv_qp_attr_mask {$/;"	g
+ibv_qp_cap	src/include/ibvwrap.h	/^struct ibv_qp_cap {$/;"	s
+ibv_qp_init_attr	src/include/ibvwrap.h	/^struct ibv_qp_init_attr {$/;"	s
+ibv_qp_init_attr_ex	src/include/ibvwrap.h	/^struct ibv_qp_init_attr_ex {$/;"	s
+ibv_qp_init_attr_mask	src/include/ibvwrap.h	/^enum ibv_qp_init_attr_mask {$/;"	g
+ibv_qp_open_attr	src/include/ibvwrap.h	/^struct ibv_qp_open_attr {$/;"	s
+ibv_qp_open_attr_mask	src/include/ibvwrap.h	/^enum ibv_qp_open_attr_mask {$/;"	g
+ibv_qp_state	src/include/ibvwrap.h	/^enum ibv_qp_state {$/;"	g
+ibv_qp_type	src/include/ibvwrap.h	/^enum ibv_qp_type {$/;"	g
+ibv_rate	src/include/ibvwrap.h	/^enum ibv_rate {$/;"	g
+ibv_recv_wr	src/include/ibvwrap.h	/^struct ibv_recv_wr {$/;"	s
+ibv_rereg_mr_flags	src/include/ibvwrap.h	/^enum ibv_rereg_mr_flags {$/;"	g
+ibv_return_enum	src/include/ibvwrap.h	/^typedef enum ibv_return_enum$/;"	g
+ibv_return_t	src/include/ibvwrap.h	/^} ibv_return_t;$/;"	t	typeref:enum:ibv_return_enum
+ibv_send_flags	src/include/ibvwrap.h	/^enum ibv_send_flags {$/;"	g
+ibv_send_wr	src/include/ibvwrap.h	/^struct ibv_send_wr {$/;"	s
+ibv_sge	src/include/ibvwrap.h	/^struct ibv_sge {$/;"	s
+ibv_srq	src/include/ibvwrap.h	/^struct ibv_srq {$/;"	s
+ibv_srq_attr	src/include/ibvwrap.h	/^struct ibv_srq_attr {$/;"	s
+ibv_srq_attr_mask	src/include/ibvwrap.h	/^enum ibv_srq_attr_mask {$/;"	g
+ibv_srq_init_attr	src/include/ibvwrap.h	/^struct ibv_srq_init_attr {$/;"	s
+ibv_srq_init_attr_ex	src/include/ibvwrap.h	/^struct ibv_srq_init_attr_ex {$/;"	s
+ibv_srq_init_attr_mask	src/include/ibvwrap.h	/^enum ibv_srq_init_attr_mask {$/;"	g
+ibv_srq_padding	src/include/ibvwrap.h	/^	void		*ibv_srq_padding;$/;"	m	struct:ibv_srq
+ibv_srq_type	src/include/ibvwrap.h	/^enum ibv_srq_type {$/;"	g
+ibv_transport_type	src/include/ibvwrap.h	/^enum ibv_transport_type {$/;"	g
+ibv_wc	src/include/ibvwrap.h	/^struct ibv_wc {$/;"	s
+ibv_wc_flags	src/include/ibvwrap.h	/^enum ibv_wc_flags {$/;"	g
+ibv_wc_opcode	src/include/ibvwrap.h	/^enum ibv_wc_opcode {$/;"	g
+ibv_wc_status	src/include/ibvwrap.h	/^enum ibv_wc_status {$/;"	g
+ibv_wr_opcode	src/include/ibvwrap.h	/^enum ibv_wr_opcode {$/;"	g
+ibv_xrcd	src/include/ibvwrap.h	/^struct ibv_xrcd {$/;"	s
+ibv_xrcd_init_attr	src/include/ibvwrap.h	/^struct ibv_xrcd_init_attr {$/;"	s
+ibv_xrcd_init_attr_mask	src/include/ibvwrap.h	/^enum ibv_xrcd_init_attr_mask {$/;"	g
+id	src/include/core.h	/^      int id;$/;"	m	struct:ncclRing::__anon19::__anon20
+imm_data	src/include/ibvwrap.h	/^	uint32_t		imm_data;	\/* in network byte order *\/$/;"	m	struct:ibv_send_wr
+imm_data	src/include/ibvwrap.h	/^	uint32_t		imm_data;	\/* in network byte order *\/$/;"	m	struct:ibv_wc
+initDebug	src/include/debug.h	/^static inline void initDebug() {$/;"	f
+initEnv	src/include/param.h	/^static void initEnv() {$/;"	f
+init_context	src/include/ibvwrap.h	/^	int	(*init_context)(struct verbs_device *device,$/;"	m	struct:verbs_device
+init_type_reply	src/include/ibvwrap.h	/^	uint8_t			init_type_reply;$/;"	m	struct:ibv_port_attr
+interface_id	src/include/ibvwrap.h	/^		uint64_t	interface_id;$/;"	m	struct:ibv_gid::__anon25
+internal	build/include/nccl.h	/^typedef struct { char internal[NCCL_UNIQUE_ID_BYTES]; } ncclUniqueId;$/;"	m	struct:__anon1
+intraBarrier	src/include/core.h	/^  int* intraBarrier;$/;"	m	struct:ncclComm
+intraCC	src/include/core.h	/^  int* intraCC; \/\/ Only to check all have the same ComputeCap and disable CGMode if not$/;"	m	struct:ncclComm
+intraCGMode	src/include/core.h	/^  int* intraCGMode; \/\/ Whether we can use CUDA9 CGMD or not$/;"	m	struct:ncclComm
+intraCudaDevs	src/include/core.h	/^  int* intraCudaDevs;$/;"	m	struct:ncclComm
+intraParams	src/include/core.h	/^  struct cudaLaunchParams * intraParams;$/;"	m	struct:ncclComm	typeref:struct:ncclComm::cudaLaunchParams
+intraPhase	src/include/core.h	/^  int intraPhase;$/;"	m	struct:ncclComm
+intraRank	src/include/core.h	/^  int intraRank;$/;"	m	struct:ncclComm
+intraRanks	src/include/core.h	/^  int intraRanks;$/;"	m	struct:ncclComm
+ipv4	src/include/ibvwrap.h	/^		struct ibv_flow_spec_ipv4 ipv4;$/;"	m	union:ibv_flow_spec::__anon35	typeref:struct:ibv_flow_spec::__anon35::ibv_flow_spec_ipv4
+irecv	src/include/nccl_net.h	/^  ncclResult_t (*irecv)(void* recvComm, void* data, int size, int type, void** request);$/;"	m	struct:__anon24
+is_global	src/include/ibvwrap.h	/^	uint8_t			is_global;$/;"	m	struct:ibv_ah_attr
+isend	src/include/nccl_net.h	/^  ncclResult_t (*isend)(void* sendComm, void* data, int size, int type, void** request);$/;"	m	struct:__anon24
+lastChunkSize	src/include/core.h	/^  int lastChunkSize;$/;"	m	struct:CollectiveArgs
+launchMode	src/include/core.h	/^  enum { GROUP, PARALLEL } launchMode;$/;"	m	struct:ncclComm	typeref:enum:ncclComm::__anon23
+length	src/include/ibvwrap.h	/^	size_t			length;$/;"	m	struct:ibv_mr
+length	src/include/ibvwrap.h	/^	size_t			length;$/;"	m	struct:ibv_mw_bind
+length	src/include/ibvwrap.h	/^	uint32_t		length;$/;"	m	struct:ibv_sge
+lid	src/include/ibvwrap.h	/^	uint16_t		lid;$/;"	m	struct:ibv_port_attr
+link_layer	src/include/ibvwrap.h	/^	uint8_t			link_layer;$/;"	m	struct:ibv_port_attr
+listen	src/include/nccl_net.h	/^  ncclResult_t (*listen)(int dev, void* handle, void** listenComm);$/;"	m	struct:__anon24
+lkey	src/include/ibvwrap.h	/^	uint32_t		lkey;$/;"	m	struct:ibv_mr
+lkey	src/include/ibvwrap.h	/^	uint32_t		lkey;$/;"	m	struct:ibv_sge
+llBuff	src/include/core.h	/^  char *llBuff;       \/\/ Local for recv, remote for send$/;"	m	struct:ncclConnInfo
+llBuff	src/include/core.h	/^  char llBuff[NCCL_LL_BUFF_SIZE];$/;"	m	struct:ncclRecvMem
+llFifo	src/include/core.h	/^  int *llFifo;        \/\/ LL Size fifo for proxy$/;"	m	struct:ncclConnInfo
+llHead	src/include/core.h	/^      uint64_t llHead;$/;"	m	struct:ncclSendMem::__anon15::__anon16
+llHead	src/include/core.h	/^  uint64_t *llHead;   \/\/ Local for send, remote for recv$/;"	m	struct:ncclConnInfo
+llLastCleaning	src/include/core.h	/^  uint64_t llLastCleaning;$/;"	m	struct:ncclConnInfo
+llMode	src/include/transport.h	/^  int llMode;$/;"	m	struct:ncclProxyArgs
+llSizesFifo	src/include/core.h	/^      int llSizesFifo[SIZES_FIFO_SIZE];$/;"	m	struct:ncclRecvMem::__anon17::__anon18
+llStep	src/include/core.h	/^  uint64_t llStep;    \/\/ Keep where we are$/;"	m	struct:ncclConnInfo
+llThreshold	src/include/core.h	/^  ssize_t llThreshold;$/;"	m	struct:ncclComm
+lmc	src/include/ibvwrap.h	/^	uint8_t			lmc;$/;"	m	struct:ibv_port_attr
+load_coll	src/collectives/device/common.h	/^static __device__ void load_coll(struct ncclColl* localColl, struct ncclColl* hostColl, int tid) {$/;"	f
+load_parallel	src/collectives/device/common.h	/^static __device__ void load_parallel(void* dst, void* src, size_t size, int tid) {$/;"	f
+local_ca_ack_delay	src/include/ibvwrap.h	/^	uint8_t			local_ca_ack_delay;$/;"	m	struct:ibv_device_attr
+mask	src/include/ibvwrap.h	/^	struct ibv_flow_eth_filter mask;$/;"	m	struct:ibv_flow_spec_eth	typeref:struct:ibv_flow_spec_eth::ibv_flow_eth_filter
+mask	src/include/ibvwrap.h	/^	struct ibv_flow_ipv4_filter mask;$/;"	m	struct:ibv_flow_spec_ipv4	typeref:struct:ibv_flow_spec_ipv4::ibv_flow_ipv4_filter
+mask	src/include/ibvwrap.h	/^	struct ibv_flow_tcp_udp_filter mask;$/;"	m	struct:ibv_flow_spec_tcp_udp	typeref:struct:ibv_flow_spec_tcp_udp::ibv_flow_tcp_udp_filter
+matchSubnet	src/include/socket.h	/^static bool matchSubnet(struct ifaddrs local_if, union socketAddress remote) {$/;"	f
+max_ah	src/include/ibvwrap.h	/^	int			max_ah;$/;"	m	struct:ibv_device_attr
+max_cq	src/include/ibvwrap.h	/^	int			max_cq;$/;"	m	struct:ibv_device_attr
+max_cqe	src/include/ibvwrap.h	/^	int			max_cqe;$/;"	m	struct:ibv_device_attr
+max_dest_rd_atomic	src/include/ibvwrap.h	/^	uint8_t			max_dest_rd_atomic;$/;"	m	struct:ibv_qp_attr
+max_ee	src/include/ibvwrap.h	/^	int			max_ee;$/;"	m	struct:ibv_device_attr
+max_ee_init_rd_atom	src/include/ibvwrap.h	/^	int			max_ee_init_rd_atom;$/;"	m	struct:ibv_device_attr
+max_ee_rd_atom	src/include/ibvwrap.h	/^	int			max_ee_rd_atom;$/;"	m	struct:ibv_device_attr
+max_fmr	src/include/ibvwrap.h	/^	int			max_fmr;$/;"	m	struct:ibv_device_attr
+max_inline_data	src/include/ibvwrap.h	/^	uint32_t		max_inline_data;$/;"	m	struct:ibv_qp_cap
+max_map_per_fmr	src/include/ibvwrap.h	/^	int			max_map_per_fmr;$/;"	m	struct:ibv_device_attr
+max_mcast_grp	src/include/ibvwrap.h	/^	int			max_mcast_grp;$/;"	m	struct:ibv_device_attr
+max_mcast_qp_attach	src/include/ibvwrap.h	/^	int			max_mcast_qp_attach;$/;"	m	struct:ibv_device_attr
+max_mr	src/include/ibvwrap.h	/^	int			max_mr;$/;"	m	struct:ibv_device_attr
+max_mr_size	src/include/ibvwrap.h	/^	uint64_t		max_mr_size;$/;"	m	struct:ibv_device_attr
+max_msg_sz	src/include/ibvwrap.h	/^	uint32_t		max_msg_sz;$/;"	m	struct:ibv_port_attr
+max_mtu	src/include/ibvwrap.h	/^	enum ibv_mtu		max_mtu;$/;"	m	struct:ibv_port_attr	typeref:enum:ibv_port_attr::ibv_mtu
+max_mw	src/include/ibvwrap.h	/^	int			max_mw;$/;"	m	struct:ibv_device_attr
+max_pd	src/include/ibvwrap.h	/^	int			max_pd;$/;"	m	struct:ibv_device_attr
+max_pkeys	src/include/ibvwrap.h	/^	uint16_t		max_pkeys;$/;"	m	struct:ibv_device_attr
+max_qp	src/include/ibvwrap.h	/^	int			max_qp;$/;"	m	struct:ibv_device_attr
+max_qp_init_rd_atom	src/include/ibvwrap.h	/^	int			max_qp_init_rd_atom;$/;"	m	struct:ibv_device_attr
+max_qp_rd_atom	src/include/ibvwrap.h	/^	int			max_qp_rd_atom;$/;"	m	struct:ibv_device_attr
+max_qp_wr	src/include/ibvwrap.h	/^	int			max_qp_wr;$/;"	m	struct:ibv_device_attr
+max_raw_ethy_qp	src/include/ibvwrap.h	/^	int			max_raw_ethy_qp;$/;"	m	struct:ibv_device_attr
+max_raw_ipv6_qp	src/include/ibvwrap.h	/^	int			max_raw_ipv6_qp;$/;"	m	struct:ibv_device_attr
+max_rd_atomic	src/include/ibvwrap.h	/^	uint8_t			max_rd_atomic;$/;"	m	struct:ibv_qp_attr
+max_rdd	src/include/ibvwrap.h	/^	int			max_rdd;$/;"	m	struct:ibv_device_attr
+max_recv_sge	src/include/ibvwrap.h	/^	uint32_t		max_recv_sge;$/;"	m	struct:ibv_qp_cap
+max_recv_wr	src/include/ibvwrap.h	/^	uint32_t		max_recv_wr;$/;"	m	struct:ibv_qp_cap
+max_res_rd_atom	src/include/ibvwrap.h	/^	int			max_res_rd_atom;$/;"	m	struct:ibv_device_attr
+max_send_sge	src/include/ibvwrap.h	/^	uint32_t		max_send_sge;$/;"	m	struct:ibv_qp_cap
+max_send_wr	src/include/ibvwrap.h	/^	uint32_t		max_send_wr;$/;"	m	struct:ibv_qp_cap
+max_sge	src/include/ibvwrap.h	/^	int			max_sge;$/;"	m	struct:ibv_device_attr
+max_sge	src/include/ibvwrap.h	/^	uint32_t		max_sge;$/;"	m	struct:ibv_srq_attr
+max_sge_rd	src/include/ibvwrap.h	/^	int			max_sge_rd;$/;"	m	struct:ibv_device_attr
+max_srq	src/include/ibvwrap.h	/^	int			max_srq;$/;"	m	struct:ibv_device_attr
+max_srq_sge	src/include/ibvwrap.h	/^	int			max_srq_sge;$/;"	m	struct:ibv_device_attr
+max_srq_wr	src/include/ibvwrap.h	/^	int			max_srq_wr;$/;"	m	struct:ibv_device_attr
+max_total_mcast_qp_attach	src/include/ibvwrap.h	/^	int			max_total_mcast_qp_attach;$/;"	m	struct:ibv_device_attr
+max_vl_num	src/include/ibvwrap.h	/^	uint8_t			max_vl_num;$/;"	m	struct:ibv_port_attr
+max_wr	src/include/ibvwrap.h	/^	uint32_t		max_wr;$/;"	m	struct:ibv_srq_attr
+min	src/collectives/device/common_kernel.h	/^static __device__ int min(int a, ssize_t b) { return (a < b) ? a : b; }$/;"	f
+min_rnr_timer	src/include/ibvwrap.h	/^	uint8_t			min_rnr_timer;$/;"	m	struct:ibv_qp_attr
+modify_qp	src/include/ibvwrap.h	/^	int			(*modify_qp)(struct ibv_qp *qp, struct ibv_qp_attr *attr,$/;"	m	struct:ibv_context_ops
+modify_srq	src/include/ibvwrap.h	/^	int			(*modify_srq)(struct ibv_srq *srq,$/;"	m	struct:ibv_context_ops
+mr	src/include/ibvwrap.h	/^	struct ibv_mr	       *mr;$/;"	m	struct:ibv_mw_bind	typeref:struct:ibv_mw_bind::ibv_mr
+mulChar4	src/collectives/device/reduce_kernel.h	/^static __device__ uint32_t mulChar4(const uint32_t x, const uint32_t y) {$/;"	f
+mutex	src/include/ibvwrap.h	/^	pthread_mutex_t		mutex;$/;"	m	struct:ibv_context
+mutex	src/include/ibvwrap.h	/^	pthread_mutex_t		mutex;$/;"	m	struct:ibv_cq
+mutex	src/include/ibvwrap.h	/^	pthread_mutex_t		mutex;$/;"	m	struct:ibv_qp
+mutex	src/include/ibvwrap.h	/^	pthread_mutex_t		mutex;$/;"	m	struct:ibv_srq
+mutex	src/include/transport.h	/^  pthread_mutex_t mutex;$/;"	m	struct:transportProxyInfo
+mw_access_flags	src/include/ibvwrap.h	/^	int			mw_access_flags;$/;"	m	struct:ibv_mw_bind
+myParams	src/include/core.h	/^  struct cudaLaunchParams *myParams;$/;"	m	struct:ncclComm	typeref:struct:ncclComm::cudaLaunchParams
+nRanks	src/include/core.h	/^  int nRanks;  \/\/ number of GPUs in communicator$/;"	m	struct:ncclComm
+nRings	src/include/core.h	/^  int nRings;$/;"	m	struct:ncclComm
+nRings	src/include/core.h	/^  uint8_t nRings;$/;"	m	struct:CollectiveArgs
+nThreads	src/include/core.h	/^      uint16_t nThreads;$/;"	m	struct:ncclColl::__anon21::__anon22
+nThreads	src/include/core.h	/^  int nThreads;$/;"	m	struct:ncclComm
+nThreads	src/include/core.h	/^  uint16_t nThreads;$/;"	m	struct:CollectiveArgs
+name	src/include/ibvwrap.h	/^	char			name[IBV_SYSFS_NAME_MAX];$/;"	m	struct:ibv_device
+name	src/include/nccl_net.h	/^  const char* name;$/;"	m	struct:__anon24
+name	src/include/transport.h	/^  const char name[4];$/;"	m	struct:ncclTransport
+ncclAllGatherKernel	src/collectives/device/all_gather.h	/^__device__ void ncclAllGatherKernel(struct CollectiveArgs* args) {$/;"	f
+ncclAllGatherLLKernel	src/collectives/device/all_gather.h	/^__device__ void ncclAllGatherLLKernel(struct CollectiveArgs* args) {$/;"	f
+ncclAllReduceKernel	src/collectives/device/all_reduce.h	/^__device__ void ncclAllReduceKernel(struct CollectiveArgs* args) {$/;"	f
+ncclAllReduceLLKernel	src/collectives/device/all_reduce.h	/^__device__ void ncclAllReduceLLKernel(struct CollectiveArgs* args) {$/;"	f
+ncclBroadcastKernel	src/collectives/device/broadcast.h	/^__device__ void ncclBroadcastKernel(struct CollectiveArgs* args) {$/;"	f
+ncclBroadcastLLKernel	src/collectives/device/broadcast.h	/^__device__ void ncclBroadcastLLKernel(struct CollectiveArgs* args) {$/;"	f
+ncclCalloc	src/include/core.h	/^static ncclResult_t ncclCalloc(T** ptr, size_t nelem) {$/;"	f
+ncclChar	build/include/nccl.h	/^typedef enum { ncclInt8       = 0, ncclChar       = 0,$/;"	e	enum:__anon4
+ncclColl	src/include/core.h	/^struct ncclColl {$/;"	s
+ncclCollAllGather	src/collectives/collectives.h	/^typedef enum { ncclCollBroadcast, ncclCollReduce, ncclCollAllGather, ncclCollReduceScatter, ncclCollAllReduce, ncclCollCount } ncclColl_t;$/;"	e	enum:__anon10
+ncclCollAllReduce	src/collectives/collectives.h	/^typedef enum { ncclCollBroadcast, ncclCollReduce, ncclCollAllGather, ncclCollReduceScatter, ncclCollAllReduce, ncclCollCount } ncclColl_t;$/;"	e	enum:__anon10
+ncclCollBroadcast	src/collectives/collectives.h	/^typedef enum { ncclCollBroadcast, ncclCollReduce, ncclCollAllGather, ncclCollReduceScatter, ncclCollAllReduce, ncclCollCount } ncclColl_t;$/;"	e	enum:__anon10
+ncclCollCount	src/collectives/collectives.h	/^typedef enum { ncclCollBroadcast, ncclCollReduce, ncclCollAllGather, ncclCollReduceScatter, ncclCollAllReduce, ncclCollCount } ncclColl_t;$/;"	e	enum:__anon10
+ncclCollFunc_t	src/include/group.h	/^typedef ncclResult_t(*ncclCollFunc_t)(const void* sendbuff, void* recvbuff, size_t count,$/;"	t
+ncclCollReduce	src/collectives/collectives.h	/^typedef enum { ncclCollBroadcast, ncclCollReduce, ncclCollAllGather, ncclCollReduceScatter, ncclCollAllReduce, ncclCollCount } ncclColl_t;$/;"	e	enum:__anon10
+ncclCollReduceScatter	src/collectives/collectives.h	/^typedef enum { ncclCollBroadcast, ncclCollReduce, ncclCollAllGather, ncclCollReduceScatter, ncclCollAllReduce, ncclCollCount } ncclColl_t;$/;"	e	enum:__anon10
+ncclColl_t	src/collectives/collectives.h	/^typedef enum { ncclCollBroadcast, ncclCollReduce, ncclCollAllGather, ncclCollReduceScatter, ncclCollAllReduce, ncclCollCount } ncclColl_t;$/;"	t	typeref:enum:__anon10
+ncclComm	src/include/core.h	/^struct ncclComm {$/;"	s
+ncclComm_t	build/include/nccl.h	/^typedef struct ncclComm* ncclComm_t;$/;"	t	typeref:struct:ncclComm
+ncclConnInfo	src/include/core.h	/^struct ncclConnInfo {$/;"	s
+ncclConnect	src/include/transport.h	/^struct ncclConnect {$/;"	s
+ncclConnector	src/include/core.h	/^struct ncclConnector {$/;"	s
+ncclCudaCalloc	src/include/core.h	/^static ncclResult_t ncclCudaCalloc(T** ptr, size_t nelem) {$/;"	f
+ncclCudaHostAlloc	src/include/core.h	/^static inline ncclResult_t ncclCudaHostAlloc(void** ptr, void** devPtr, size_t size) {$/;"	f
+ncclCudaHostFree	src/include/core.h	/^static inline ncclResult_t ncclCudaHostFree(void* ptr) {$/;"	f
+ncclCudaMemcpy	src/include/core.h	/^static ncclResult_t ncclCudaMemcpy(T* dst, T* src, size_t nelem) {$/;"	f
+ncclDataType_t	build/include/nccl.h	/^               ncclNumTypes   = 9 } ncclDataType_t;$/;"	t	typeref:enum:__anon4
+ncclDeviceType	src/include/nvlink.h	/^static ncclResult_t ncclDeviceType(const char* busId, enum ncclNvLinkDeviceType* type) {$/;"	f
+ncclDouble	build/include/nccl.h	/^               ncclFloat64    = 8, ncclDouble     = 8,$/;"	e	enum:__anon4
+ncclFloat	build/include/nccl.h	/^               ncclFloat32    = 7, ncclFloat      = 7,$/;"	e	enum:__anon4
+ncclFloat16	build/include/nccl.h	/^               ncclFloat16    = 6, ncclHalf       = 6,$/;"	e	enum:__anon4
+ncclFloat32	build/include/nccl.h	/^               ncclFloat32    = 7, ncclFloat      = 7,$/;"	e	enum:__anon4
+ncclFloat64	build/include/nccl.h	/^               ncclFloat64    = 8, ncclDouble     = 8,$/;"	e	enum:__anon4
+ncclFunc_t	src/include/enqueue.h	/^typedef ncclResult_t(*ncclFunc_t)(const void* sendbuff, void* recvbuff, size_t count,$/;"	t
+ncclGetCollResource	src/include/common_coll.h	/^static inline void ncclGetCollResource(ncclComm_t comm, size_t nbytes, int* nrings, int* nthreads, int* ll) {$/;"	f
+ncclHalf	build/include/nccl.h	/^               ncclFloat16    = 6, ncclHalf       = 6,$/;"	e	enum:__anon4
+ncclIbPathDist	src/include/topo.h	/^enum ncclIbPathDist {$/;"	g
+ncclInfo	src/include/transport.h	/^struct ncclInfo {$/;"	s
+ncclInitFunc_t	src/include/group.h	/^typedef ncclResult_t(*ncclInitFunc_t)(ncclComm_t* newcomm, int ndev, ncclUniqueId commId, int myrank);$/;"	t
+ncclInt	build/include/nccl.h	/^               ncclInt32      = 2, ncclInt        = 2,$/;"	e	enum:__anon4
+ncclInt32	build/include/nccl.h	/^               ncclInt32      = 2, ncclInt        = 2,$/;"	e	enum:__anon4
+ncclInt64	build/include/nccl.h	/^               ncclInt64      = 4,$/;"	e	enum:__anon4
+ncclInt8	build/include/nccl.h	/^typedef enum { ncclInt8       = 0, ncclChar       = 0,$/;"	e	enum:__anon4
+ncclInternalError	build/include/nccl.h	/^               ncclInternalError           =  3,$/;"	e	enum:__anon2
+ncclInvalidArgument	build/include/nccl.h	/^               ncclInvalidArgument         =  4,$/;"	e	enum:__anon2
+ncclInvalidUsage	build/include/nccl.h	/^               ncclInvalidUsage            =  5,$/;"	e	enum:__anon2
+ncclKern_t	src/collectives/device/common.h	/^typedef void(*ncclKern_t)(struct CollectiveArgs* args);$/;"	t
+ncclLLFifoLine	src/include/core.h	/^union ncclLLFifoLine {$/;"	u
+ncclMax	build/include/nccl.h	/^               ncclMax        = 2,$/;"	e	enum:__anon3
+ncclMin	build/include/nccl.h	/^               ncclMin        = 3,$/;"	e	enum:__anon3
+ncclNetAccept	src/include/net.h	/^static ncclResult_t ncclNetAccept(void* listenComm, void** recvComm) { NCCLCHECK(ncclNet->accept(listenComm, recvComm)); return ncclSuccess; }$/;"	f
+ncclNetCloseListen	src/include/net.h	/^static ncclResult_t ncclNetCloseListen(void* listenComm) { NCCLCHECK(ncclNet->closeListen(listenComm)); return ncclSuccess; }$/;"	f
+ncclNetCloseRecv	src/include/net.h	/^static ncclResult_t ncclNetCloseRecv(void* recvComm) { NCCLCHECK(ncclNet->closeRecv(recvComm)); return ncclSuccess; }$/;"	f
+ncclNetCloseSend	src/include/net.h	/^static ncclResult_t ncclNetCloseSend(void* sendComm) { NCCLCHECK(ncclNet->closeSend(sendComm)); return ncclSuccess; }$/;"	f
+ncclNetConnect	src/include/net.h	/^static ncclResult_t ncclNetConnect(int dev, void* handle, void** sendComm) { NCCLCHECK(ncclNet->connect(dev, handle, sendComm)); return ncclSuccess; }$/;"	f
+ncclNetDevices	src/include/net.h	/^static ncclResult_t ncclNetDevices(int* ndev, int** scores) { NCCLCHECK(ncclNet->devices(ndev, scores)); return ncclSuccess; }$/;"	f
+ncclNetFlush	src/include/net.h	/^static ncclResult_t ncclNetFlush(void* recvComm, void* data, int size) { NCCLCHECK(ncclNet->flush(recvComm, data, size)); return ncclSuccess; }$/;"	f
+ncclNetHandle_t	src/include/net.h	/^typedef char ncclNetHandle_t[NCCL_NET_HANDLE_MAXSIZE];$/;"	t
+ncclNetIrecv	src/include/net.h	/^static ncclResult_t ncclNetIrecv(void* recvComm, void* data, int size, int type, void** request) { NCCLCHECK(ncclNet->irecv(recvComm, data, size, type, request)); return ncclSuccess; }$/;"	f
+ncclNetIsend	src/include/net.h	/^static ncclResult_t ncclNetIsend(void* sendComm, void* data, int size, int type, void** request) { NCCLCHECK(ncclNet->isend(sendComm, data, size, type, request)); return ncclSuccess; }$/;"	f
+ncclNetListen	src/include/net.h	/^static ncclResult_t ncclNetListen(int dev, void* handle, void** listenComm) { NCCLCHECK(ncclNet->listen(dev, handle, listenComm)); return ncclSuccess; }$/;"	f
+ncclNetName	src/include/net.h	/^static const char* ncclNetName() { return ncclNet->name; }$/;"	f
+ncclNetPtrSupport	src/include/net.h	/^static ncclResult_t ncclNetPtrSupport(int dev, int* supportedTypes) { NCCLCHECK(ncclNet->ptrSupport(dev, supportedTypes)); return ncclSuccess; }$/;"	f
+ncclNetTest	src/include/net.h	/^static ncclResult_t ncclNetTest(void* request, int* done, int* size) { NCCLCHECK(ncclNet->test(request, done, size)); return ncclSuccess; }$/;"	f
+ncclNet_t	src/include/nccl_net.h	/^} ncclNet_t;$/;"	t	typeref:struct:__anon24
+ncclNumOps	build/include/nccl.h	/^               ncclNumOps     = 4 } ncclRedOp_t;$/;"	e	enum:__anon3
+ncclNumResults	build/include/nccl.h	/^               ncclNumResults              =  6 } ncclResult_t;$/;"	e	enum:__anon2
+ncclNumTypes	build/include/nccl.h	/^               ncclNumTypes   = 9 } ncclDataType_t;$/;"	e	enum:__anon4
+ncclNvLinkDeviceGpu	src/include/nvlink.h	/^  ncclNvLinkDeviceGpu,$/;"	e	enum:ncclNvLinkDeviceType
+ncclNvLinkDeviceSwitch	src/include/nvlink.h	/^  ncclNvLinkDeviceSwitch,$/;"	e	enum:ncclNvLinkDeviceType
+ncclNvLinkDeviceType	src/include/nvlink.h	/^enum ncclNvLinkDeviceType {$/;"	g
+ncclProd	build/include/nccl.h	/^               ncclProd       = 1,$/;"	e	enum:__anon3
+ncclProxyArgs	src/include/transport.h	/^struct ncclProxyArgs {$/;"	s
+ncclRecvMem	src/include/core.h	/^struct ncclRecvMem {$/;"	s
+ncclRedOp_t	build/include/nccl.h	/^               ncclNumOps     = 4 } ncclRedOp_t;$/;"	t	typeref:enum:__anon3
+ncclReduceKernel	src/collectives/device/reduce.h	/^__device__ void ncclReduceKernel(struct CollectiveArgs* args) {$/;"	f
+ncclReduceLLKernel	src/collectives/device/reduce.h	/^__device__ void ncclReduceLLKernel(struct CollectiveArgs* args) {$/;"	f
+ncclReduceScatterKernel	src/collectives/device/reduce_scatter.h	/^__device__ void ncclReduceScatterKernel(struct CollectiveArgs* args) {$/;"	f
+ncclReduceScatterLLKernel	src/collectives/device/reduce_scatter.h	/^__device__ void ncclReduceScatterLLKernel(struct CollectiveArgs* args) {$/;"	f
+ncclResult_t	build/include/nccl.h	/^               ncclNumResults              =  6 } ncclResult_t;$/;"	t	typeref:enum:__anon2
+ncclRing	src/include/core.h	/^struct ncclRing {$/;"	s
+ncclSendMem	src/include/core.h	/^struct ncclSendMem {$/;"	s
+ncclSocketIfSl_t	src/include/net.h	/^} ncclSocketIfSl_t;$/;"	t	typeref:enum:__anon11
+ncclSuccess	build/include/nccl.h	/^typedef enum { ncclSuccess                 =  0,$/;"	e	enum:__anon2
+ncclSum	build/include/nccl.h	/^typedef enum { ncclSum        = 0,$/;"	e	enum:__anon3
+ncclSystemError	build/include/nccl.h	/^               ncclSystemError             =  2,$/;"	e	enum:__anon2
+ncclTinfo_t	src/include/transport.h	/^typedef char ncclTinfo_t[RANK_INFO_SIZE];$/;"	t
+ncclTransport	src/include/transport.h	/^struct ncclTransport {$/;"	s
+ncclTransportComm	src/include/transport.h	/^struct ncclTransportComm {$/;"	s
+ncclTvalue_t	src/include/transport.h	/^typedef int64_t ncclTvalue_t;$/;"	t
+ncclTypeSize	src/include/common_coll.h	/^static __inline__ int ncclTypeSize(ncclDataType_t type) {$/;"	f
+ncclUint32	build/include/nccl.h	/^               ncclUint32     = 3,$/;"	e	enum:__anon4
+ncclUint64	build/include/nccl.h	/^               ncclUint64     = 5,$/;"	e	enum:__anon4
+ncclUint8	build/include/nccl.h	/^               ncclUint8      = 1,$/;"	e	enum:__anon4
+ncclUnhandledCudaError	build/include/nccl.h	/^               ncclUnhandledCudaError      =  1,$/;"	e	enum:__anon2
+ncclUniqueId	build/include/nccl.h	/^typedef struct { char internal[NCCL_UNIQUE_ID_BYTES]; } ncclUniqueId;$/;"	t	typeref:struct:__anon1
+needProxy	src/include/transport.h	/^  bool needProxy;$/;"	m	struct:ncclProxyArgs
+netIf	src/include/utils.h	/^struct netIf {$/;"	s
+next	src/include/ibvwrap.h	/^	struct ibv_recv_wr     *next;$/;"	m	struct:ibv_recv_wr	typeref:struct:ibv_recv_wr::ibv_recv_wr
+next	src/include/ibvwrap.h	/^	struct ibv_send_wr     *next;$/;"	m	struct:ibv_send_wr	typeref:struct:ibv_send_wr::ibv_send_wr
+nextIndex	src/include/core.h	/^      uint16_t nextIndex;$/;"	m	struct:ncclColl::__anon21::__anon22
+next_hdr	src/include/ibvwrap.h	/^	uint8_t			next_hdr;$/;"	m	struct:ibv_grh
+node_guid	src/include/ibvwrap.h	/^	uint64_t		node_guid;$/;"	m	struct:ibv_device_attr
+node_type	src/include/ibvwrap.h	/^	enum ibv_node_type	node_type;$/;"	m	struct:ibv_device	typeref:enum:ibv_device::ibv_node_type
+nsteps	src/include/transport.h	/^  int nsteps;$/;"	m	struct:ncclProxyArgs
+nthreads	src/include/core.h	/^      int nthreads;$/;"	m	struct:ncclRing::__anon19::__anon20
+num_comp_vectors	src/include/ibvwrap.h	/^	int			num_comp_vectors;$/;"	m	struct:ibv_context
+num_of_specs	src/include/ibvwrap.h	/^	uint8_t num_of_specs;$/;"	m	struct:ibv_flow_attr
+num_sge	src/include/ibvwrap.h	/^	int			num_sge;$/;"	m	struct:ibv_recv_wr
+num_sge	src/include/ibvwrap.h	/^	int			num_sge;$/;"	m	struct:ibv_send_wr
+nvmlDevice_t	src/include/nvmlwrap.h	/^typedef struct nvmlDevice_st* nvmlDevice_t;$/;"	t	typeref:struct:nvmlDevice_st
+nvmlEnableState_enum	src/include/nvmlwrap.h	/^typedef enum nvmlEnableState_enum$/;"	g
+nvmlEnableState_t	src/include/nvmlwrap.h	/^} nvmlEnableState_t;$/;"	t	typeref:enum:nvmlEnableState_enum
+nvmlNvLinkCapability_enum	src/include/nvmlwrap.h	/^typedef enum nvmlNvLinkCapability_enum$/;"	g
+nvmlNvLinkCapability_t	src/include/nvmlwrap.h	/^} nvmlNvLinkCapability_t;$/;"	t	typeref:enum:nvmlNvLinkCapability_enum
+nvmlPciInfo_st	src/include/nvmlwrap.h	/^typedef struct nvmlPciInfo_st$/;"	s
+nvmlPciInfo_t	src/include/nvmlwrap.h	/^} nvmlPciInfo_t;$/;"	t	typeref:struct:nvmlPciInfo_st
+nvmlReturn_enum	src/include/nvmlwrap.h	/^typedef enum nvmlReturn_enum$/;"	g
+nvmlReturn_t	src/include/nvmlwrap.h	/^} nvmlReturn_t;$/;"	t	typeref:enum:nvmlReturn_enum
+oflags	src/include/ibvwrap.h	/^	int	 oflags;$/;"	m	struct:ibv_xrcd_init_attr
+opCount	src/include/core.h	/^      uint64_t opCount;$/;"	m	struct:ncclRecvMem::__anon17::__anon18
+opCount	src/include/core.h	/^  uint64_t *opCount;  \/\/ Local for recv, remote for send$/;"	m	struct:ncclConnInfo
+opCount	src/include/core.h	/^  uint64_t opCount;$/;"	m	struct:CollectiveArgs
+opCount	src/include/core.h	/^  uint64_t opCount;$/;"	m	struct:ncclComm
+opCount	src/include/transport.h	/^  uint64_t opCount;$/;"	m	struct:ncclProxyArgs
+opcode	src/include/ibvwrap.h	/^	enum ibv_wc_opcode	opcode;$/;"	m	struct:ibv_wc	typeref:enum:ibv_wc::ibv_wc_opcode
+opcode	src/include/ibvwrap.h	/^	enum ibv_wr_opcode	opcode;$/;"	m	struct:ibv_send_wr	typeref:enum:ibv_send_wr::ibv_wr_opcode
+open_qp	src/include/ibvwrap.h	/^	struct ibv_qp * (*open_qp)(struct ibv_context *context,$/;"	m	struct:verbs_context	typeref:struct:verbs_context::open_qp
+open_xrcd	src/include/ibvwrap.h	/^	struct ibv_xrcd * (*open_xrcd)(struct ibv_context *context,$/;"	m	struct:verbs_context	typeref:struct:verbs_context::open_xrcd
+operator ()	src/collectives/device/common_kernel.h	/^  __device__ PackType operator()(const PackType x, const PackType y) const {$/;"	f	struct:MULTI
+operator ()	src/collectives/device/common_kernel.h	/^  __device__ void operator()(Pack128& x, Pack128& y) {$/;"	f	struct:MULTI128
+operator ()	src/collectives/device/reduce_kernel.h	/^  __device__ T operator()(const T x, const T y) const {$/;"	f	struct:FuncMax
+operator ()	src/collectives/device/reduce_kernel.h	/^  __device__ T operator()(const T x, const T y) const {$/;"	f	struct:FuncMin
+operator ()	src/collectives/device/reduce_kernel.h	/^  __device__ T operator()(const T x, const T y) const {$/;"	f	struct:FuncNull
+operator ()	src/collectives/device/reduce_kernel.h	/^  __device__ T operator()(const T x, const T y) const {$/;"	f	struct:FuncProd
+operator ()	src/collectives/device/reduce_kernel.h	/^  __device__ T operator()(const T x, const T y) const {$/;"	f	struct:FuncSum
+operator ()	src/collectives/device/reduce_kernel.h	/^  __device__ half operator()(const half x, const half y) const {$/;"	f	struct:FuncMax
+operator ()	src/collectives/device/reduce_kernel.h	/^  __device__ half operator()(const half x, const half y) const {$/;"	f	struct:FuncMin
+operator ()	src/collectives/device/reduce_kernel.h	/^  __device__ half operator()(const half x, const half y) const {$/;"	f	struct:FuncProd
+operator ()	src/collectives/device/reduce_kernel.h	/^  __device__ half operator()(const half x, const half y) const {$/;"	f	struct:FuncSum
+operator ()	src/collectives/device/reduce_kernel.h	/^  __device__ half2 operator()(const half2 x, const half2 y) const {$/;"	f	struct:FuncMax
+operator ()	src/collectives/device/reduce_kernel.h	/^  __device__ half2 operator()(const half2 x, const half2 y) const {$/;"	f	struct:FuncMin
+operator ()	src/collectives/device/reduce_kernel.h	/^  __device__ half2 operator()(const half2 x, const half2 y) const {$/;"	f	struct:FuncProd
+operator ()	src/collectives/device/reduce_kernel.h	/^  __device__ half2 operator()(const half2 x, const half2 y) const {$/;"	f	struct:FuncSum
+operator ()	src/collectives/device/reduce_kernel.h	/^  __device__ int8_t operator()(const int8_t x, const int8_t y) const {$/;"	f	struct:FuncMax
+operator ()	src/collectives/device/reduce_kernel.h	/^  __device__ int8_t operator()(const int8_t x, const int8_t y) const {$/;"	f	struct:FuncMin
+operator ()	src/collectives/device/reduce_kernel.h	/^  __device__ int8_t operator()(const int8_t x, const int8_t y) const {$/;"	f	struct:FuncProd
+operator ()	src/collectives/device/reduce_kernel.h	/^  __device__ int8_t operator()(const int8_t x, const int8_t y) const {$/;"	f	struct:FuncSum
+operator ()	src/collectives/device/reduce_kernel.h	/^  __device__ uint32_t operator()(const uint32_t x, const uint32_t y) const {$/;"	f	struct:FuncMax
+operator ()	src/collectives/device/reduce_kernel.h	/^  __device__ uint32_t operator()(const uint32_t x, const uint32_t y) const {$/;"	f	struct:FuncMin
+operator ()	src/collectives/device/reduce_kernel.h	/^  __device__ uint32_t operator()(const uint32_t x, const uint32_t y) const {$/;"	f	struct:FuncProd
+operator ()	src/collectives/device/reduce_kernel.h	/^  __device__ uint32_t operator()(const uint32_t x, const uint32_t y) const {$/;"	f	struct:FuncSum
+operator ()	src/collectives/device/reduce_kernel.h	/^  __device__ uint8_t operator()(const uint8_t x, const uint8_t y) const {$/;"	f	struct:FuncMax
+operator ()	src/collectives/device/reduce_kernel.h	/^  __device__ uint8_t operator()(const uint8_t x, const uint8_t y) const {$/;"	f	struct:FuncMin
+operator ()	src/collectives/device/reduce_kernel.h	/^  __device__ uint8_t operator()(const uint8_t x, const uint8_t y) const {$/;"	f	struct:FuncProd
+operator ()	src/collectives/device/reduce_kernel.h	/^  __device__ uint8_t operator()(const uint8_t x, const uint8_t y) const {$/;"	f	struct:FuncSum
+ops	src/include/ibvwrap.h	/^	struct ibv_context_ops	ops;$/;"	m	struct:ibv_context	typeref:struct:ibv_context::ibv_context_ops
+ops	src/include/ibvwrap.h	/^	struct ibv_device_ops	ops;$/;"	m	struct:ibv_device	typeref:struct:ibv_device::ibv_device_ops
+pad1	src/include/core.h	/^      char pad1[CACHE_LINE_SIZE-sizeof(uint64_t)];$/;"	m	struct:ncclSendMem::__anon15::__anon16
+pad2	src/include/core.h	/^      char pad2[CACHE_LINE_SIZE-sizeof(uint64_t)];$/;"	m	struct:ncclRecvMem::__anon17::__anon18
+pad2	src/include/core.h	/^      char pad2[CACHE_LINE_SIZE-sizeof(void*)];$/;"	m	struct:ncclSendMem::__anon15::__anon16
+pad3	src/include/core.h	/^    char pad3[MEM_ALIGN];$/;"	m	union:ncclSendMem::__anon15
+pad4	src/include/core.h	/^      char pad4[CACHE_LINE_SIZE-sizeof(uint64_t)];$/;"	m	struct:ncclRecvMem::__anon17::__anon18
+pad5	src/include/core.h	/^    char pad5[MEM_ALIGN];$/;"	m	union:ncclRecvMem::__anon17
+page_size_cap	src/include/ibvwrap.h	/^	uint64_t		page_size_cap;$/;"	m	struct:ibv_device_attr
+pathDists	src/include/topo.h	/^static const char* pathDists[] = { "PIX", "PXB", "PHB", "SOC" };$/;"	v
+path_mig_state	src/include/ibvwrap.h	/^	enum ibv_mig_state	path_mig_state;$/;"	m	struct:ibv_qp_attr	typeref:enum:ibv_qp_attr::ibv_mig_state
+path_mtu	src/include/ibvwrap.h	/^	enum ibv_mtu		path_mtu;$/;"	m	struct:ibv_qp_attr	typeref:enum:ibv_qp_attr::ibv_mtu
+paylen	src/include/ibvwrap.h	/^	uint16_t		paylen;$/;"	m	struct:ibv_grh
+pciDeviceId	src/include/nvmlwrap.h	/^    unsigned int pciDeviceId;        \/\/!< The combined 16-bit device id and 16-bit vendor id$/;"	m	struct:nvmlPciInfo_st
+pciDistance	src/include/topo.h	/^static int pciDistance(char* path1, char* path2) {$/;"	f
+pciSubSystemId	src/include/nvmlwrap.h	/^    unsigned int pciSubSystemId;     \/\/!< The 32-bit Sub System Device ID$/;"	m	struct:nvmlPciInfo_st
+pd	src/include/ibvwrap.h	/^	struct ibv_pd	       *pd;$/;"	m	struct:ibv_ah	typeref:struct:ibv_ah::ibv_pd
+pd	src/include/ibvwrap.h	/^	struct ibv_pd	       *pd;$/;"	m	struct:ibv_mr	typeref:struct:ibv_mr::ibv_pd
+pd	src/include/ibvwrap.h	/^	struct ibv_pd	       *pd;$/;"	m	struct:ibv_mw	typeref:struct:ibv_mw::ibv_pd
+pd	src/include/ibvwrap.h	/^	struct ibv_pd	       *pd;$/;"	m	struct:ibv_qp	typeref:struct:ibv_qp::ibv_pd
+pd	src/include/ibvwrap.h	/^	struct ibv_pd	       *pd;$/;"	m	struct:ibv_qp_init_attr_ex	typeref:struct:ibv_qp_init_attr_ex::ibv_pd
+pd	src/include/ibvwrap.h	/^	struct ibv_pd	       *pd;$/;"	m	struct:ibv_srq	typeref:struct:ibv_srq::ibv_pd
+pd	src/include/ibvwrap.h	/^	struct ibv_pd	       *pd;$/;"	m	struct:ibv_srq_init_attr_ex	typeref:struct:ibv_srq_init_attr_ex::ibv_pd
+phys_port_cnt	src/include/ibvwrap.h	/^	uint8_t			phys_port_cnt;$/;"	m	struct:ibv_device_attr
+phys_state	src/include/ibvwrap.h	/^	uint8_t			phys_state;$/;"	m	struct:ibv_port_attr
+pkey_index	src/include/ibvwrap.h	/^	uint16_t		pkey_index;$/;"	m	struct:ibv_qp_attr
+pkey_index	src/include/ibvwrap.h	/^	uint16_t		pkey_index;$/;"	m	struct:ibv_wc
+pkey_tbl_len	src/include/ibvwrap.h	/^	uint16_t		pkey_tbl_len;$/;"	m	struct:ibv_port_attr
+poll_cq	src/include/ibvwrap.h	/^	int			(*poll_cq)(struct ibv_cq *cq, int num_entries, struct ibv_wc *wc);$/;"	m	struct:ibv_context_ops
+port	src/include/ibvwrap.h	/^	uint8_t port;$/;"	m	struct:ibv_flow_attr
+port	src/include/utils.h	/^  int port;$/;"	m	struct:netIf
+port_cap_flags	src/include/ibvwrap.h	/^	uint32_t		port_cap_flags;$/;"	m	struct:ibv_port_attr
+port_num	src/include/ibvwrap.h	/^		int		port_num;$/;"	m	union:ibv_async_event::__anon27
+port_num	src/include/ibvwrap.h	/^	uint8_t			port_num;$/;"	m	struct:ibv_ah_attr
+port_num	src/include/ibvwrap.h	/^	uint8_t			port_num;$/;"	m	struct:ibv_qp_attr
+post	src/collectives/device/primitives.h	/^  void post(uint64_t val) { *flag = (val - shift); }$/;"	f	class:PostFlag
+postSize	src/collectives/device/primitives.h	/^  void postSize(uint64_t step, int size) { if (fifo != NULL) fifo[step%fifo_size] = size; };$/;"	f	class:PostFlag
+post_recv	src/include/ibvwrap.h	/^	int			(*post_recv)(struct ibv_qp *qp, struct ibv_recv_wr *wr,$/;"	m	struct:ibv_context_ops
+post_send	src/include/ibvwrap.h	/^	int			(*post_send)(struct ibv_qp *qp, struct ibv_send_wr *wr,$/;"	m	struct:ibv_context_ops
+post_srq_recv	src/include/ibvwrap.h	/^	int			(*post_srq_recv)(struct ibv_srq *srq,$/;"	m	struct:ibv_context_ops
+prefix	src/include/utils.h	/^  char prefix[64];$/;"	m	struct:netIf
+priority	src/include/ibvwrap.h	/^	uint16_t priority;$/;"	m	struct:ibv_flow_attr
+proxy	src/include/transport.h	/^  ncclResult_t (*proxy)(struct ncclProxyArgs*);$/;"	m	struct:ncclTransportComm
+proxyFrom	src/include/transport.h	/^  proxyFrom = 1,$/;"	e	enum:proxyMode
+proxyInfo	src/include/core.h	/^  struct transportProxyInfo* proxyInfo;$/;"	m	struct:ncclConnector	typeref:struct:ncclConnector::transportProxyInfo
+proxyMode	src/include/transport.h	/^enum proxyMode {$/;"	g
+proxyPatternFrom	src/include/transport.h	/^static inline int proxyPatternFrom(int root) { return 1+root; }$/;"	f
+proxyPatternMode	src/include/transport.h	/^static inline enum proxyMode proxyPatternMode(int pattern) { return (pattern == 0) ? proxyRing : ((pattern > 0) ? proxyFrom : proxyTo); }$/;"	f
+proxyPatternRing	src/include/transport.h	/^static int proxyPatternRing = proxyRing;$/;"	v
+proxyPatternRoot	src/include/transport.h	/^static inline int proxyPatternRoot(int pattern) { return (pattern > 0) ? pattern-1 : -pattern-1; }$/;"	f
+proxyPatternTo	src/include/transport.h	/^static inline int proxyPatternTo(int root) { return -1-root; }$/;"	f
+proxyReady	src/include/transport.h	/^  volatile int proxyReady;$/;"	m	struct:transportProxyInfo
+proxyRing	src/include/transport.h	/^  proxyRing = 0,$/;"	e	enum:proxyMode
+proxyTo	src/include/transport.h	/^  proxyTo = 2$/;"	e	enum:proxyMode
+ptrExchange	src/include/core.h	/^      void* ptrExchange;$/;"	m	struct:ncclSendMem::__anon15::__anon16
+ptrExchange	src/include/core.h	/^  void **ptrExchange; \/\/ Pointer exchange for direct communication$/;"	m	struct:ncclConnInfo
+ptrSupport	src/include/nccl_net.h	/^  ncclResult_t (*ptrSupport)(int dev, int* supportedTypes);$/;"	m	struct:__anon24
+ptradd	src/collectives/device/primitives.h	/^Tptr ptradd(Tptr ptr, int i) {$/;"	f
+ptradd	src/collectives/device/primitives.h	/^nullptr_t ptradd(nullptr_t ptr, int i) {$/;"	f
+qkey	src/include/ibvwrap.h	/^	uint32_t		qkey;$/;"	m	struct:ibv_qp_attr
+qkey_viol_cntr	src/include/ibvwrap.h	/^	uint32_t		qkey_viol_cntr;$/;"	m	struct:ibv_port_attr
+qp	src/include/ibvwrap.h	/^		struct ibv_qp  *qp;$/;"	m	union:ibv_async_event::__anon27	typeref:struct:ibv_async_event::__anon27::ibv_qp
+qp_access_flags	src/include/ibvwrap.h	/^	int			qp_access_flags;$/;"	m	struct:ibv_qp_attr
+qp_context	src/include/ibvwrap.h	/^	void		       *qp_context;$/;"	m	struct:ibv_qp
+qp_context	src/include/ibvwrap.h	/^	void		       *qp_context;$/;"	m	struct:ibv_qp_init_attr
+qp_context	src/include/ibvwrap.h	/^	void		       *qp_context;$/;"	m	struct:ibv_qp_init_attr_ex
+qp_context	src/include/ibvwrap.h	/^	void		       *qp_context;$/;"	m	struct:ibv_qp_open_attr
+qp_num	src/include/ibvwrap.h	/^	uint32_t		qp_num;$/;"	m	struct:ibv_qp
+qp_num	src/include/ibvwrap.h	/^	uint32_t		qp_num;$/;"	m	struct:ibv_qp_open_attr
+qp_num	src/include/ibvwrap.h	/^	uint32_t		qp_num;$/;"	m	struct:ibv_wc
+qp_state	src/include/ibvwrap.h	/^	enum ibv_qp_state	qp_state;$/;"	m	struct:ibv_qp_attr	typeref:enum:ibv_qp_attr::ibv_qp_state
+qp_type	src/include/ibvwrap.h	/^		} qp_type;$/;"	m	union:ibv_send_wr::__anon32	typeref:union:ibv_send_wr::__anon32::__anon33
+qp_type	src/include/ibvwrap.h	/^	enum ibv_qp_type	qp_type;$/;"	m	struct:ibv_qp	typeref:enum:ibv_qp::ibv_qp_type
+qp_type	src/include/ibvwrap.h	/^	enum ibv_qp_type	qp_type;$/;"	m	struct:ibv_qp_init_attr	typeref:enum:ibv_qp_init_attr::ibv_qp_type
+qp_type	src/include/ibvwrap.h	/^	enum ibv_qp_type	qp_type;$/;"	m	struct:ibv_qp_init_attr_ex	typeref:enum:ibv_qp_init_attr_ex::ibv_qp_type
+qp_type	src/include/ibvwrap.h	/^	enum ibv_qp_type	qp_type;$/;"	m	struct:ibv_qp_open_attr	typeref:enum:ibv_qp_open_attr::ibv_qp_type
+query_device	src/include/ibvwrap.h	/^	int			(*query_device)(struct ibv_context *context,$/;"	m	struct:ibv_context_ops
+query_port	src/include/ibvwrap.h	/^	int			(*query_port)(struct ibv_context *context, uint8_t port_num,$/;"	m	struct:ibv_context_ops
+query_qp	src/include/ibvwrap.h	/^	int			(*query_qp)(struct ibv_qp *qp, struct ibv_qp_attr *attr,$/;"	m	struct:ibv_context_ops
+query_srq	src/include/ibvwrap.h	/^	int			(*query_srq)(struct ibv_srq *srq,$/;"	m	struct:ibv_context_ops
+rank	src/include/core.h	/^  int rank;    \/\/ my rank in the communicator$/;"	m	struct:ncclComm
+raw	src/include/ibvwrap.h	/^	uint8_t			raw[16];$/;"	m	union:ibv_gid
+rdma	src/include/ibvwrap.h	/^		} rdma;$/;"	m	union:ibv_send_wr::__anon28	typeref:struct:ibv_send_wr::__anon28::__anon29
+readAL	src/collectives/device/ll_kernel.h	/^static __device__ uint64_t readAL(uint64_t* src) {$/;"	f
+readLL	src/collectives/device/ll_kernel.h	/^static __device__ uint64_t readLL(union ncclLLFifoLine* src, uint32_t flag) {$/;"	f
+recv	src/include/core.h	/^      struct ncclConnector recv;$/;"	m	struct:ncclRing::__anon19::__anon20	typeref:struct:ncclRing::__anon19::__anon20::ncclConnector
+recv	src/include/transport.h	/^  struct ncclTransportComm recv;$/;"	m	struct:ncclTransport	typeref:struct:ncclTransport::ncclTransportComm
+recv_cq	src/include/ibvwrap.h	/^	struct ibv_cq	       *recv_cq;$/;"	m	struct:ibv_qp	typeref:struct:ibv_qp::ibv_cq
+recv_cq	src/include/ibvwrap.h	/^	struct ibv_cq	       *recv_cq;$/;"	m	struct:ibv_qp_init_attr	typeref:struct:ibv_qp_init_attr::ibv_cq
+recv_cq	src/include/ibvwrap.h	/^	struct ibv_cq	       *recv_cq;$/;"	m	struct:ibv_qp_init_attr_ex	typeref:struct:ibv_qp_init_attr_ex::ibv_cq
+refcnt	src/include/ibvwrap.h	/^	int			refcnt;$/;"	m	struct:ibv_comp_channel
+reg_mr	src/include/ibvwrap.h	/^	struct ibv_mr *		(*reg_mr)(struct ibv_pd *pd, void *addr, size_t length,$/;"	m	struct:ibv_context_ops	typeref:struct:ibv_context_ops::reg_mr
+remote_addr	src/include/ibvwrap.h	/^			uint64_t	remote_addr;$/;"	m	struct:ibv_send_wr::__anon28::__anon29
+remote_addr	src/include/ibvwrap.h	/^			uint64_t	remote_addr;$/;"	m	struct:ibv_send_wr::__anon28::__anon30
+remote_qkey	src/include/ibvwrap.h	/^			uint32_t	remote_qkey;$/;"	m	struct:ibv_send_wr::__anon28::__anon31
+remote_qpn	src/include/ibvwrap.h	/^			uint32_t	remote_qpn;$/;"	m	struct:ibv_send_wr::__anon28::__anon31
+remote_srqn	src/include/ibvwrap.h	/^				uint32_t    remote_srqn;$/;"	m	struct:ibv_send_wr::__anon32::__anon33::__anon34
+req_notify_cq	src/include/ibvwrap.h	/^	int			(*req_notify_cq)(struct ibv_cq *cq, int solicited_only);$/;"	m	struct:ibv_context_ops
+rereg_mr	src/include/ibvwrap.h	/^	struct ibv_mr *		(*rereg_mr)(struct ibv_mr *mr,$/;"	m	struct:ibv_context_ops	typeref:struct:ibv_context_ops::rereg_mr
+reserved	src/include/ibvwrap.h	/^	uint8_t			reserved;$/;"	m	struct:ibv_port_attr
+reserved0	src/include/nvmlwrap.h	/^    unsigned int reserved0;$/;"	m	struct:nvmlPciInfo_st
+reserved1	src/include/nvmlwrap.h	/^    unsigned int reserved1;$/;"	m	struct:nvmlPciInfo_st
+reserved2	src/include/nvmlwrap.h	/^    unsigned int reserved2;$/;"	m	struct:nvmlPciInfo_st
+reserved3	src/include/nvmlwrap.h	/^    unsigned int reserved3;$/;"	m	struct:nvmlPciInfo_st
+resize_cq	src/include/ibvwrap.h	/^	int			(*resize_cq)(struct ibv_cq *cq, int cqe);$/;"	m	struct:ibv_context_ops
+retry_cnt	src/include/ibvwrap.h	/^	uint8_t			retry_cnt;$/;"	m	struct:ibv_qp_attr
+ring	src/include/transport.h	/^  struct ncclRing* ring;$/;"	m	struct:ncclProxyArgs	typeref:struct:ncclProxyArgs::ncclRing
+rings	src/include/core.h	/^  struct ncclRing rings[MAXRINGS];$/;"	m	struct:ncclComm	typeref:struct:ncclComm::ncclRing
+rkey	src/include/ibvwrap.h	/^			uint32_t	rkey;$/;"	m	struct:ibv_send_wr::__anon28::__anon29
+rkey	src/include/ibvwrap.h	/^			uint32_t	rkey;$/;"	m	struct:ibv_send_wr::__anon28::__anon30
+rkey	src/include/ibvwrap.h	/^	uint32_t		rkey;$/;"	m	struct:ibv_mr
+rkey	src/include/ibvwrap.h	/^	uint32_t		rkey;$/;"	m	struct:ibv_mw
+rnr_retry	src/include/ibvwrap.h	/^	uint8_t			rnr_retry;$/;"	m	struct:ibv_qp_attr
+root	src/include/core.h	/^  uint32_t root;$/;"	m	struct:CollectiveArgs
+rq_psn	src/include/ibvwrap.h	/^	uint32_t		rq_psn;$/;"	m	struct:ibv_qp_attr
+sa	src/include/socket.h	/^  struct sockaddr sa;$/;"	m	union:socketAddress	typeref:struct:socketAddress::sockaddr
+saveKernel	src/include/common_coll.h	/^static ncclResult_t saveKernel(int coll, const void* sendbuff, void* recvbuff, size_t count,$/;"	f
+send	src/include/core.h	/^      struct ncclConnector send;$/;"	m	struct:ncclRing::__anon19::__anon20	typeref:struct:ncclRing::__anon19::__anon20::ncclConnector
+send	src/include/transport.h	/^  struct ncclTransportComm send;$/;"	m	struct:ncclTransport	typeref:struct:ncclTransport::ncclTransportComm
+send_cq	src/include/ibvwrap.h	/^	struct ibv_cq	       *send_cq;$/;"	m	struct:ibv_qp	typeref:struct:ibv_qp::ibv_cq
+send_cq	src/include/ibvwrap.h	/^	struct ibv_cq	       *send_cq;$/;"	m	struct:ibv_qp_init_attr	typeref:struct:ibv_qp_init_attr::ibv_cq
+send_cq	src/include/ibvwrap.h	/^	struct ibv_cq	       *send_cq;$/;"	m	struct:ibv_qp_init_attr_ex	typeref:struct:ibv_qp_init_attr_ex::ibv_cq
+send_flags	src/include/ibvwrap.h	/^	int			send_flags;$/;"	m	struct:ibv_mw_bind
+send_flags	src/include/ibvwrap.h	/^	int			send_flags;$/;"	m	struct:ibv_send_wr
+setEnvFile	src/include/param.h	/^static void setEnvFile(const char* fileName) {$/;"	f
+setup	src/include/transport.h	/^  ncclResult_t (*setup)(ncclTinfo_t*, ncclTinfo_t*, struct ncclConnect*, struct ncclRing*);$/;"	m	struct:ncclTransportComm
+sg_list	src/include/ibvwrap.h	/^	struct ibv_sge	       *sg_list;$/;"	m	struct:ibv_recv_wr	typeref:struct:ibv_recv_wr::ibv_sge
+sg_list	src/include/ibvwrap.h	/^	struct ibv_sge	       *sg_list;$/;"	m	struct:ibv_send_wr	typeref:struct:ibv_send_wr::ibv_sge
+sgid	src/include/ibvwrap.h	/^	union ibv_gid		sgid;$/;"	m	struct:ibv_grh	typeref:union:ibv_grh::ibv_gid
+sgid_index	src/include/ibvwrap.h	/^	uint8_t			sgid_index;$/;"	m	struct:ibv_global_route
+sharedMem	src/include/core.h	/^  size_t sharedMem;$/;"	m	struct:cudaLaunchParams
+shift	src/collectives/device/primitives.h	/^  const int shift;$/;"	m	class:PostFlag
+shift	src/collectives/device/primitives.h	/^  const int shift;$/;"	m	class:WaitFlag
+shmClose	src/include/shm.h	/^static ncclResult_t shmClose(void* shmPtr, void* devShmPtr, const int shmsize) {$/;"	f
+shmOpen	src/include/shm.h	/^static ncclResult_t shmOpen(const char* shmname, const int shmsize, void** shmPtr, void** devShmPtr, int create) {$/;"	f
+shmUnlink	src/include/shm.h	/^static ncclResult_t shmUnlink(const char* shmname) {$/;"	f
+sin	src/include/socket.h	/^  struct sockaddr_in sin;$/;"	m	union:socketAddress	typeref:struct:socketAddress::sockaddr_in
+sin6	src/include/socket.h	/^  struct sockaddr_in6 sin6;$/;"	m	union:socketAddress	typeref:struct:socketAddress::sockaddr_in6
+size	src/include/ibvwrap.h	/^			uint16_t		size;$/;"	m	struct:ibv_flow_spec::__anon35::__anon36
+size	src/include/ibvwrap.h	/^	uint16_t  size;$/;"	m	struct:ibv_flow_spec_eth
+size	src/include/ibvwrap.h	/^	uint16_t  size;$/;"	m	struct:ibv_flow_spec_ipv4
+size	src/include/ibvwrap.h	/^	uint16_t  size;$/;"	m	struct:ibv_flow_spec_tcp_udp
+size	src/include/ibvwrap.h	/^	uint16_t size;$/;"	m	struct:ibv_flow_attr
+size_of_context	src/include/ibvwrap.h	/^	size_t	size_of_context;$/;"	m	struct:verbs_device
+sizeof	src/collectives/device/common_kernel.h	/^  static_assert(sizeof(PackType) == 2 * sizeof(float),$/;"	m	struct:MULTI
+sizeof	src/collectives/device/common_kernel.h	/^  static_assert(sizeof(PackType) == 2 * sizeof(int32_t),$/;"	m	struct:MULTI
+sizeof	src/collectives/device/common_kernel.h	/^  static_assert(sizeof(PackType) == 2 * sizeof(uint32_t),$/;"	m	struct:MULTI
+sizeof	src/collectives/device/common_kernel.h	/^  static_assert(sizeof(PackType) == 4 * sizeof(half),$/;"	m	struct:MULTI
+sizeof	src/collectives/device/common_kernel.h	/^  static_assert(sizeof(PackType) == sizeof(double),$/;"	m	struct:MULTI
+sizeof	src/collectives/device/common_kernel.h	/^  static_assert(sizeof(PackType) == sizeof(int64_t),$/;"	m	struct:MULTI
+sizeof	src/collectives/device/common_kernel.h	/^  static_assert(sizeof(PackType) == sizeof(uint64_t),$/;"	m	struct:MULTI
+sizeof	src/include/core.h	/^static_assert(sizeof(struct ncclRing) == 0x80*sizeof(int), "ncclRing must have a pow2 size");$/;"	v
+sizesFifo	src/include/core.h	/^      int sizesFifo[SIZES_FIFO_SIZE];$/;"	m	struct:ncclRecvMem::__anon17::__anon18
+sl	src/include/ibvwrap.h	/^	uint8_t			sl;$/;"	m	struct:ibv_ah_attr
+sl	src/include/ibvwrap.h	/^	uint8_t			sl;$/;"	m	struct:ibv_wc
+slid	src/include/ibvwrap.h	/^	uint16_t		slid;$/;"	m	struct:ibv_wc
+sm_lid	src/include/ibvwrap.h	/^	uint16_t		sm_lid;$/;"	m	struct:ibv_port_attr
+sm_sl	src/include/ibvwrap.h	/^	uint8_t			sm_sl;$/;"	m	struct:ibv_port_attr
+socketAddress	src/include/socket.h	/^union socketAddress {$/;"	u
+socketReceive	src/include/socket.h	/^static ncclResult_t socketReceive(int fd, void* ptr, int size) {$/;"	f
+socketSend	src/include/socket.h	/^static ncclResult_t socketSend(int fd, void* ptr, int size) {$/;"	f
+socketToPort	src/include/socket.h	/^static inline short socketToPort(struct sockaddr *saddr) {$/;"	f
+socketToString	src/include/socket.h	/^static inline const char *socketToString(struct sockaddr *saddr, char *buf) {$/;"	f
+sq_draining	src/include/ibvwrap.h	/^	uint8_t			sq_draining;$/;"	m	struct:ibv_qp_attr
+sq_psn	src/include/ibvwrap.h	/^	uint32_t		sq_psn;$/;"	m	struct:ibv_qp_attr
+sq_sig_all	src/include/ibvwrap.h	/^	int			sq_sig_all;$/;"	m	struct:ibv_qp_init_attr
+sq_sig_all	src/include/ibvwrap.h	/^	int			sq_sig_all;$/;"	m	struct:ibv_qp_init_attr_ex
+src_ip	src/include/ibvwrap.h	/^	uint32_t src_ip;$/;"	m	struct:ibv_flow_ipv4_filter
+src_mac	src/include/ibvwrap.h	/^	uint8_t		src_mac[6];$/;"	m	struct:ibv_flow_eth_filter
+src_path_bits	src/include/ibvwrap.h	/^	uint8_t			src_path_bits;$/;"	m	struct:ibv_ah_attr
+src_port	src/include/ibvwrap.h	/^	uint16_t src_port;$/;"	m	struct:ibv_flow_tcp_udp_filter
+src_qp	src/include/ibvwrap.h	/^	uint32_t		src_qp;$/;"	m	struct:ibv_wc
+srq	src/include/ibvwrap.h	/^		struct ibv_srq *srq;$/;"	m	union:ibv_async_event::__anon27	typeref:struct:ibv_async_event::__anon27::ibv_srq
+srq	src/include/ibvwrap.h	/^	struct ibv_srq	       *srq;$/;"	m	struct:ibv_qp	typeref:struct:ibv_qp::ibv_srq
+srq	src/include/ibvwrap.h	/^	struct ibv_srq	       *srq;$/;"	m	struct:ibv_qp_init_attr	typeref:struct:ibv_qp_init_attr::ibv_srq
+srq	src/include/ibvwrap.h	/^	struct ibv_srq	       *srq;$/;"	m	struct:ibv_qp_init_attr_ex	typeref:struct:ibv_qp_init_attr_ex::ibv_srq
+srq_context	src/include/ibvwrap.h	/^	void		       *srq_context;$/;"	m	struct:ibv_srq
+srq_context	src/include/ibvwrap.h	/^	void		       *srq_context;$/;"	m	struct:ibv_srq_init_attr
+srq_context	src/include/ibvwrap.h	/^	void		       *srq_context;$/;"	m	struct:ibv_srq_init_attr_ex
+srq_limit	src/include/ibvwrap.h	/^	uint32_t		srq_limit;$/;"	m	struct:ibv_srq_attr
+srq_type	src/include/ibvwrap.h	/^	enum ibv_srq_type	srq_type;$/;"	m	struct:ibv_srq_init_attr_ex	typeref:enum:ibv_srq_init_attr_ex::ibv_srq_type
+state	src/include/ibvwrap.h	/^	enum ibv_port_state	state;$/;"	m	struct:ibv_port_attr	typeref:enum:ibv_port_attr::ibv_port_state
+state	src/include/ibvwrap.h	/^	enum ibv_qp_state       state;$/;"	m	struct:ibv_qp	typeref:enum:ibv_qp::ibv_qp_state
+static_rate	src/include/ibvwrap.h	/^	uint8_t			static_rate;$/;"	m	struct:ibv_ah_attr
+status	src/include/ibvwrap.h	/^	enum ibv_wc_status	status;$/;"	m	struct:ibv_wc	typeref:enum:ibv_wc::ibv_wc_status
+storage	src/collectives/device/common_kernel.h	/^    PackType storage;$/;"	m	union:MULTI::converter
+storage	src/collectives/device/reduce_kernel.h	/^  union converter { uint32_t storage; char4 a; };$/;"	m	union:FuncMax::converter
+storage	src/collectives/device/reduce_kernel.h	/^  union converter { uint32_t storage; char4 a; };$/;"	m	union:FuncMin::converter
+storage	src/collectives/device/reduce_kernel.h	/^  union converter { uint32_t storage; char4 a; };$/;"	m	union:FuncSum::converter
+storage	src/collectives/device/reduce_kernel.h	/^  union converter { uint32_t storage; uchar4 a; };$/;"	m	union:FuncMax::converter
+storage	src/collectives/device/reduce_kernel.h	/^  union converter { uint32_t storage; uchar4 a; };$/;"	m	union:FuncMin::converter
+storage	src/collectives/device/reduce_kernel.h	/^  union converter { uint32_t storage; uchar4 a; };$/;"	m	union:FuncSum::converter
+storeAL	src/collectives/device/ll_kernel.h	/^static __device__ void storeAL(uint64_t* dst, uint64_t val) {$/;"	f
+storeLL	src/collectives/device/ll_kernel.h	/^static __device__ void storeLL(union ncclLLFifoLine* dst, uint64_t val, uint32_t flag) {$/;"	f
+stream	src/include/core.h	/^  cudaStream_t stream;$/;"	m	struct:cudaLaunchParams
+subnet_prefix	src/include/ibvwrap.h	/^		uint64_t	subnet_prefix;$/;"	m	struct:ibv_gid::__anon25
+subnet_timeout	src/include/ibvwrap.h	/^	uint8_t			subnet_timeout;$/;"	m	struct:ibv_port_attr
+substeps	src/include/transport.h	/^  int substeps;$/;"	m	struct:ncclProxyArgs
+swap	src/include/ibvwrap.h	/^			uint64_t	swap;$/;"	m	struct:ibv_send_wr::__anon28::__anon30
+sys_image_guid	src/include/ibvwrap.h	/^	uint64_t		sys_image_guid;$/;"	m	struct:ibv_device_attr
+sz	src/include/ibvwrap.h	/^	size_t	sz;$/;"	m	struct:verbs_device
+sz	src/include/ibvwrap.h	/^	size_t   sz;	\/* Must be immediately before struct ibv_context *\/$/;"	m	struct:verbs_context
+tail	src/include/core.h	/^      uint64_t tail;$/;"	m	struct:ncclRecvMem::__anon17::__anon18
+tail	src/include/core.h	/^  uint64_t *tail;     \/\/ Local for recv, remote for send$/;"	m	struct:ncclConnInfo
+tcp_udp	src/include/ibvwrap.h	/^		struct ibv_flow_spec_tcp_udp tcp_udp;$/;"	m	union:ibv_flow_spec::__anon35	typeref:struct:ibv_flow_spec::__anon35::ibv_flow_spec_tcp_udp
+test	src/include/nccl_net.h	/^  ncclResult_t (*test)(void* request, int* done, int* size);$/;"	m	struct:__anon24
+thread	src/include/transport.h	/^  pthread_t thread;$/;"	m	struct:transportProxyInfo
+threadFunc_t	src/include/transport.h	/^typedef ncclResult_t (*threadFunc_t)(struct ncclProxyArgs*);$/;"	t
+threadThreshold	src/include/core.h	/^  ssize_t threadThreshold;$/;"	m	struct:ncclComm
+timeout	src/include/ibvwrap.h	/^	uint8_t			timeout;$/;"	m	struct:ibv_qp_attr
+tinfo	src/include/transport.h	/^  ncclTinfo_t tinfo[NTRANSPORTS];$/;"	m	struct:ncclInfo
+traffic_class	src/include/ibvwrap.h	/^	uint8_t			traffic_class;$/;"	m	struct:ibv_global_route
+transport	src/include/core.h	/^  struct ncclTransport* transport;$/;"	m	struct:ncclConnector	typeref:struct:ncclConnector::ncclTransport
+transportProxyIdle	src/include/transport.h	/^inline void transportProxyIdle(int idle) {$/;"	f
+transportProxyInfo	src/include/transport.h	/^struct transportProxyInfo {$/;"	s
+transportProxyWait	src/include/transport.h	/^inline void transportProxyWait(const FUNC& func) {$/;"	f
+transportResources	src/include/core.h	/^  void* transportResources; \/\/ Host-side resources$/;"	m	struct:ncclConnector
+transport_type	src/include/ibvwrap.h	/^	enum ibv_transport_type	transport_type;$/;"	m	struct:ibv_device	typeref:enum:ibv_device::ibv_transport_type
+type	src/include/ibvwrap.h	/^			enum ibv_flow_spec_type	type;$/;"	m	struct:ibv_flow_spec::__anon35::__anon36	typeref:enum:ibv_flow_spec::__anon35::__anon36::ibv_flow_spec_type
+type	src/include/ibvwrap.h	/^	enum ibv_flow_attr_type type;$/;"	m	struct:ibv_flow_attr	typeref:enum:ibv_flow_attr::ibv_flow_attr_type
+type	src/include/ibvwrap.h	/^	enum ibv_flow_spec_type  type;$/;"	m	struct:ibv_flow_spec_eth	typeref:enum:ibv_flow_spec_eth::ibv_flow_spec_type
+type	src/include/ibvwrap.h	/^	enum ibv_flow_spec_type  type;$/;"	m	struct:ibv_flow_spec_ipv4	typeref:enum:ibv_flow_spec_ipv4::ibv_flow_spec_type
+type	src/include/ibvwrap.h	/^	enum ibv_flow_spec_type  type;$/;"	m	struct:ibv_flow_spec_tcp_udp	typeref:enum:ibv_flow_spec_tcp_udp::ibv_flow_spec_type
+ud	src/include/ibvwrap.h	/^		} ud;$/;"	m	union:ibv_send_wr::__anon28	typeref:struct:ibv_send_wr::__anon28::__anon31
+uninit_context	src/include/ibvwrap.h	/^	void	(*uninit_context)(struct verbs_device *device,$/;"	m	struct:verbs_device
+userHomeDir	src/include/param.h	/^static const char* userHomeDir() {$/;"	f
+userRanks	src/include/core.h	/^      int* userRanks;$/;"	m	struct:ncclRing::__anon19::__anon20
+userStream	src/include/core.h	/^  cudaStream_t userStream;$/;"	m	struct:ncclComm
+userStreamSet	src/include/core.h	/^  bool userStreamSet;$/;"	m	struct:ncclComm
+v	src/include/core.h	/^  uint64_t v[2];$/;"	m	union:ncclLLFifoLine
+vFetch	src/collectives/device/common_kernel.h	/^T vFetch(const volatile T* ptr) {$/;"	f
+vFetch	src/collectives/device/common_kernel.h	/^half vFetch<half>(const volatile half* ptr) {$/;"	f
+vStore	src/collectives/device/common_kernel.h	/^void vStore(volatile T* ptr, const T val) {$/;"	f
+vStore	src/collectives/device/common_kernel.h	/^void vStore<half>(volatile half* ptr, const half val) {$/;"	f
+val	src/include/ibvwrap.h	/^	struct ibv_flow_eth_filter val;$/;"	m	struct:ibv_flow_spec_eth	typeref:struct:ibv_flow_spec_eth::ibv_flow_eth_filter
+val	src/include/ibvwrap.h	/^	struct ibv_flow_ipv4_filter val;$/;"	m	struct:ibv_flow_spec_ipv4	typeref:struct:ibv_flow_spec_ipv4::ibv_flow_ipv4_filter
+val	src/include/ibvwrap.h	/^	struct ibv_flow_tcp_udp_filter val;$/;"	m	struct:ibv_flow_spec_tcp_udp	typeref:struct:ibv_flow_spec_tcp_udp::ibv_flow_tcp_udp_filter
+vendor_err	src/include/ibvwrap.h	/^	uint32_t		vendor_err;$/;"	m	struct:ibv_wc
+vendor_id	src/include/ibvwrap.h	/^	uint32_t		vendor_id;$/;"	m	struct:ibv_device_attr
+vendor_part_id	src/include/ibvwrap.h	/^	uint32_t		vendor_part_id;$/;"	m	struct:ibv_device_attr
+verbs_context	src/include/ibvwrap.h	/^struct verbs_context {$/;"	s
+verbs_context_mask	src/include/ibvwrap.h	/^enum verbs_context_mask {$/;"	g
+verbs_device	src/include/ibvwrap.h	/^struct verbs_device {$/;"	s
+verbs_get_device	src/include/ibvwrap.h	/^static inline struct verbs_device *verbs_get_device(struct ibv_device *dev)$/;"	f
+verbs_set_ctx_op	src/include/ibvwrap.h	1035;"	d
+version_tclass_flow	src/include/ibvwrap.h	/^	uint32_t		version_tclass_flow;$/;"	m	struct:ibv_grh
+vext_field_avail	src/include/ibvwrap.h	47;"	d
+vlan_tag	src/include/ibvwrap.h	/^	uint16_t	vlan_tag;$/;"	m	struct:ibv_flow_eth_filter
+wait	src/collectives/device/primitives.h	/^  void wait(uint64_t val) { while ((*flag + shift) < val) \/*SPIN*\/; }$/;"	f	class:WaitFlag
+wc_flags	src/include/ibvwrap.h	/^	int			wc_flags;$/;"	m	struct:ibv_wc
+wr	src/include/ibvwrap.h	/^	} wr;$/;"	m	struct:ibv_send_wr	typeref:union:ibv_send_wr::__anon28
+wr_id	src/include/ibvwrap.h	/^	uint64_t		wr_id;$/;"	m	struct:ibv_mw_bind
+wr_id	src/include/ibvwrap.h	/^	uint64_t		wr_id;$/;"	m	struct:ibv_recv_wr
+wr_id	src/include/ibvwrap.h	/^	uint64_t		wr_id;$/;"	m	struct:ibv_send_wr
+wr_id	src/include/ibvwrap.h	/^	uint64_t		wr_id;$/;"	m	struct:ibv_wc
+wrapNvmlDeviceClearCpuAffinity	src/include/nvmlwrap.h	/^static ncclResult_t wrapNvmlDeviceClearCpuAffinity(nvmlDevice_t device) {$/;"	f
+wrapNvmlDeviceGetHandleByIndex	src/include/nvmlwrap.h	/^static ncclResult_t wrapNvmlDeviceGetHandleByIndex(unsigned int index, nvmlDevice_t *device) {$/;"	f
+wrapNvmlDeviceGetHandleByPciBusId	src/include/nvmlwrap.h	/^static ncclResult_t wrapNvmlDeviceGetHandleByPciBusId(const char* pciBusId, nvmlDevice_t* device) {$/;"	f
+wrapNvmlDeviceGetHandleByPciInfo	src/include/nvmlwrap.h	/^static ncclResult_t wrapNvmlDeviceGetHandleByPciInfo(nvmlDevice_t device, nvmlPciInfo_t* pci) {$/;"	f
+wrapNvmlDeviceGetIndex	src/include/nvmlwrap.h	/^static ncclResult_t wrapNvmlDeviceGetIndex(nvmlDevice_t device, unsigned* index) {$/;"	f
+wrapNvmlDeviceGetNvLinkCapability	src/include/nvmlwrap.h	/^static ncclResult_t wrapNvmlDeviceGetNvLinkCapability(nvmlDevice_t device, unsigned int link,$/;"	f
+wrapNvmlDeviceGetNvLinkRemotePciInfo	src/include/nvmlwrap.h	/^static ncclResult_t wrapNvmlDeviceGetNvLinkRemotePciInfo(nvmlDevice_t device, unsigned int link, nvmlPciInfo_t *pci) {$/;"	f
+wrapNvmlDeviceGetNvLinkState	src/include/nvmlwrap.h	/^static ncclResult_t wrapNvmlDeviceGetNvLinkState(nvmlDevice_t device, unsigned int link, nvmlEnableState_t *isActive) {$/;"	f
+wrapNvmlDeviceSetCpuAffinity	src/include/nvmlwrap.h	/^static ncclResult_t wrapNvmlDeviceSetCpuAffinity(nvmlDevice_t device) {$/;"	f
+wrapNvmlInit	src/include/nvmlwrap.h	/^static ncclResult_t wrapNvmlInit(void) { NVMLCHECK(nvmlInit()); return ncclSuccess; }$/;"	f
+wrapNvmlShutdown	src/include/nvmlwrap.h	/^static ncclResult_t wrapNvmlShutdown(void) { NVMLCHECK(nvmlShutdown()); return ncclSuccess; }$/;"	f
+wrapNvmlSymbols	src/include/nvmlwrap.h	/^static ncclResult_t wrapNvmlSymbols(void) { return ncclSuccess; }$/;"	f
+wrap_ibv_poll_cq	src/include/ibvwrap.h	/^static inline ncclResult_t wrap_ibv_poll_cq(struct ibv_cq *cq, int num_entries, struct ibv_wc *wc, int* num_done) {$/;"	f
+wrap_ibv_post_recv	src/include/ibvwrap.h	/^static inline ncclResult_t wrap_ibv_post_recv(struct ibv_qp *qp, struct ibv_recv_wr *wr, struct ibv_recv_wr **bad_wr) {$/;"	f
+wrap_ibv_post_send	src/include/ibvwrap.h	/^static inline ncclResult_t wrap_ibv_post_send(struct ibv_qp *qp, struct ibv_send_wr *wr, struct ibv_send_wr **bad_wr) {$/;"	f
+xrc	src/include/ibvwrap.h	/^			} xrc;$/;"	m	union:ibv_send_wr::__anon32::__anon33	typeref:struct:ibv_send_wr::__anon32::__anon33::__anon34
+xrc_cq	src/include/ibvwrap.h	/^	struct ibv_cq		*xrc_cq;$/;"	m	struct:ibv_srq	typeref:struct:ibv_srq::ibv_cq
+xrc_cq_bin_compat_padding	src/include/ibvwrap.h	/^	struct ibv_cq	*xrc_cq_bin_compat_padding;$/;"	m	struct:ibv_srq	typeref:struct:ibv_srq::ibv_cq
+xrc_domain	src/include/ibvwrap.h	/^	struct ibv_xrc_domain	*xrc_domain;$/;"	m	struct:ibv_srq	typeref:struct:ibv_srq::ibv_xrc_domain
+xrc_domain	src/include/ibvwrap.h	/^	struct ibv_xrc_domain  *xrc_domain;$/;"	m	struct:ibv_qp_init_attr	typeref:struct:ibv_qp_init_attr::ibv_xrc_domain
+xrc_domain_bin_compat_padding	src/include/ibvwrap.h	/^	struct ibv_xrc_domain	*xrc_domain_bin_compat_padding;$/;"	m	struct:ibv_srq	typeref:struct:ibv_srq::ibv_xrc_domain
+xrc_qp_num	src/include/ibvwrap.h	/^		uint32_t	xrc_qp_num;$/;"	m	union:ibv_async_event::__anon27
+xrc_remote_srq_num	src/include/ibvwrap.h	/^		uint32_t		xrc_remote_srq_num;$/;"	m	union:ibv_send_wr::__anon32
+xrc_srq_num	src/include/ibvwrap.h	/^	uint32_t		xrc_srq_num;$/;"	m	struct:ibv_srq
+xrc_srq_num_bin_compat_padding	src/include/ibvwrap.h	/^	uint32_t		xrc_srq_num_bin_compat_padding;$/;"	m	struct:ibv_srq
+xrcd	src/include/ibvwrap.h	/^	struct ibv_xrcd	       *xrcd;$/;"	m	struct:ibv_qp_init_attr_ex	typeref:struct:ibv_qp_init_attr_ex::ibv_xrcd
+xrcd	src/include/ibvwrap.h	/^	struct ibv_xrcd	       *xrcd;$/;"	m	struct:ibv_srq_init_attr_ex	typeref:struct:ibv_srq_init_attr_ex::ibv_xrcd
+xrcd	src/include/ibvwrap.h	/^	struct ibv_xrcd        *xrcd;$/;"	m	struct:ibv_qp_open_attr	typeref:struct:ibv_qp_open_attr::ibv_xrcd

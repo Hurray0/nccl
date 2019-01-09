@@ -379,6 +379,7 @@ static ncclResult_t ncclCudaCalloc(T** ptr, size_t nelem) {
 
 template <typename T>
 static ncclResult_t ncclCudaMemcpy(T* dst, T* src, size_t nelem) {
+printf("[Hurray]CUDA Memcpy\n");
   CUDACHECK(cudaMemcpy(dst, src, nelem*sizeof(T), cudaMemcpyDefault));
   return ncclSuccess;
 }

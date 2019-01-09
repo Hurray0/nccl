@@ -126,6 +126,7 @@ ncclResult_t ncclSocketListen(int dev, void* opaqueHandle, void** listenComm) {
   } // Otherwise, handle stores a local address
   struct ncclSocketComm* comm;
   NCCLCHECK(ncclSocketNewComm(&comm));
+//printf("[Hurray2]fd=%d, addr=%s\n", comm->fd, handle->connectAddr.sa.sa_data);
   NCCLCHECK(createListenSocket(&comm->fd, &handle->connectAddr));
   *listenComm = comm;
   return ncclSuccess;

@@ -16,6 +16,8 @@
 #include <net/if.h>
 #include "utils.h"
 
+#include <time.h>
+
 #define MAX_IFS 16
 #define MAX_IF_NAME_SIZE 16
 #define SLEEP_INT     1000  // sleep interval in usec
@@ -326,6 +328,7 @@ static ncclResult_t createListenSocket(int *fd, union socketAddress *localAddr) 
 
   // localAddr port should be 0 (Any port)
   SYSCHECK(bind(sockfd, &localAddr->sa, salen), "bind");
+printf("[Hurray3] sockfd = %d, sa_family = %d, sa_data = %s\n", sockfd, localAddr->sa.sa_family, localAddr->sa.sa_data);
 
   /* Get the assigned Port */
   socklen_t size = salen;
@@ -373,6 +376,9 @@ static ncclResult_t connectAddress(int* fd, union socketAddress* remoteAddr) {
 static ncclResult_t socketReceive(int fd, void* ptr, int size) {
   char* data = (char*)ptr;
   int offset = 0;
+struct timespec tn, tn2;
+clock_gettime(CLOCK_REALTIME, &tn);
+//printf("[Hurray]start socketRecv: fd = %d, size = %d\n", fd, size);
   while (offset < size) {
     int recvsize;
     SYSCHECKVAL(recv(fd, data, size-offset, 0), "recv", recvsize);
@@ -387,12 +393,20 @@ static ncclResult_t socketReceive(int fd, void* ptr, int size) {
     data += recvsize;
     offset += recvsize;
   }
+clock_gettime(CLOCK_REALTIME, &tn2);
+double start_time = tn.tv_sec * 1000000000 + tn.tv_nsec;
+double end_time = tn2.tv_sec * 1000000000 + tn2.tv_nsec;
+int latency_ns = end_time - start_time;
+printf("[Hurray]SocketRecv: starttime = %.9lf, latency = %d, fd = %d, size = %d\n", start_time/1000000000.0, latency_ns, fd, size);
   return ncclSuccess;
 }
 
 static ncclResult_t socketSend(int fd, void* ptr, int size) {
   char* data = (char*)ptr;
   int offset = 0;
+//printf("[Hurray]start socketSend: fd = %d, size = %d\n", fd, size);
+struct timespec tn, tn2;
+clock_gettime(CLOCK_REALTIME, &tn);
   while (offset < size) {
     int sendsize;
     SYSCHECKVAL(write(fd, data, size-offset), "write", sendsize);
@@ -403,6 +417,12 @@ static ncclResult_t socketSend(int fd, void* ptr, int size) {
     data += sendsize;
     offset += sendsize;
   }
+clock_gettime(CLOCK_REALTIME, &tn2);
+double start_time = tn.tv_sec * 1000000000 + tn.tv_nsec;
+double end_time = tn2.tv_sec * 1000000000 + tn2.tv_nsec;
+int latency_ns = end_time - start_time;
+printf("[Hurray]SocketSend: starttime = %.9lf, latency = %d, fd = %d, size = %d\n", start_time/1000000000.0, latency_ns, fd, size);
+//printf("[Hurray]end socketSend: fd = %d, size = %d\n", fd, size);
   return ncclSuccess;
 }
 

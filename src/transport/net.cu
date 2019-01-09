@@ -13,6 +13,24 @@
 #include <cuda_runtime.h>
 #include <assert.h>
 
+#ifndef _RDTSC
+#define _RDTSC
+#ifdef _WIN32
+#include <intrin.h>
+uint64_t rdtsc() {
+	return __rdtsc();
+}
+#else
+#include <x86intrin.h>
+uint64_t rdtsc() {
+	unsigned int lo, hi;
+	__asm__ __volatile__ ("rdtsc" : "=a" (lo), "=d" (hi));
+	return ((uint64_t)hi << 32) | lo;
+}
+#endif
+#endif
+#include <time.h>
+
 #define NET_MAX_IFS 16
 
 // We encode 3 bits of distance per interface into a ncclTvalue_t (64-bit)
@@ -42,6 +60,8 @@ struct netSendResources {
   struct ncclRecvMem* devNetMem;
   uint64_t llStep;
   uint64_t llLastCleaning;
+  int myRank; // @hurray
+  int peerRank; // @hurray
 };
 
 struct netRecvResources {
@@ -56,6 +76,8 @@ struct netRecvResources {
   bool cudaSupport;
   uint64_t llStep;
   uint64_t llLastCleaning;
+  int myRank; // @hurray
+  int peerRank; // @hurray
 };
 
 /* Fill information necessary to exchange between ranks to choose whether or not
@@ -200,8 +222,11 @@ ncclResult_t netSendSetup(ncclTinfo_t* myOpaqueInfo, ncclTinfo_t* peerOpaqueInfo
   ring->send.transportResources = resources;
 
   struct netInfo* myInfo = (struct netInfo*)myOpaqueInfo;
+  struct netInfo* peerInfo = (struct netInfo*)peerOpaqueInfo; // @hurray
   resources->netDev = getDev(ring->id, myInfo->ndev, myInfo->scores);
   resources->cudaSupport = false;
+  resources->myRank = myInfo->rank; // @hurray
+  resources->peerRank = peerInfo->rank; // @hurray
 
   // Get user's GDR READ setting
   int gdrReadParam = ncclParamNetGdrRead();
@@ -243,10 +268,13 @@ ncclResult_t netRecvSetup(ncclTinfo_t* myOpaqueInfo, ncclTinfo_t* peerOpaqueInfo
   ring->recv.transportResources = resources;
 
   struct netInfo* myInfo = (struct netInfo*)myOpaqueInfo;
+  struct netInfo* peerInfo = (struct netInfo*)peerOpaqueInfo; // @hurray
   resources->netDev = getDev(ring->id, myInfo->ndev, myInfo->scores);
   int flags;
   NCCLCHECK(ncclNetPtrSupport(resources->netDev, &flags));
   resources->cudaSupport = (flags & NCCL_PTR_CUDA) ? true : false;
+  resources->myRank = myInfo->rank; // @hurray
+  resources->peerRank = peerInfo->rank; // @hurray
 
   int sendSize = sizeof(struct ncclSendMem);
   NCCLCHECK(ncclCudaHostAlloc((void**)&resources->hostSendMem, (void**)&resources->devHostSendMem, sendSize));
@@ -254,7 +282,7 @@ ncclResult_t netRecvSetup(ncclTinfo_t* myOpaqueInfo, ncclTinfo_t* peerOpaqueInfo
   int recvSize = offsetof(struct ncclRecvMem, buff)+ring->buffSize;
   NCCLCHECK(ncclCudaHostAlloc((void**)&resources->hostRecvMem, (void**)&resources->devHostRecvMem, recvSize));
 
-  struct netInfo* peerInfo = (struct netInfo*)peerOpaqueInfo;
+  //struct netInfo* peerInfo = (struct netInfo*)peerOpaqueInfo;
   INFO(INIT|NET,"Ring %02d : %d -> %d via NET/%s/%d%s%s", ring->id, peerInfo->rank, myInfo->rank, ncclNetName(), resources->netDev,
       resources->cudaSupport ? "/GDRDMA" : "",
       (resources->hostDevMem != NULL) ? "/GDCopy" : "");
@@ -337,6 +365,7 @@ ncclResult_t netRecvFree(void* transportResources) {
 }
 
 ncclResult_t netSendProxy(struct ncclProxyArgs* args) {
+//printf("[Hurray2]Start Send: %lx\n", args->opCount);
   struct ncclRing* ring = args->ring;
   struct netSendResources* resources = (struct netSendResources*) (ring->send.transportResources);
   const int llMode = args->llMode;
@@ -360,6 +389,15 @@ ncclResult_t netSendProxy(struct ncclProxyArgs* args) {
   int idle = 0;
   void* requests[args->substeps];
 
+	//@hurray
+  struct timespec tn, tn2;
+	uint64_t t1, t2;
+	t1 = rdtsc();
+  clock_gettime(CLOCK_REALTIME, &tn);
+	int sizeSum = 0;
+	double start_time, end_time;
+	int latency_ns;
+
   if (!args->needProxy) goto nextColl;
 
   TRACE(NET,"opCount %lx head %lx tail %lx end %lx nsteps %d llMode %d", args->opCount, head, tail, end, args->nsteps, llMode);
@@ -367,6 +405,7 @@ ncclResult_t netSendProxy(struct ncclProxyArgs* args) {
 
   // Update in case we skipped some collectives
   if (llMode == 0) resources->hostRecvMem->opCount = args->opCount;
+
 
   while (head < end) {
     idle++;
@@ -386,6 +425,7 @@ ncclResult_t netSendProxy(struct ncclProxyArgs* args) {
             while (f1[0] != flag || f2[0] != flag);
           }
           NCCLCHECK(ncclNetIsend(resources->netSendComm, lines, size, ptrType, requests+slot));
+		  sizeSum += size; //@hurray
           sizesFifo[slot] = size;
           tail++;
           idle = 0;
@@ -395,6 +435,7 @@ ncclResult_t netSendProxy(struct ncclProxyArgs* args) {
         // Send through network
         int slot = tail%args->substeps;
         NCCLCHECK(ncclNetIsend(resources->netSendComm, localBuff+slot*sliceSize, sizesFifo[slot], ptrType, requests+slot));
+		sizeSum += sizesFifo[slot]; // @hurray
         tail++;
         idle = 0;
       }
@@ -416,6 +457,14 @@ ncclResult_t netSendProxy(struct ncclProxyArgs* args) {
     if (idle) transportProxyIdle(idle);
   }
 
+  clock_gettime(CLOCK_REALTIME, &tn2);
+	t2 = rdtsc();
+  start_time = tn.tv_sec * 1000000000 + tn.tv_nsec;
+  end_time = tn2.tv_sec * 1000000000 + tn2.tv_nsec;
+  latency_ns = end_time - start_time;
+
+  printf("[Hurray]IBSend: opCount = %lx, startTime = %.9lf, transTime = %d, llMode = %d, myRank = %d, peerRank = %d, size = %d, transCycle = %ld, avg_throughput = %.6lfGbps\n", args->opCount, start_time/1000000000.0, latency_ns, llMode, resources->myRank, resources->peerRank, sizeSum, t2-t1, sizeSum*8.0/latency_ns*1000000000/1073741824);
+
   // Reset
   if (llMode == 0) *prevTail = 0;
 
@@ -435,6 +484,7 @@ nextColl:
 }
 
 ncclResult_t netRecvProxy(struct ncclProxyArgs* args) {
+//printf("[Hurray2]Start Recv: %lx\n", args->opCount);
   struct ncclRing* ring = args->ring;
   struct netRecvResources* resources = (struct netRecvResources*) (ring->recv.transportResources);
   int llMode = args->llMode;
@@ -456,6 +506,14 @@ ncclResult_t netRecvProxy(struct ncclProxyArgs* args) {
   int idle = 0;
   void* requests[args->substeps];
 
+	//@hurray
+  struct timespec tn, tn2;
+	uint64_t t1, t2;
+	t1 = rdtsc();
+  clock_gettime(CLOCK_REALTIME, &tn);
+	int sizeSum = 0;
+	double start_time, end_time;
+	int latency_ns;
   if (!args->needProxy) goto nextColl;
 
   TRACE(NET,"opCount %lx head %lx tail %lx end %lx nsteps %d llMode %d", args->opCount, head, tail, end, args->nsteps, llMode);
@@ -472,6 +530,7 @@ ncclResult_t netRecvProxy(struct ncclProxyArgs* args) {
     if ((tail < head + args->substeps) && (tail < *nextHead + args->substeps) && (tail < end)) {
       int slot = tail%args->substeps;
       NCCLCHECK(ncclNetIrecv(resources->netRecvComm, localBuff+slot*sliceSize, sliceSize, ptrType, requests+slot));
+	  sizeSum += sliceSize;
       tail++;
       idle = 0;
     }
@@ -492,6 +551,14 @@ ncclResult_t netRecvProxy(struct ncclProxyArgs* args) {
     }
     if (idle) transportProxyIdle(idle);
   }
+
+  clock_gettime(CLOCK_REALTIME, &tn2);
+	t2 = rdtsc();
+  start_time = tn.tv_sec * 1000000000 + tn.tv_nsec;
+  end_time = tn2.tv_sec * 1000000000 + tn2.tv_nsec;
+  latency_ns = end_time - start_time;
+
+  printf("[Hurray]IBRecv: opCount = %lx, startTime = %.9lf, transTime = %d, llMode = %d, myRank = %d, peerRank = %d, size = %d, transCycle = %ld, avg_throughput = %.6lfGbps\n", args->opCount, start_time/1000000000.0, latency_ns, llMode, resources->myRank, resources->peerRank, sizeSum, t2-t1, sizeSum*8.0/latency_ns*1000000000/1073741824);
 
   // Wait for last ack and reset
   if (llMode == 0) {
